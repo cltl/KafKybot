@@ -70,7 +70,8 @@ java -Xmx812m -cp ../lib/vu.kafkybot.KafKybot-1.0-jar-with-dependencies.jar vu.k
 --kaf-file "../example" 
 --profiles "../profiles/profiles-sem.txt" --extension ".kaf" > "../example/bus-accident.ont.dep.kaf.sem.tpl" 
 
-In this example, all files in the folder example with the extension ".kaf" are processed with the same profiles and the result is stored in a single result output stream.
+In this example, all files in the folder example with the extension ".kaf" are processed with the same profiles and
+the result is stored in separate files with the extension ".tpl" for each input file.
 
 Finally, an optional argument --overview can be given. This will trigger the generation of an additional xls file with a simple overview of relations and quantification of the results.
 Such an overview could look as follows:
