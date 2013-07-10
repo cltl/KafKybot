@@ -70,16 +70,9 @@ public class KafKybot {
             }
         }
         else {
-            try {
-                FileOutputStream fos = new FileOutputStream(kafFile.getAbsolutePath()+".tpl");
                 kafResultOverviewMap = ApplyProfilesToKafFile(kafFile, pathToProfiles);
-                System.out.println("kafResultOverviewMap = " + kafResultOverviewMap.size());
-                SerializeKafResults.writeMapToStream(kafResultOverviewMap, fos);
-                fos.flush();
-                fos.close();
-            } catch (IOException e) {
-                e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-            }
+                //System.out.println("kafResultOverviewMap = " + kafResultOverviewMap.size());
+                SerializeKafResults.writeMapToStream(kafResultOverviewMap, System.out);
         }
       //  System.out.println("FINAL kafResultMap.size() = " + kafResultMap.size());
 
@@ -94,6 +87,13 @@ public class KafKybot {
         }
     }
 
+    /**
+     * @TODO Sentence based processing should be extended to cover any range sentence
+     * @param pathToKafFile
+     * @param pathToProfiles
+     * @return
+     */
+
 
     static public HashMap<String, ArrayList<KafResult>> ApplyProfilesToKafFile (File pathToKafFile, String pathToProfiles) {
         HashMap<String, ArrayList<KafResult>> kafResultMap = new HashMap<String, ArrayList<KafResult>>();
@@ -107,15 +107,12 @@ public class KafKybot {
            // System.out.println("pathToKafFile = " + pathToKafFile.getName());
             kafSaxParser.parseFile(pathToKafFile);
 
+
             /// We process the kaf file sentence by sentence
             Set keySet = kafSaxParser.SentenceToTerm.keySet();
             Iterator keys = keySet.iterator();
             while (keys.hasNext()) {
                 String sentenceId = (String) keys.next();
-               // System.out.println("sentenceId = " + sentenceId);
-/*                if (!sentenceId.equals("s1")) {
-                       continue;
-                }*/
                 ArrayList<KafResult> sentenceResults = new ArrayList<KafResult>();
                 ArrayList<String> termIds = kafSaxParser.SentenceToTerm.get(sentenceId);
                 ArrayList<String> tokenIds = kafSaxParser.SentenceToWord.get(sentenceId);
