@@ -1,0 +1,3 @@
+profile=agent-next15
+id=1;type=participant; role=agent;next=15;term:pos=N*
+id=2;type=event;term:pos=V*;term:lemma=!have;term:lemma=!be

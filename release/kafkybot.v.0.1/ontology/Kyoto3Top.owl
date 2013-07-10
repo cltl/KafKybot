@@ -1,0 +1,615 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY DOLCE-Lite "http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#" >
+    <!ENTITY Collections "http://www.loa-cnr.it/ontologies/Collections.owl#" >
+    <!ENTITY TopKyoto3 "http://www.kyoto-project.eu/ontologies/TopKyoto3#" >
+    <!ENTITY ExtendedDnS "http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#" >
+    <!ENTITY CommonSenseMapping "http://www.loa-cnr.it/ontologies/CommonSenseMapping.owl#" >
+    <!ENTITY TopKyoto22 "http://www.kyoto-project.eu/ontologies/TopKyoto2/TopKyoto2#" >
+    <!ENTITY TopKyoto2 "http://www.kyoto-project.eu/ontologies/TopKyoto2/TopKyoto2.1#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.kyoto-project.eu/ontologies/KYOTO3/KYOTO3Top#"
+     xml:base="http://www.kyoto-project.eu/ontologies/KYOTO3/KYOTO3Top"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:DOLCE-Lite="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#"
+     xmlns:CommonSenseMapping="http://www.loa-cnr.it/ontologies/CommonSenseMapping.owl#"
+     xmlns:Collections="http://www.loa-cnr.it/ontologies/Collections.owl#"
+     xmlns:TopKyoto22="http://www.kyoto-project.eu/ontologies/TopKyoto2/TopKyoto2#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:TopKyoto2="http://www.kyoto-project.eu/ontologies/TopKyoto2/TopKyoto2.1#"
+     xmlns:ExtendedDnS="http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#"
+     xmlns:TopKyoto3="http://www.kyoto-project.eu/ontologies/TopKyoto3#">
+    <owl:Ontology rdf:about="">
+        <dc:date>February 2011</dc:date>
+        <dc:title>KYOTO 3 Top</dc:title>
+        <dc:creator
+            >Amanda Hicks
+Kyoto Project</dc:creator>
+        <owl:imports rdf:resource="http://www.loa-cnr.it/ontologies/DLP_397.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:AnnotationProperty rdf:about="&dc;date"/>
+    <owl:AnnotationProperty rdf:about="&dc;title"/>
+    <owl:AnnotationProperty rdf:about="&dc;creator"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#inherent-in -->
+
+    <owl:ObjectProperty rdf:about="&DOLCE-Lite;inherent-in"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#q-location -->
+
+    <owl:ObjectProperty rdf:about="&DOLCE-Lite;q-location"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#q-location-of -->
+
+    <owl:ObjectProperty rdf:about="&DOLCE-Lite;q-location-of"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#played-by -->
+
+    <owl:ObjectProperty rdf:about="&ExtendedDnS;played-by"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/TopKyoto2/TopKyoto2#indefinite_quality_region -->
+
+    <owl:Class rdf:about="&TopKyoto22;indefinite_quality_region">
+        <rdfs:subClassOf rdf:resource="&DOLCE-Lite;region"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DOLCE-Lite;q-location-of"/>
+                <owl:someValuesFrom rdf:resource="&DOLCE-Lite;quality"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/TopKyoto2/TopKyoto2.1#amount-of-matter-region -->
+
+    <owl:Class rdf:about="&TopKyoto2;amount-of-matter-region">
+        <rdfs:subClassOf rdf:resource="&DOLCE-Lite;physical-region"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DOLCE-Lite;q-location-of"/>
+                <owl:allValuesFrom rdf:resource="&TopKyoto3;amount-of-matter-quality"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="&TopKyoto2;feature-region"/>
+        <owl:disjointWith rdf:resource="&TopKyoto2;physical-object-region"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/TopKyoto2/TopKyoto2.1#dispositional-region -->
+
+    <owl:Class rdf:about="&TopKyoto2;dispositional-region">
+        <rdfs:subClassOf rdf:resource="&DOLCE-Lite;region"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DOLCE-Lite;q-location-of"/>
+                <owl:someValuesFrom rdf:resource="&TopKyoto3;dispositional"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/TopKyoto2/TopKyoto2.1#feature-region -->
+
+    <owl:Class rdf:about="&TopKyoto2;feature-region">
+        <rdfs:subClassOf rdf:resource="&DOLCE-Lite;physical-region"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DOLCE-Lite;q-location-of"/>
+                <owl:allValuesFrom rdf:resource="&TopKyoto3;feature-quality"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/TopKyoto2/TopKyoto2.1#physical-object-region -->
+
+    <owl:Class rdf:about="&TopKyoto2;physical-object-region">
+        <rdfs:subClassOf rdf:resource="&DOLCE-Lite;physical-region"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DOLCE-Lite;q-location-of"/>
+                <owl:allValuesFrom rdf:resource="&TopKyoto3;physical-object-quality"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/TopKyoto2/TopKyoto2.1#relational_region -->
+
+    <owl:Class rdf:about="&TopKyoto2;relational_region">
+        <rdfs:subClassOf rdf:resource="&DOLCE-Lite;region"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DOLCE-Lite;q-location-of"/>
+                <owl:someValuesFrom rdf:resource="&TopKyoto3;relational"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/TopKyoto3#agentive-physical-object-role -->
+
+    <owl:Class rdf:about="&TopKyoto3;agentive-physical-object-role">
+        <rdfs:subClassOf rdf:resource="&TopKyoto3;physical-object-role"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ExtendedDnS;played-by"/>
+                <owl:allValuesFrom rdf:resource="&ExtendedDnS;agentive-physical-object"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/TopKyoto3#agentive-social-object-role -->
+
+    <owl:Class rdf:about="&TopKyoto3;agentive-social-object-role">
+        <rdfs:subClassOf rdf:resource="&TopKyoto3;social-object-role"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ExtendedDnS;played-by"/>
+                <owl:allValuesFrom rdf:resource="&ExtendedDnS;agentive-social-object"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/TopKyoto3#amount-of-matter-quality -->
+
+    <owl:Class rdf:about="&TopKyoto3;amount-of-matter-quality">
+        <rdfs:subClassOf rdf:resource="&DOLCE-Lite;physical-quality"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DOLCE-Lite;q-location"/>
+                <owl:someValuesFrom rdf:resource="&TopKyoto2;amount-of-matter-region"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DOLCE-Lite;inherent-in"/>
+                <owl:someValuesFrom rdf:resource="&DOLCE-Lite;amount-of-matter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/TopKyoto3#arbitrary-sum-role -->
+
+    <owl:Class rdf:about="&TopKyoto3;arbitrary-sum-role">
+        <rdfs:subClassOf rdf:resource="&ExtendedDnS;role"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ExtendedDnS;played-by"/>
+                <owl:allValuesFrom rdf:resource="&DOLCE-Lite;arbitrary-sum"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/TopKyoto3#dispositional -->
+
+    <owl:Class rdf:about="&TopKyoto3;dispositional">
+        <rdfs:subClassOf rdf:resource="&DOLCE-Lite;quality"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DOLCE-Lite;q-location"/>
+                <owl:someValuesFrom rdf:resource="&TopKyoto2;dispositional-region"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DOLCE-Lite;inherent-in"/>
+                <owl:someValuesFrom rdf:resource="&DOLCE-Lite;endurant"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/TopKyoto3#feature-quality -->
+
+    <owl:Class rdf:about="&TopKyoto3;feature-quality">
+        <rdfs:subClassOf rdf:resource="&DOLCE-Lite;physical-quality"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DOLCE-Lite;inherent-in"/>
+                <owl:someValuesFrom rdf:resource="&DOLCE-Lite;feature"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DOLCE-Lite;q-location"/>
+                <owl:someValuesFrom rdf:resource="&TopKyoto2;feature-region"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/TopKyoto3#material-artifact-role -->
+
+    <owl:Class rdf:about="&TopKyoto3;material-artifact-role">
+        <rdfs:subClassOf rdf:resource="&TopKyoto3;non-agentive-physical-object-role"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ExtendedDnS;played-by"/>
+                <owl:allValuesFrom rdf:resource="&ExtendedDnS;material-artifact"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/TopKyoto3#non-agentive-physical-object-role -->
+
+    <owl:Class rdf:about="&TopKyoto3;non-agentive-physical-object-role">
+        <rdfs:subClassOf rdf:resource="&TopKyoto3;physical-object-role"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ExtendedDnS;played-by"/>
+                <owl:allValuesFrom rdf:resource="&ExtendedDnS;non-agentive-physical-object"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/TopKyoto3#non-agentive-social-object-role -->
+
+    <owl:Class rdf:about="&TopKyoto3;non-agentive-social-object-role">
+        <rdfs:subClassOf rdf:resource="&TopKyoto3;social-object-role"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ExtendedDnS;played-by"/>
+                <owl:allValuesFrom rdf:resource="&ExtendedDnS;non-agentive-social-object"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/TopKyoto3#non-physical-endurant-role -->
+
+    <owl:Class rdf:about="&TopKyoto3;non-physical-endurant-role">
+        <rdfs:subClassOf rdf:resource="&ExtendedDnS;role"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ExtendedDnS;played-by"/>
+                <owl:allValuesFrom rdf:resource="&DOLCE-Lite;non-physical-endurant"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/TopKyoto3#non-physical-object-role -->
+
+    <owl:Class rdf:about="&TopKyoto3;non-physical-object-role">
+        <rdfs:subClassOf rdf:resource="&TopKyoto3;non-physical-endurant-role"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ExtendedDnS;played-by"/>
+                <owl:allValuesFrom rdf:resource="&DOLCE-Lite;non-physical-object"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/TopKyoto3#physical-endurant-role -->
+
+    <owl:Class rdf:about="&TopKyoto3;physical-endurant-role">
+        <rdfs:subClassOf rdf:resource="&ExtendedDnS;role"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ExtendedDnS;played-by"/>
+                <owl:allValuesFrom rdf:resource="&DOLCE-Lite;physical-endurant"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/TopKyoto3#physical-object-quality -->
+
+    <owl:Class rdf:about="&TopKyoto3;physical-object-quality">
+        <rdfs:subClassOf rdf:resource="&DOLCE-Lite;physical-quality"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DOLCE-Lite;inherent-in"/>
+                <owl:someValuesFrom rdf:resource="&DOLCE-Lite;physical-object"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DOLCE-Lite;q-location"/>
+                <owl:someValuesFrom rdf:resource="&TopKyoto2;physical-object-region"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/TopKyoto3#physical-object-role -->
+
+    <owl:Class rdf:about="&TopKyoto3;physical-object-role">
+        <rdfs:subClassOf rdf:resource="&TopKyoto3;physical-endurant-role"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ExtendedDnS;played-by"/>
+                <owl:allValuesFrom rdf:resource="&DOLCE-Lite;physical-object"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/TopKyoto3#physical-plurality-role -->
+
+    <owl:Class rdf:about="&TopKyoto3;physical-plurality-role">
+        <rdfs:subClassOf rdf:resource="&TopKyoto3;physical-object-role"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ExtendedDnS;played-by"/>
+                <owl:allValuesFrom rdf:resource="&Collections;physical-plurality"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/TopKyoto3#relational -->
+
+    <owl:Class rdf:about="&TopKyoto3;relational">
+        <rdfs:subClassOf rdf:resource="&DOLCE-Lite;quality"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DOLCE-Lite;q-location"/>
+                <owl:someValuesFrom rdf:resource="&TopKyoto2;relational_region"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DOLCE-Lite;inherent-in"/>
+                <owl:someValuesFrom rdf:resource="&DOLCE-Lite;spatio-temporal-particular"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/TopKyoto3#social-object-role -->
+
+    <owl:Class rdf:about="&TopKyoto3;social-object-role">
+        <rdfs:subClassOf rdf:resource="&TopKyoto3;non-physical-object-role"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/Collections.owl#physical-plurality -->
+
+    <owl:Class rdf:about="&Collections;physical-plurality"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/CommonSenseMapping.owl#collection-role -->
+
+    <owl:Class rdf:about="&CommonSenseMapping;collection-role">
+        <rdfs:subClassOf rdf:resource="&TopKyoto3;non-agentive-social-object-role"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/CommonSenseMapping.owl#feature-role -->
+
+    <owl:Class rdf:about="&CommonSenseMapping;feature-role">
+        <rdfs:subClassOf rdf:resource="&TopKyoto3;physical-endurant-role"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ExtendedDnS;played-by"/>
+                <owl:allValuesFrom rdf:resource="&DOLCE-Lite;feature"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/CommonSenseMapping.owl#substance-role -->
+
+    <owl:Class rdf:about="&CommonSenseMapping;substance-role">
+        <rdfs:subClassOf rdf:resource="&TopKyoto3;physical-endurant-role"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#amount-of-matter -->
+
+    <owl:Class rdf:about="&DOLCE-Lite;amount-of-matter"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#arbitrary-sum -->
+
+    <owl:Class rdf:about="&DOLCE-Lite;arbitrary-sum"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#endurant -->
+
+    <owl:Class rdf:about="&DOLCE-Lite;endurant"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#feature -->
+
+    <owl:Class rdf:about="&DOLCE-Lite;feature"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#non-physical-endurant -->
+
+    <owl:Class rdf:about="&DOLCE-Lite;non-physical-endurant"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#non-physical-object -->
+
+    <owl:Class rdf:about="&DOLCE-Lite;non-physical-object"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#physical-endurant -->
+
+    <owl:Class rdf:about="&DOLCE-Lite;physical-endurant"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#physical-object -->
+
+    <owl:Class rdf:about="&DOLCE-Lite;physical-object"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#physical-quality -->
+
+    <owl:Class rdf:about="&DOLCE-Lite;physical-quality"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#physical-region -->
+
+    <owl:Class rdf:about="&DOLCE-Lite;physical-region"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#quality -->
+
+    <owl:Class rdf:about="&DOLCE-Lite;quality"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#region -->
+
+    <owl:Class rdf:about="&DOLCE-Lite;region"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#spatio-temporal-particular -->
+
+    <owl:Class rdf:about="&DOLCE-Lite;spatio-temporal-particular"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#agentive-physical-object -->
+
+    <owl:Class rdf:about="&ExtendedDnS;agentive-physical-object"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#agentive-social-object -->
+
+    <owl:Class rdf:about="&ExtendedDnS;agentive-social-object"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#description-role -->
+
+    <owl:Class rdf:about="&ExtendedDnS;description-role">
+        <rdfs:subClassOf rdf:resource="&TopKyoto3;non-agentive-social-object-role"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#material-artifact -->
+
+    <owl:Class rdf:about="&ExtendedDnS;material-artifact"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#non-agentive-physical-object -->
+
+    <owl:Class rdf:about="&ExtendedDnS;non-agentive-physical-object"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#non-agentive-social-object -->
+
+    <owl:Class rdf:about="&ExtendedDnS;non-agentive-social-object"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#role -->
+
+    <owl:Class rdf:about="&ExtendedDnS;role"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+

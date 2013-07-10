@@ -1,0 +1,4829 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY Plans "http://www.loa-cnr.it/ontologies/Plans.owl#" >
+    <!ENTITY Kyoto "http://www.kyoto-project.eu/ontologies/Kyoto#" >
+    <!ENTITY DOLCE-Lite "http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#" >
+    <!ENTITY Collectives "http://www.loa-cnr.it/ontologies/Collectives.owl#" >
+    <!ENTITY ExtendedDnS "http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#" >
+    <!ENTITY Collections "http://www.loa-cnr.it/ontologies/Collections.owl#" >
+    <!ENTITY TopKyoto3 "http://www.kyoto-project.eu/ontologies/TopKyoto3#" >
+    <!ENTITY SocialUnits "http://www.loa-cnr.it/ontologies/SocialUnits.owl#" >
+    <!ENTITY MentalObjects "http://www.loa-cnr.it/ontologies/MentalObjects.owl#" >
+    <!ENTITY MiddleKyoto2 "http://www.kyoto-project.eu/ontologies/MiddleKyoto2#" >
+    <!ENTITY Kyoto3Middle "http://www.kyoto-project.eu/ontologies/Kyoto3Middle#" >
+    <!ENTITY SpatialRelations "http://www.loa-cnr.it/ontologies/SpatialRelations.owl#" >
+    <!ENTITY TemporalRelations "http://www.loa-cnr.it/ontologies/TemporalRelations.owl#" >
+    <!ENTITY CommonSenseMapping "http://www.loa-cnr.it/ontologies/CommonSenseMapping.owl#" >
+    <!ENTITY InformationObjects "http://www.loa-cnr.it/ontologies/InformationObjects.owl#" >
+    <!ENTITY TopKyoto22 "http://www.kyoto-project.eu/ontologies/TopKyoto2/TopKyoto2#" >
+    <!ENTITY FunctionalParticipation "http://www.loa-cnr.it/ontologies/FunctionalParticipation.owl#" >
+    <!ENTITY TopKyoto2 "http://www.kyoto-project.eu/ontologies/TopKyoto2/TopKyoto2.1#" >
+    <!ENTITY SemioticCommunicationTheory "http://www.loa-cnr.it/ontologies/SemioticCommunicationTheory.owl#" >
+    <!ENTITY MiddleKyoto22 "http://www.kyoto-project.eu/ontologies/MiddleKyoto2/MiddleKyoto2.1#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.kyoto-project.eu/ontologies/KYOTO3/KYOTO3Middle#"
+     xml:base="http://www.kyoto-project.eu/ontologies/KYOTO3/KYOTO3Middle"
+     xmlns:SemioticCommunicationTheory="http://www.loa-cnr.it/ontologies/SemioticCommunicationTheory.owl#"
+     xmlns:DOLCE-Lite="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#"
+     xmlns:TemporalRelations="http://www.loa-cnr.it/ontologies/TemporalRelations.owl#"
+     xmlns:MentalObjects="http://www.loa-cnr.it/ontologies/MentalObjects.owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:ExtendedDnS="http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#"
+     xmlns:Collectives="http://www.loa-cnr.it/ontologies/Collectives.owl#"
+     xmlns:MiddleKyoto2="http://www.kyoto-project.eu/ontologies/MiddleKyoto2#"
+     xmlns:Kyoto="http://www.kyoto-project.eu/ontologies/Kyoto#"
+     xmlns:InformationObjects="http://www.loa-cnr.it/ontologies/InformationObjects.owl#"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:Kyoto3Middle="http://www.kyoto-project.eu/ontologies/Kyoto3Middle#"
+     xmlns:MiddleKyoto22="http://www.kyoto-project.eu/ontologies/MiddleKyoto2/MiddleKyoto2.1#"
+     xmlns:Plans="http://www.loa-cnr.it/ontologies/Plans.owl#"
+     xmlns:CommonSenseMapping="http://www.loa-cnr.it/ontologies/CommonSenseMapping.owl#"
+     xmlns:Collections="http://www.loa-cnr.it/ontologies/Collections.owl#"
+     xmlns:TopKyoto22="http://www.kyoto-project.eu/ontologies/TopKyoto2/TopKyoto2#"
+     xmlns:SocialUnits="http://www.loa-cnr.it/ontologies/SocialUnits.owl#"
+     xmlns:FunctionalParticipation="http://www.loa-cnr.it/ontologies/FunctionalParticipation.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:TopKyoto2="http://www.kyoto-project.eu/ontologies/TopKyoto2/TopKyoto2.1#"
+     xmlns:SpatialRelations="http://www.loa-cnr.it/ontologies/SpatialRelations.owl#"
+     xmlns:TopKyoto3="http://www.kyoto-project.eu/ontologies/TopKyoto3#">
+    <owl:Ontology rdf:about="">
+        <dc:date>February 2011</dc:date>
+        <dc:title>KYOTO3.2 Middle</dc:title>
+        <dc:creator
+            >Amanda Hicks
+KYOTO Project</dc:creator>
+        <owl:imports rdf:resource="http://www.kyoto-project.eu/ontologies/KYOTO3/KYOTO3Top"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:AnnotationProperty rdf:about="&dc;date"/>
+    <owl:AnnotationProperty rdf:about="&dc;title"/>
+    <owl:AnnotationProperty rdf:about="&dc;creator"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#active-participant-in -->
+
+    <owl:ObjectProperty rdf:about="&Kyoto;active-participant-in">
+        <owl:inverseOf rdf:resource="&Kyoto;done-by"/>
+        <rdfs:subPropertyOf rdf:resource="&FunctionalParticipation;functional-participant-in"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#done-by -->
+
+    <owl:ObjectProperty rdf:about="&Kyoto;done-by">
+        <rdfs:range rdf:resource="&DOLCE-Lite;endurant"/>
+        <rdfs:domain rdf:resource="&DOLCE-Lite;perdurant"/>
+        <rdfs:subPropertyOf rdf:resource="&FunctionalParticipation;functional-participant"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#entails -->
+
+    <owl:ObjectProperty rdf:about="&Kyoto;entails">
+        <rdfs:label>entails</rdfs:label>
+        <rdfs:range rdf:resource="&DOLCE-Lite;perdurant"/>
+        <rdfs:domain rdf:resource="&DOLCE-Lite;perdurant"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#has-destination -->
+
+    <owl:ObjectProperty rdf:about="&Kyoto;has-destination">
+        <rdfs:label>has-destination</rdfs:label>
+        <rdfs:range rdf:resource="&DOLCE-Lite;particular"/>
+        <rdfs:domain rdf:resource="&DOLCE-Lite;particular"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#has-path -->
+
+    <owl:ObjectProperty rdf:about="&Kyoto;has-path">
+        <rdfs:label>has-path</rdfs:label>
+        <rdfs:domain rdf:resource="&DOLCE-Lite;particular"/>
+        <rdfs:range rdf:resource="&DOLCE-Lite;particular"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#has-source -->
+
+    <owl:ObjectProperty rdf:about="&Kyoto;has-source">
+        <rdfs:label>has-source</rdfs:label>
+        <rdfs:domain rdf:resource="&DOLCE-Lite;particular"/>
+        <rdfs:range rdf:resource="&DOLCE-Lite;particular"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#overlaps -->
+
+    <owl:ObjectProperty rdf:about="&Kyoto;overlaps">
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <rdfs:label>overlaps</rdfs:label>
+        <rdfs:comment
+            >a mereological relation</rdfs:comment>
+        <rdfs:domain rdf:resource="&DOLCE-Lite;particular"/>
+        <rdfs:range rdf:resource="&DOLCE-Lite;particular"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto3Middle#end-quality -->
+
+    <owl:ObjectProperty rdf:about="&Kyoto3Middle;end-quality">
+        <rdfs:domain rdf:resource="&Kyoto;change-eng-3.0-00191142-n"/>
+        <owl:inverseOf rdf:resource="&Kyoto3Middle;end-quality-of"/>
+        <rdfs:range rdf:resource="&DOLCE-Lite;region"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto3Middle#end-quality-of -->
+
+    <owl:ObjectProperty rdf:about="&Kyoto3Middle;end-quality-of">
+        <rdfs:range rdf:resource="&Kyoto;change-eng-3.0-00191142-n"/>
+        <rdfs:domain rdf:resource="&DOLCE-Lite;region"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto3Middle#initial-quality -->
+
+    <owl:ObjectProperty rdf:about="&Kyoto3Middle;initial-quality">
+        <rdfs:domain rdf:resource="&Kyoto;change-eng-3.0-00191142-n"/>
+        <owl:inverseOf rdf:resource="&Kyoto3Middle;initial-quality-of"/>
+        <rdfs:range rdf:resource="&DOLCE-Lite;region"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto3Middle#initial-quality-of -->
+
+    <owl:ObjectProperty rdf:about="&Kyoto3Middle;initial-quality-of">
+        <rdfs:range rdf:resource="&Kyoto;change-eng-3.0-00191142-n"/>
+        <rdfs:domain rdf:resource="&DOLCE-Lite;region"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto3Middle#pertinent-quality -->
+
+    <owl:ObjectProperty rdf:about="&Kyoto3Middle;pertinent-quality">
+        <rdfs:domain rdf:resource="&DOLCE-Lite;perdurant"/>
+        <rdfs:range rdf:resource="&DOLCE-Lite;quality"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#generic-constituent -->
+
+    <owl:ObjectProperty rdf:about="&DOLCE-Lite;generic-constituent">
+        <rdfs:label
+            >generic-constituent</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#generic-constituent-of -->
+
+    <owl:ObjectProperty rdf:about="&DOLCE-Lite;generic-constituent-of">
+        <rdfs:label
+            >generic-constituent-of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#generic-dependent -->
+
+    <owl:ObjectProperty rdf:about="&DOLCE-Lite;generic-dependent">
+        <rdfs:label
+            >generic-dependent</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#has-quality -->
+
+    <owl:ObjectProperty rdf:about="&DOLCE-Lite;has-quality"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#inherent-in -->
+
+    <owl:ObjectProperty rdf:about="&DOLCE-Lite;inherent-in">
+        <rdfs:label>inherent-in</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#life-of -->
+
+    <owl:ObjectProperty rdf:about="&DOLCE-Lite;life-of"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#participant -->
+
+    <owl:ObjectProperty rdf:about="&DOLCE-Lite;participant"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#proper-part -->
+
+    <owl:ObjectProperty rdf:about="&DOLCE-Lite;proper-part">
+        <rdfs:label>proper-part</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#q-location -->
+
+    <owl:ObjectProperty rdf:about="&DOLCE-Lite;q-location">
+        <rdfs:label>q-location</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#q-location-of -->
+
+    <owl:ObjectProperty rdf:about="&DOLCE-Lite;q-location-of"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#expands -->
+
+    <owl:ObjectProperty rdf:about="&ExtendedDnS;expands">
+        <rdfs:label>expands</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#played-by -->
+
+    <owl:ObjectProperty rdf:about="&ExtendedDnS;played-by">
+        <rdfs:label>played-by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/FunctionalParticipation.owl#functional-participant -->
+
+    <owl:ObjectProperty rdf:about="&FunctionalParticipation;functional-participant"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/FunctionalParticipation.owl#functional-participant-in -->
+
+    <owl:ObjectProperty rdf:about="&FunctionalParticipation;functional-participant-in"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/FunctionalParticipation.owl#patient -->
+
+    <owl:ObjectProperty rdf:about="&FunctionalParticipation;patient"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/FunctionalParticipation.owl#performed-by -->
+
+    <owl:ObjectProperty rdf:about="&FunctionalParticipation;performed-by">
+        <rdfs:subPropertyOf rdf:resource="&Kyoto;done-by"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/FunctionalParticipation.owl#product -->
+
+    <owl:ObjectProperty rdf:about="&FunctionalParticipation;product"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/FunctionalParticipation.owl#use-of -->
+
+    <owl:ObjectProperty rdf:about="&FunctionalParticipation;use-of"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/FunctionalParticipation.owl#used-in -->
+
+    <owl:ObjectProperty rdf:about="&FunctionalParticipation;used-in"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/SpatialRelations.owl#participant-place -->
+
+    <owl:ObjectProperty rdf:about="&SpatialRelations;participant-place"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/TemporalRelations.owl#concludes -->
+
+    <owl:ObjectProperty rdf:about="&TemporalRelations;concludes"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/TemporalRelations.owl#follows -->
+
+    <owl:ObjectProperty rdf:about="&TemporalRelations;follows"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/TemporalRelations.owl#meets -->
+
+    <owl:ObjectProperty rdf:about="&TemporalRelations;meets"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/TemporalRelations.owl#precedes -->
+
+    <owl:ObjectProperty rdf:about="&TemporalRelations;precedes"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/TemporalRelations.owl#starts -->
+
+    <owl:ObjectProperty rdf:about="&TemporalRelations;starts"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/TemporalRelations.owl#temporally-overlaps -->
+
+    <owl:ObjectProperty rdf:about="&TemporalRelations;temporally-overlaps">
+        <rdfs:subPropertyOf rdf:resource="&Kyoto;overlaps"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/1999/02/22-rdf-syntax-ns#first -->
+
+    <owl:ObjectProperty rdf:about="&rdf;first">
+        <rdfs:label>first</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/1999/02/22-rdf-syntax-ns#rest -->
+
+    <owl:ObjectProperty rdf:about="&rdf;rest">
+        <rdfs:label>rest</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#members -->
+
+    <owl:ObjectProperty rdf:about="&owl;members">
+        <rdfs:label>members</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#American_state-eng-3.0-08655464-n -->
+
+    <owl:Class rdf:about="&Kyoto;American_state-eng-3.0-08655464-n">
+        <rdfs:label>American_state</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Kyoto;state__province-eng-3.0-08654360-n"/>
+        <rdfs:comment
+            >one of the 50 states of the United States</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#abnormality__abnormalcy-eng-3.0-14501726-n -->
+
+    <owl:Class rdf:about="&Kyoto;abnormality__abnormalcy-eng-3.0-14501726-n">
+        <rdfs:label
+            >abnormality__abnormalcy</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ExtendedDnS;situation"/>
+        <rdfs:comment
+            >an abnormal physical condition resulting from defective genes or developmental deficiencies</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#acid-eng-3.0-00020090-n -->
+
+    <owl:Class rdf:about="&Kyoto;acid-eng-3.0-00020090-n">
+        <rdfs:label>acid</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&DOLCE-Lite;amount-of-matter"/>
+        <rdfs:comment
+            >a particular kind or species of matter with uniform properties</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#active-change-of-location -->
+
+    <owl:Class rdf:about="&Kyoto;active-change-of-location">
+        <rdfs:label
+            >active change of location</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Kyoto;change_of_location__movement_11-eng-3.0-00280586n"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Kyoto;done-by"/>
+                <owl:someValuesFrom rdf:resource="&DOLCE-Lite;endurant"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment
+            >a intransitive change of location</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#activity-eng-3.0-00407535-n -->
+
+    <owl:Class rdf:about="&Kyoto;activity-eng-3.0-00407535-n">
+        <rdfs:label>activity</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ExtendedDnS;activity"/>
+        <rdfs:comment
+            >any specific behavior</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#agency_federal_agency_government_agency_bureau_office_authority-eng-3.0-08337324-n -->
+
+    <owl:Class rdf:about="&Kyoto;agency_federal_agency_government_agency_bureau_office_authority-eng-3.0-08337324-n">
+        <rdfs:label
+            >agency_federal_agency_government_agency_bureau_office_authority</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&SocialUnits;institution"/>
+        <rdfs:comment
+            >an administrative unit of government</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#alloy-eng-3.0-14586769-n -->
+
+    <owl:Class rdf:about="&Kyoto;alloy-eng-3.0-14586769-n">
+        <rdfs:label>alloy</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&DOLCE-Lite;amount-of-matter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#animal__animate_being_beast__brute__creature__fauna-eng-3.0-00015388-n -->
+
+    <owl:Class rdf:about="&Kyoto;animal__animate_being_beast__brute__creature__fauna-eng-3.0-00015388-n">
+        <rdfs:label
+            >animal__animate_being_beast__brute__creature__fauna</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Kyoto;organism__being-eng-3.0-00004475-n"/>
+        <rdfs:comment
+            >a living organism characterized by voluntary movement</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#animal_disease-eng-3.0-14253124-n -->
+
+    <owl:Class rdf:about="&Kyoto;animal_disease-eng-3.0-14253124-n">
+        <rdfs:label>animal_disease</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Kyoto;disease-eng-3.0-14070360-n"/>
+        <rdfs:comment
+            >a disease that typically does not affect human beings</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#animal_tissue-eng-3.0-05267548-n -->
+
+    <owl:Class rdf:about="&Kyoto;animal_tissue-eng-3.0-05267548-n">
+        <rdfs:label>animal_tissue</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Kyoto;body_part-eng-3.0-05220461-n"/>
+        <rdfs:comment
+            >the tissue in the bodies of animals</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#appearance-eng-3.0-07321772-n -->
+
+    <owl:Class rdf:about="&Kyoto;appearance-eng-3.0-07321772-n">
+        <rdfs:label>appearance</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&DOLCE-Lite;achievement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#archipelago-eng-3.0-09203827-n -->
+
+    <owl:Class rdf:about="&Kyoto;archipelago-eng-3.0-09203827-n">
+        <rdfs:label>archipelago</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&CommonSenseMapping;geographical-object"/>
+        <rdfs:comment
+            >a group of many islands in a large body of water</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#area -->
+
+    <owl:Class rdf:about="&Kyoto;area">
+        <rdfs:label>area</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Kyoto;magnitude-eng-3.0-05090441-n"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DOLCE-Lite;q-location"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&Kyoto;area_unit"/>
+                            <rdf:Description rdf:about="&TopKyoto22;indefinite_quality_region"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#area__country-eng-3.0-08497294-n -->
+
+    <owl:Class rdf:about="&Kyoto;area__country-eng-3.0-08497294-n">
+        <rdfs:label>area__country</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&CommonSenseMapping;locative-role"/>
+        <rdfs:comment
+            >a particular geographical region of indefinite boundary (usually serving some special purpose or distinguished by its people or culture or geography)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#area_unit -->
+
+    <owl:Class rdf:about="&Kyoto;area_unit">
+        <rdfs:label>area unit</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Kyoto3Middle;physical_units_of_measure"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DOLCE-Lite;q-location-of"/>
+                <owl:someValuesFrom rdf:resource="&Kyoto;area"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#arrangement__organization__organisation_system-eng-3.0-05726596-n -->
+
+    <owl:Class rdf:about="&Kyoto;arrangement__organization__organisation_system-eng-3.0-05726596-n">
+        <rdfs:label
+            >arrangement__organization__organisation_system</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&InformationObjects;classification-system"/>
+        <rdfs:comment
+            >an organized structure for arranging or classifying</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#artery__arteria__arterial__blood_vessel-eng-3.0-05333777-n -->
+
+    <owl:Class rdf:about="&Kyoto;artery__arteria__arterial__blood_vessel-eng-3.0-05333777-n">
+        <rdfs:label
+            >artery__arteria__arterial__blood_vessel</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Kyoto;structure__anatomical_structure__complex_body_part__bodily_structure__body_structure-eng-3.0-05225602-n"/>
+        <rdfs:comment
+            >a blood vessel that carries blood from the heart to the body</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#artifact-role -->
+
+    <owl:Class rdf:about="&Kyoto;artifact-role">
+        <rdfs:label>artifact-role</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&TopKyoto3;material-artifact-role"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ExtendedDnS;played-by"/>
+                <owl:allValuesFrom rdf:resource="&Kyoto;artifact__artefact-eng-3.0-00021939-n"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#artifact__artefact-eng-3.0-00021939-n -->
+
+    <owl:Class rdf:about="&Kyoto;artifact__artefact-eng-3.0-00021939-n">
+        <rdfs:label
+            >artifact__artefact</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ExtendedDnS;material-artifact"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&FunctionalParticipation;used-in"/>
+                <owl:someValuesFrom rdf:resource="&DOLCE-Lite;perdurant"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment
+            >a man-made object taken as a whole</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#attribute-eng-3.0-00024264-n -->
+
+    <owl:Class rdf:about="&Kyoto;attribute-eng-3.0-00024264-n">
+        <rdfs:label>attribute</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&DOLCE-Lite;quality"/>
+        <rdfs:comment
+            >an abstraction belonging to or characteristic of an entity</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#basic_cognitive_process-eng-3.0-05701944-n -->
+
+    <owl:Class rdf:about="&Kyoto;basic_cognitive_process-eng-3.0-05701944-n">
+        <rdfs:label
+            >basic_cognitive_process</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ExtendedDnS;cognitive-event"/>
+        <rdfs:comment
+            >cognitive processes involved in obtaining and storing knowledge</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#beginning__start__commencement-eng.3.0-00235435-n -->
+
+    <owl:Class rdf:about="&Kyoto;beginning__start__commencement-eng.3.0-00235435-n">
+        <rdfs:label>beginning</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&DOLCE-Lite;achievement"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&TemporalRelations;starts"/>
+                <owl:someValuesFrom rdf:resource="&DOLCE-Lite;perdurant"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment
+            >the act of starting something</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#biologist__life_scientist-eng-3.0-09855630-n -->
+
+    <owl:Class rdf:about="&Kyoto;biologist__life_scientist-eng-3.0-09855630-n">
+        <rdfs:label
+            >biologist__life_scientist</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ExtendedDnS;agent-driven-role"/>
+        <rdfs:comment
+            >(biology) a scientist who studies living organisms</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#biology_biological_science-eng-3.0-06037666-n -->
+
+    <owl:Class rdf:about="&Kyoto;biology_biological_science-eng-3.0-06037666-n">
+        <rdfs:label
+            >biology_biological_science</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Kyoto;discipline__subject__subject_area__subject_field__field__field_of_study__study__bailiwic-eng-3.0-05996646-n"/>
+        <rdfs:comment
+            >the science that studies living organisms</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#blood_disease_blood_disorder-eng-3.0-14189204-n -->
+
+    <owl:Class rdf:about="&Kyoto;blood_disease_blood_disorder-eng-3.0-14189204-n">
+        <rdfs:label
+            >blood_disease_blood_disorder</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Kyoto;disease-eng-3.0-14070360-n"/>
+        <rdfs:comment
+            >a disease or disorder of the blood</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#body_of_water_water-eng-3.0-09225146-n -->
+
+    <owl:Class rdf:about="&Kyoto;body_of_water_water-eng-3.0-09225146-n">
+        <rdfs:label
+            >body_of_water_water</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&CommonSenseMapping;geographical-object"/>
+        <rdfs:comment
+            >the part of the earth&#39;s surface covered with water (such as a river or lake or ocean)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#body_part-eng-3.0-05220461-n -->
+
+    <owl:Class rdf:about="&Kyoto;body_part-eng-3.0-05220461-n">
+        <rdfs:label>body_part</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&CommonSenseMapping;biological-object"/>
+        <rdfs:comment
+            >any part of an organism such as an organ or extremity</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#bone_os-eng-3.0-05269901-n -->
+
+    <owl:Class rdf:about="&Kyoto;bone_os-eng-3.0-05269901-n">
+        <rdfs:label>bone_os</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Kyoto;membrane_tissue_layer-eng-3.0-05426243-n"/>
+        <rdfs:comment
+            >rigid connective tissue that makes up the skeleton of vertebrates</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#book-eng-3.0-06410904-n -->
+
+    <owl:Class rdf:about="&Kyoto;book-eng-3.0-06410904-n">
+        <rdfs:label>book</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&InformationObjects;information-realization"/>
+        <rdfs:comment
+            >a written work or composition that has been published (printed on pages bound together)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#boundary_bound_bounds-eng-3.0-08512259-n -->
+
+    <owl:Class rdf:about="&Kyoto;boundary_bound_bounds-eng-3.0-08512259-n">
+        <rdfs:label
+            >boundary_bound_bounds</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&CommonSenseMapping;spatial-feature"/>
+        <rdfs:comment
+            >the line or plane indicating the limit or extent of something</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#bredth -->
+
+    <owl:Class rdf:about="&Kyoto;bredth">
+        <rdfs:label>bredth</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Kyoto;length"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#breeding -->
+
+    <owl:Class rdf:about="&Kyoto;breeding">
+        <rdfs:subClassOf rdf:resource="&Kyoto;things_organisms_do"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&TemporalRelations;precedes"/>
+                <owl:someValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&DOLCE-Lite;life-of"/>
+                        <owl:someValuesFrom rdf:resource="&Kyoto;organism__being-eng-3.0-00004475-n"/>
+                    </owl:Restriction>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&TemporalRelations;meets"/>
+                <owl:someValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&DOLCE-Lite;life-of"/>
+                        <owl:someValuesFrom rdf:resource="&Kyoto;organism__being-eng-3.0-00004475-n"/>
+                    </owl:Restriction>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#cell-eng-3.0-00006484-n -->
+
+    <owl:Class rdf:about="&Kyoto;cell-eng-3.0-00006484-n">
+        <rdfs:label>cell</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&CommonSenseMapping;biological-object"/>
+        <rdfs:comment
+            >(biology) the basic structural and functional unit of all organisms; they may exist as independent units of life (as in monads) or may form colonies or tissues as in higher plants and animals</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#change-eng-3.0-00191142-n -->
+
+    <owl:Class rdf:about="&Kyoto;change-eng-3.0-00191142-n">
+        <rdfs:label>change</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&DOLCE-Lite;accomplishment"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Kyoto3Middle;initial-quality"/>
+                <owl:someValuesFrom rdf:resource="&DOLCE-Lite;region"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Kyoto3Middle;end-quality"/>
+                <owl:someValuesFrom rdf:resource="&DOLCE-Lite;region"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment
+            >the action of changing something</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#change_of_integrity-eng-3.0-00376063-n -->
+
+    <owl:Class rdf:about="&Kyoto;change_of_integrity-eng-3.0-00376063-n">
+        <rdfs:label
+            >change of integrity</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Kyoto3Middle;physical-change"/>
+        <rdfs:comment
+            >the act of changing the unity or wholeness of something</rdfs:comment>
+        <rdfs:comment
+            >A change is a change of integrity if for participants x and y, x is a part of y at t1, and is no longer a part of y at t2 or y is a whole at t1 and is no longer a whole at t2.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#change_of_location__movement_11-eng-3.0-00280586n -->
+
+    <owl:Class rdf:about="&Kyoto;change_of_location__movement_11-eng-3.0-00280586n">
+        <rdfs:subClassOf rdf:resource="&Kyoto3Middle;physical-change"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Kyoto;has-source"/>
+                <owl:someValuesFrom rdf:resource="&DOLCE-Lite;particular"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Kyoto3Middle;initial-quality"/>
+                <owl:someValuesFrom rdf:resource="&DOLCE-Lite;space-region"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Kyoto;has-path"/>
+                <owl:someValuesFrom rdf:resource="&DOLCE-Lite;particular"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Kyoto;has-destination"/>
+                <owl:someValuesFrom rdf:resource="&DOLCE-Lite;particular"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Kyoto3Middle;end-quality"/>
+                <owl:someValuesFrom rdf:resource="&DOLCE-Lite;space-region"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment
+            >the act of changing the location of something: the movement of cargo onto the vessel;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#change_of_magnitude-eng-3.0-00351485-n -->
+
+    <owl:Class rdf:about="&Kyoto;change_of_magnitude-eng-3.0-00351485-n">
+        <rdfs:label
+            >change of magnitude</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Kyoto3Middle;physical-change"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Kyoto3Middle;pertinent-quality"/>
+                <owl:someValuesFrom rdf:resource="&Kyoto;magnitude-eng-3.0-05090441-n"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment
+            >Implies a change either in the number of parts or the magnitude of the whole but does not imply a change in the kinds of parts or constituents involved.  For example, a population increases when the number of organisms that constitute the population changes, while the kind of organsims remain the same.</rdfs:comment>
+        <rdfs:comment
+            >the act of changing the amount or size of something</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#change_of_state-eng-3.0-00199130-n -->
+
+    <owl:Class rdf:about="&Kyoto;change_of_state-eng-3.0-00199130-n">
+        <rdfs:label>change of state</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Kyoto3Middle;physical-change"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&FunctionalParticipation;patient"/>
+                <owl:someValuesFrom rdf:resource="&DOLCE-Lite;endurant"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment
+            >the act of changing something into something different in essential characteristics</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#charge-eng-3.0-13306870-n -->
+
+    <owl:Class rdf:about="&Kyoto;charge-eng-3.0-13306870-n">
+        <rdfs:label>charge</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&CommonSenseMapping;commerce-role"/>
+        <rdfs:comment
+            >the price charged for some article or service</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#chemical_element__element-eng-3.0-14622893-n -->
+
+    <owl:Class rdf:about="&Kyoto;chemical_element__element-eng-3.0-14622893-n">
+        <rdfs:label
+            >chemical_element__element</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&DOLCE-Lite;amount-of-matter"/>
+        <rdfs:comment
+            >any of the more than 100 known substances (of which 92 occur naturally) that cannot be separated into simpler substances and that singly or in combination constitute all matter</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#chemist-eng-3.0-09913824-n -->
+
+    <owl:Class rdf:about="&Kyoto;chemist-eng-3.0-09913824-n">
+        <rdfs:label>chemist</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ExtendedDnS;agent-driven-role"/>
+        <rdfs:comment
+            >a scientist who specializes in chemistry</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#city__metropolis__urban_center-eng-3.0-08524735-n -->
+
+    <owl:Class rdf:about="&Kyoto;city__metropolis__urban_center-eng-3.0-08524735-n">
+        <rdfs:label
+            >city__metropolis__urban_center</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&CommonSenseMapping;locative-role"/>
+        <rdfs:comment
+            >a large and densely populated urban area; may include several independent administrative districts</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#class-eng-3.0-08103777-n -->
+
+    <owl:Class rdf:about="&Kyoto;class-eng-3.0-08103777-n">
+        <rdfs:label>class</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Kyoto;taxonomic-group"/>
+        <rdfs:comment
+            >&quot;a taxonomic group containing one or more orders&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#cognition__knowledge__noesis-eng-3.0-00023271-n -->
+
+    <owl:Class rdf:about="&Kyoto;cognition__knowledge__noesis-eng-3.0-00023271-n">
+        <rdfs:label
+            >cognition__knowledge__noesis</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&MentalObjects;mental-object"/>
+        <rdfs:comment
+            >the psychological result of perception and learning and reasoning</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#color__colour__coloring__colouring-eng-3.0-04956594-n -->
+
+    <owl:Class rdf:about="&Kyoto;color__colour__coloring__colouring-eng-3.0-04956594-n">
+        <rdfs:label
+            >color__colour__coloring__colouring</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&TopKyoto3;feature-quality"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DOLCE-Lite;q-location"/>
+                <owl:someValuesFrom rdf:resource="&Kyoto;color_region"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment
+            >a visual attribute of things that results from the light they emit or transmit or reflect</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#color_region -->
+
+    <owl:Class rdf:about="&Kyoto;color_region">
+        <rdfs:label>color region</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&TopKyoto2;feature-region"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DOLCE-Lite;q-location-of"/>
+                <owl:someValuesFrom rdf:resource="&Kyoto;color__colour__coloring__colouring-eng-3.0-04956594-n"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#commerce__commercialism__mercantilism-eng-3.0-01090446-n -->
+
+    <owl:Class rdf:about="&Kyoto;commerce__commercialism__mercantilism-eng-3.0-01090446-n">
+        <rdfs:label
+            >commerce__commercialism__mercantilism</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ExtendedDnS;activity"/>
+        <rdfs:comment
+            >transactions (sales and purchases) having the objective of supplying commodities (goods and services)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#communication-eng-3.0-00033020-n -->
+
+    <owl:Class rdf:about="&Kyoto;communication-eng-3.0-00033020-n">
+        <rdfs:label>communication</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ExtendedDnS;social-relationship"/>
+        <rdfs:comment
+            >something that is communicated by or to or between people or groups</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#compound__chemical_compound-eng-3.0-14818238-n -->
+
+    <owl:Class rdf:about="&Kyoto;compound__chemical_compound-eng-3.0-14818238-n">
+        <rdfs:label
+            >compound__chemical_compound</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&DOLCE-Lite;amount-of-matter"/>
+        <rdfs:comment
+            >(chemistry) a substance formed by chemical union of two or more elements or ingredients in definite proportion by weight</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#concentration-eng-3.0-05038593-n -->
+
+    <owl:Class rdf:about="&Kyoto;concentration-eng-3.0-05038593-n">
+        <rdfs:label>concentration</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&TopKyoto3;amount-of-matter-quality"/>
+        <rdfs:comment
+            >he strength of a solution; number of molecules of a substance in a given volume</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#condition__status-eng-3.0-13920835-n -->
+
+    <owl:Class rdf:about="&Kyoto;condition__status-eng-3.0-13920835-n">
+        <rdfs:label
+            >condition__status</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Kyoto;state-eng-3.0-00024720-n"/>
+        <rdfs:comment
+            >a state at a particular time</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#consequence__effect__outcome__result__issue__upshot-eng-3.0-11410625-n -->
+
+    <owl:Class rdf:about="&Kyoto;consequence__effect__outcome__result__issue__upshot-eng-3.0-11410625-n">
+        <rdfs:label>consequence</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&DOLCE-Lite;event"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Kyoto;entails"/>
+                <owl:someValuesFrom rdf:resource="&Kyoto;change-eng-3.0-00191142-n"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&TemporalRelations;follows"/>
+                <owl:someValuesFrom rdf:resource="&DOLCE-Lite;perdurant"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#constellation-eng-3.0-09252970-n -->
+
+    <owl:Class rdf:about="&Kyoto;constellation-eng-3.0-09252970-n">
+        <rdfs:label>constellation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&CommonSenseMapping;collection-role"/>
+        <rdfs:comment
+            >a configuration of stars as seen from the earth</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#consumption_ingestion_intake_uptake-eng-3.0-00838098n -->
+
+    <owl:Class rdf:about="&Kyoto;consumption_ingestion_intake_uptake-eng-3.0-00838098n">
+        <rdfs:subClassOf rdf:resource="&Kyoto;things_organisms_do"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&FunctionalParticipation;patient"/>
+                <owl:someValuesFrom rdf:resource="&DOLCE-Lite;endurant"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#content-eng-3.0-05809132-n -->
+
+    <owl:Class rdf:about="&Kyoto;content-eng-3.0-05809132-n">
+        <rdfs:label>content</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Collections;non-physical-collection"/>
+        <rdfs:comment
+            >the sum or range of what has been perceived, discovered, or learned</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#contest__competition-eng-3.0-07456188-n -->
+
+    <owl:Class rdf:about="&Kyoto;contest__competition-eng-3.0-07456188-n">
+        <rdfs:label
+            >contest__competition</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ExtendedDnS;activity"/>
+        <rdfs:comment
+            >an occasion on which a winner is selected from among two or more contestants</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#control_controling-eng-3.0-00803617-n -->
+
+    <owl:Class rdf:about="&Kyoto;control_controling-eng-3.0-00803617-n">
+        <rdfs:label>control</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&DOLCE-Lite;accomplishment"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Kyoto;done-by"/>
+                <owl:someValuesFrom rdf:resource="&ExtendedDnS;agent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&FunctionalParticipation;patient"/>
+                <owl:someValuesFrom rdf:resource="&DOLCE-Lite;endurant"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment
+            >the activity of managing or exerting control over something: the control of the mob by the police was admirable</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#cord-eng-3.0-03106110-n -->
+
+    <owl:Class rdf:about="&Kyoto;cord-eng-3.0-03106110-n">
+        <rdfs:label>cord</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Kyoto;artifact__artefact-eng-3.0-00021939-n"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#country__state__land-eng-3.0-08544813-n -->
+
+    <owl:Class rdf:about="&Kyoto;country__state__land-eng-3.0-08544813-n">
+        <rdfs:label
+            >country__state__land</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&CommonSenseMapping;country"/>
+        <rdfs:comment
+            >the territory occupied by a nation</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#covering__natural_covering-eng-3.0-09257949-n -->
+
+    <owl:Class rdf:about="&Kyoto;covering__natural_covering-eng-3.0-09257949-n">
+        <rdfs:label
+            >covering__natural_covering</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&DOLCE-Lite;relevant-part"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#creation_1__creative_activity_1-eng-3.0-00908492-n -->
+
+    <owl:Class rdf:about="&Kyoto;creation_1__creative_activity_1-eng-3.0-00908492-n">
+        <rdfs:label>creation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Kyoto;change_of_state-eng-3.0-00199130-n"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&TemporalRelations;meets"/>
+                <owl:someValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&DOLCE-Lite;life-of"/>
+                        <owl:someValuesFrom rdf:resource="&DOLCE-Lite;endurant"/>
+                    </owl:Restriction>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&SpatialRelations;participant-place"/>
+                <owl:someValuesFrom rdf:resource="&DOLCE-Lite;endurant"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&TemporalRelations;precedes"/>
+                <owl:someValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&DOLCE-Lite;life-of"/>
+                        <owl:someValuesFrom rdf:resource="&DOLCE-Lite;endurant"/>
+                    </owl:Restriction>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&FunctionalParticipation;product"/>
+                <owl:someValuesFrom rdf:resource="&DOLCE-Lite;endurant"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#crime-eng-3.0-00766234-n -->
+
+    <owl:Class rdf:about="&Kyoto;crime-eng-3.0-00766234-n">
+        <rdfs:label>crime</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ExtendedDnS;situation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#dancing__dance__terpsichore__saltation-eng-3.0-00428270-n -->
+
+    <owl:Class rdf:about="&Kyoto;dancing__dance__terpsichore__saltation-eng-3.0-00428270-n">
+        <rdfs:label
+            >dancing__dance__terpsichore__saltation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ExtendedDnS;activity"/>
+        <rdfs:comment
+            >taking a series of rhythmical steps (and movements) in time to music</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#day-eng-3.0-15157225-n -->
+
+    <owl:Class rdf:about="&Kyoto;day-eng-3.0-15157225-n">
+        <rdfs:label>day</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&DOLCE-Lite;temporal-region"/>
+        <rdfs:comment
+            >a day assigned to a particular purpose or observance</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#decrease_in_magnitude -->
+
+    <owl:Class rdf:about="&Kyoto;decrease_in_magnitude">
+        <rdfs:label
+            >decrease in magnitude</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Kyoto;change_of_magnitude-eng-3.0-00351485-n"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Kyoto3Middle;end-quality"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&Kyoto3Middle;decreased"/>
+                            <rdf:Description rdf:about="&Kyoto3Middle;reduced"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#definite_quantity-eng-3.0-13576101-n -->
+
+    <owl:Class rdf:about="&Kyoto;definite_quantity-eng-3.0-13576101-n">
+        <rdfs:label
+            >definite_quantity</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&DOLCE-Lite;physical-region"/>
+        <rdfs:comment
+            >a specific measure of amount</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#deity_divinity_god_immortal-eng-3.0-09505418-n -->
+
+    <owl:Class rdf:about="&Kyoto;deity_divinity_god_immortal-eng-3.0-09505418-n">
+        <rdfs:label
+            >deity_divinity_god_immortal</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ExtendedDnS;agent-driven-role"/>
+        <rdfs:comment
+            >any supernatural being worshipped as controlling some part of the world or some aspect of life or who is the personification of a force</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#depletion-eng-3.0-00356199-n -->
+
+    <owl:Class rdf:about="&Kyoto;depletion-eng-3.0-00356199-n">
+        <rdfs:label>depletion</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Kyoto;decrease_in_magnitude"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#depth -->
+
+    <owl:Class rdf:about="&Kyoto;depth">
+        <rdfs:label>depth</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Kyoto;length"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#development-eng-3.0-00250259-n -->
+
+    <owl:Class rdf:about="&Kyoto;development-eng-3.0-00250259-n">
+        <rdfs:label>development</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Kyoto;creation_1__creative_activity_1-eng-3.0-00908492-n"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Kyoto;done-by"/>
+                <owl:someValuesFrom rdf:resource="&ExtendedDnS;agent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment
+            >act of improving by expanding or enlarging or refining:</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#discipline__subject__subject_area__subject_field__field__field_of_study__study__bailiwic-eng-3.0-05996646-n -->
+
+    <owl:Class rdf:about="&Kyoto;discipline__subject__subject_area__subject_field__field__field_of_study__study__bailiwic-eng-3.0-05996646-n">
+        <rdfs:label
+            >discipline__subject__subject_area__subject_field__field__field_of_study__study__bailiwic</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&InformationObjects;subject"/>
+        <rdfs:comment
+            >a branch of knowledge</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#disease-eng-3.0-14070360-n -->
+
+    <owl:Class rdf:about="&Kyoto;disease-eng-3.0-14070360-n">
+        <rdfs:label>disease</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ExtendedDnS;situation"/>
+        <rdfs:comment
+            >an impairment of health or a condition of abnormal functioning</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#district__territory__territorial_dominion__dominion-eng-3.0-08552138-n -->
+
+    <owl:Class rdf:about="&Kyoto;district__territory__territorial_dominion__dominion-eng-3.0-08552138-n">
+        <rdfs:label
+            >district__territory__territorial_dominion__dominion</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&CommonSenseMapping;country"/>
+        <rdfs:comment
+            >a region marked off for administrative or other purposes</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#disturbance_eng-3.0-07428450-n -->
+
+    <owl:Class rdf:about="&Kyoto;disturbance_eng-3.0-07428450-n">
+        <rdfs:label>disturbance</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Kyoto;change_of_state-eng-3.0-00199130-n"/>
+        <rdfs:comment
+            >activity that is a malfunction, intrusion, or interruption
+malfunction, failure to function normally</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#drug-eng-3.0-03247620-n -->
+
+    <owl:Class rdf:about="&Kyoto;drug-eng-3.0-03247620-n">
+        <rdfs:label>drug</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&CommonSenseMapping;substance-role"/>
+        <rdfs:comment
+            >a substance that is used as a medicine or narcotic</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#education-eng-3.0-00883297-n -->
+
+    <owl:Class rdf:about="&Kyoto;education-eng-3.0-00883297-n">
+        <rdfs:label>education</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ExtendedDnS;activity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#entity-eng-3.0-00001740-n -->
+
+    <owl:Class rdf:about="&Kyoto;entity-eng-3.0-00001740-n">
+        <rdfs:label>entity</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&DOLCE-Lite;physical-endurant"/>
+        <rdfs:comment
+            >that which is perceived or known or inferred to have its own distinct existence (living or nonliving)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#enzyme-eng-3.0-14732946-n -->
+
+    <owl:Class rdf:about="&Kyoto;enzyme-eng-3.0-14732946-n">
+        <rdfs:label>enzyme</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&CommonSenseMapping;substance-role"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ExtendedDnS;played-by"/>
+                <owl:allValuesFrom rdf:resource="&Kyoto;protein-eng-3.0-14728724-n"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment
+            >any of several complex proteins that are produced by cells and act as catalysts in specific biochemical reactions</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#eubacteria__eubacterium__true_bacteria-eng-3.0-01355326-n -->
+
+    <owl:Class rdf:about="&Kyoto;eubacteria__eubacterium__true_bacteria-eng-3.0-01355326-n">
+        <rdfs:label
+            >eubacteria__eubacterium__true_bacteria</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Kyoto;organism__being-eng-3.0-00004475-n"/>
+        <rdfs:comment
+            >a large group of bacteria having rigid cell walls; motile types have flagella</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#execution__implementation-eng-3.0-01127379-n -->
+
+    <owl:Class rdf:about="&Kyoto;execution__implementation-eng-3.0-01127379-n">
+        <rdfs:label
+            >execution__implementation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ExtendedDnS;activity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#exploitation_1__development_5-eng-3.0-00948206-n -->
+
+    <owl:Class rdf:about="&Kyoto;exploitation_1__development_5-eng-3.0-00948206-n">
+        <rdfs:label>exploitation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ExtendedDnS;activity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#exploration-eng-3.0-00945777-n -->
+
+    <owl:Class rdf:about="&Kyoto;exploration-eng-3.0-00945777-n">
+        <rdfs:label>exploration</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ExtendedDnS;activity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#expressive_style__style-eng-3.0-07066659-n -->
+
+    <owl:Class rdf:about="&Kyoto;expressive_style__style-eng-3.0-07066659-n">
+        <rdfs:label
+            >expressive_style__style</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ExtendedDnS;information-encoding-system"/>
+        <rdfs:comment
+            >a way of expressing something (in language or art or music etc.) that is characteristic of a particular person or group of people or period</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#family-eng-3.0-08107499-n -->
+
+    <owl:Class rdf:about="&Kyoto;family-eng-3.0-08107499-n">
+        <rdfs:label>family</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Kyoto;taxonomic-group"/>
+        <rdfs:comment
+            >(biology) a taxonomic group containing one or more genera</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#fictional_character__fictitious_character__character-eng-3.0-09587565-n -->
+
+    <owl:Class rdf:about="&Kyoto;fictional_character__fictitious_character__character-eng-3.0-09587565-n">
+        <rdfs:label
+            >fictional_character__fictitious_character__character</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ExtendedDnS;agentive-figure"/>
+        <rdfs:comment
+            >an imaginary person represented in a work of fiction (play or film or story)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#flower-eng-3.0-11669921-n -->
+
+    <owl:Class rdf:about="&Kyoto;flower-eng-3.0-11669921-n">
+        <rdfs:label>flower</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Kyoto;plant-role"/>
+        <rdfs:comment
+            >a plant cultivated for its blooms or blossoms</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#fluxuation_of_magintude -->
+
+    <owl:Class rdf:about="&Kyoto;fluxuation_of_magintude">
+        <rdfs:label
+            >fluxuation in magnitude</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Kyoto;change_of_magnitude-eng-3.0-00351485-n"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#food__nutrient-eng-3.0-00021265-n -->
+
+    <owl:Class rdf:about="&Kyoto;food__nutrient-eng-3.0-00021265-n">
+        <rdfs:label>food__nutrient</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&CommonSenseMapping;substance-role"/>
+        <rdfs:comment
+            >any substance that can be metabolized by an animal to give energy and build tissue</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#frequency -->
+
+    <owl:Class rdf:about="&Kyoto;frequency">
+        <rdfs:label>frequency</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&DOLCE-Lite;temporal-quality"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DOLCE-Lite;q-location"/>
+                <owl:someValuesFrom rdf:resource="&MiddleKyoto22;frequency-region"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#fruit-eng-3.0-13134947-n -->
+
+    <owl:Class rdf:about="&Kyoto;fruit-eng-3.0-13134947-n">
+        <rdfs:label>fruit</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Kyoto;reproductive_structure-eng-3.0-11675842-n"/>
+        <rdfs:comment
+            >the ripened reproductive body of a seed plant</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#gathering-eng-3.0-01380638-v -->
+
+    <owl:Class rdf:about="&Kyoto;gathering-eng-3.0-01380638-v">
+        <rdfs:label>gathering</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&DOLCE-Lite;accomplishment"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&FunctionalParticipation;patient"/>
+                <owl:someValuesFrom rdf:resource="&DOLCE-Lite;endurant"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#gathering__assemblage-eng-3.0-07975026-n -->
+
+    <owl:Class rdf:about="&Kyoto;gathering__assemblage-eng-3.0-07975026-n">
+        <rdfs:label
+            >gathering__assemblage</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Collectives;simple-planned-collective"/>
+        <rdfs:comment
+            >a group of persons together in one place</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#genus-eng-3.0-08108972-n -->
+
+    <owl:Class rdf:about="&Kyoto;genus-eng-3.0-08108972-n">
+        <rdfs:label>genus</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Kyoto;taxonomic-group"/>
+        <rdfs:comment
+            >((biology) taxonomic group containing one or more species)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#geographical_area__geographic_area__geographical_region__geographic_region-eng-3.0-08574314-n -->
+
+    <owl:Class rdf:about="&Kyoto;geographical_area__geographic_area__geographical_region__geographic_region-eng-3.0-08574314-n">
+        <rdfs:label
+            >geographical_area__geographic_area__geographical_region__geographic_region</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&CommonSenseMapping;locative-role"/>
+        <rdfs:comment
+            >a demarcated area of the Earth</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#happening__occurrence__occurrent__natural_event-eng-3.0-07283608-n -->
+
+    <owl:Class rdf:about="&Kyoto;happening__occurrence__occurrent__natural_event-eng-3.0-07283608-n">
+        <rdfs:label
+            >happening__occurrence__occurrent__natural_event</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&DOLCE-Lite;event"/>
+        <rdfs:comment
+            >an event that happens</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#heterogeneity-eng-3.0-04751098-n -->
+
+    <owl:Class rdf:about="&Kyoto;heterogeneity-eng-3.0-04751098-n">
+        <rdfs:label>heterogeneity</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&DOLCE-Lite;quality"/>
+        <rdfs:comment
+            >heterogeneitey refers to diversity amongst the kinds of things that constitute a particular, i.e., made up of or somehow dependent upon objects that have varying properties.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#importance -->
+
+    <owl:Class rdf:about="&Kyoto;importance">
+        <rdfs:label>importance</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Kyoto3Middle;evaluative"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DOLCE-Lite;q-location"/>
+                <owl:allValuesFrom rdf:resource="&Kyoto3Middle;importance_region"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#improvement-eng-3.0-00248977-n -->
+
+    <owl:Class rdf:about="&Kyoto;improvement-eng-3.0-00248977-n">
+        <rdfs:label>improvement</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Kyoto;change_of_state-eng-3.0-00199130-n"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DOLCE-Lite;has-quality"/>
+                <owl:someValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&DOLCE-Lite;q-location"/>
+                        <owl:someValuesFrom rdf:resource="&Kyoto3Middle;beneficial"/>
+                    </owl:Restriction>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment
+            >the act of improving something</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#increase_in_magnitude -->
+
+    <owl:Class rdf:about="&Kyoto;increase_in_magnitude">
+        <rdfs:label
+            >increase in magnitude</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Kyoto;change_of_magnitude-eng-3.0-00351485-n"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Kyoto3Middle;end-quality"/>
+                <owl:someValuesFrom rdf:resource="&Kyoto3Middle;increased"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#indefinite_quantity-eng-3.0-13576355-n -->
+
+    <owl:Class rdf:about="&Kyoto;indefinite_quantity-eng-3.0-13576355-n">
+        <rdfs:label
+            >indefinite_quantity</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&DOLCE-Lite;physical-region"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DOLCE-Lite;q-location-of"/>
+                <owl:someValuesFrom rdf:resource="&Kyoto;quantity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment
+            >an estimated quantity</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#inflammation__redness__rubor-eng-3.0-14336539-n -->
+
+    <owl:Class rdf:about="&Kyoto;inflammation__redness__rubor-eng-3.0-14336539-n">
+        <rdfs:label
+            >inflammation__redness__rubor</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Kyoto;symptom-eng-3.0-14299637-n"/>
+        <rdfs:comment
+            >a response of body tissues to injury or irritation; characterized by pain and swelling and redness and heat</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#injury__hurt__harm__trauma-eng-3.0-14285662-n -->
+
+    <owl:Class rdf:about="&Kyoto;injury__hurt__harm__trauma-eng-3.0-14285662-n">
+        <rdfs:label
+            >injury__hurt__harm__trauma</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ExtendedDnS;situation"/>
+        <rdfs:comment
+            >any physical damage to the body caused by violence or accident or fracture etc.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#kingdom -->
+
+    <owl:Class rdf:about="&Kyoto;kingdom">
+        <rdfs:label>kingdom</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&CommonSenseMapping;country"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#large_integer-eng-3.0-13745420-n -->
+
+    <owl:Class rdf:about="&Kyoto;large_integer-eng-3.0-13745420-n">
+        <rdfs:label>large_integer</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Kyoto;number-eng-3.0-13582013-n"/>
+        <rdfs:comment
+            >an integer equal to or greater than ten</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#law__law_of_nature-eng-3.0-05872982-n -->
+
+    <owl:Class rdf:about="&Kyoto;law__law_of_nature-eng-3.0-05872982-n">
+        <rdfs:label
+            >law__law_of_nature</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ExtendedDnS;theory"/>
+        <rdfs:comment
+            >a generalization that describes recurring facts or events in nature</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#leaf_leafage_foliaget-eng-3.0-13152742-n -->
+
+    <owl:Class rdf:about="&Kyoto;leaf_leafage_foliaget-eng-3.0-13152742-n">
+        <rdfs:label
+            >leaf_leafage_foliaget</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Kyoto;plant_part_plant_structure-eng-3.0-13086908-n"/>
+        <rdfs:comment
+            >the main organ of photosynthesis and transpiration in higher plants</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#legal_document__legal_instrument__official_document__instrument-eng-3.0-06479665-n -->
+
+    <owl:Class rdf:about="&Kyoto;legal_document__legal_instrument__official_document__instrument-eng-3.0-06479665-n">
+        <rdfs:label
+            >legal_document__legal_instrument__official_document__instrument</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Kyoto;writing__written_material__piece_of_writing-eng-3.0-06362953-n"/>
+        <rdfs:comment
+            >(law) a document that states some contractual relationship or grants some right</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#length -->
+
+    <owl:Class rdf:about="&Kyoto;length">
+        <rdfs:label>length</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Kyoto;magnitude-eng-3.0-05090441-n"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DOLCE-Lite;q-location"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&Kyoto;linear_unit_linear__measure-eng-3.0-13603305-n"/>
+                            <rdf:Description rdf:about="&TopKyoto22;indefinite_quality_region"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#letter__letter_of_the_alphabet__alphabetic_character-eng-3.0-06828818-n -->
+
+    <owl:Class rdf:about="&Kyoto;letter__letter_of_the_alphabet__alphabetic_character-eng-3.0-06828818-n">
+        <rdfs:label
+            >letter__letter_of_the_alphabet__alphabetic_character</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&InformationObjects;linguistic-object"/>
+        <rdfs:comment
+            >the conventional characters of the alphabet used to represent speech</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#linear_unit_linear__measure-eng-3.0-13603305-n -->
+
+    <owl:Class rdf:about="&Kyoto;linear_unit_linear__measure-eng-3.0-13603305-n">
+        <rdfs:label
+            >linear_unit_linear__measure</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Kyoto3Middle;physical_units_of_measure"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DOLCE-Lite;q-location-of"/>
+                <owl:someValuesFrom rdf:resource="&Kyoto;length"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment
+            >a unit of measurement of length</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#liquid_body_substance_bodily_fluid_body_fluid_humor_humour-eng-3.0-05397468-n -->
+
+    <owl:Class rdf:about="&Kyoto;liquid_body_substance_bodily_fluid_body_fluid_humor_humour-eng-3.0-05397468-n">
+        <rdfs:label
+            >liquid_body_substance_bodily_fluid_body_fluid_humor_humour</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&DOLCE-Lite;amount-of-matter"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DOLCE-Lite;has-quality"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&DOLCE-Lite;quality"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&DOLCE-Lite;q-location"/>
+                                <owl:someValuesFrom rdf:resource="&Kyoto3Middle;liquid"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment
+            >the liquid parts of the body</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#list__listing-eng-3.0-06481320-n -->
+
+    <owl:Class rdf:about="&Kyoto;list__listing-eng-3.0-06481320-n">
+        <rdfs:label>list__listing</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&SemioticCommunicationTheory;interpretation-situation"/>
+        <rdfs:comment
+            >a database containing an ordered array of items (names or topics)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#magnitude-eng-3.0-05090441-n -->
+
+    <owl:Class rdf:about="&Kyoto;magnitude-eng-3.0-05090441-n">
+        <rdfs:label>magnitude</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Kyoto;measure__quantity__amount-eng-3.0-00033615-n"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DOLCE-Lite;q-location"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&Kyoto;unit_of_measurement__unit-eng-3.0-13583724-n"/>
+                            <rdf:Description rdf:about="&TopKyoto22;indefinite_quality_region"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#management-eng-3.0-01133281-n -->
+
+    <owl:Class rdf:about="&Kyoto;management-eng-3.0-01133281-n">
+        <rdfs:label>management</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ExtendedDnS;activity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&FunctionalParticipation;patient"/>
+                <owl:someValuesFrom rdf:resource="&DOLCE-Lite;endurant"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#mass -->
+
+    <owl:Class rdf:about="&Kyoto;mass">
+        <rdfs:label>mass</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Kyoto;magnitude-eng-3.0-05090441-n"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DOLCE-Lite;q-location"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&Kyoto;mass_unit_eng-3.0-13609214-n"/>
+                            <rdf:Description rdf:about="&TopKyoto22;indefinite_quality_region"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#mass_unit_eng-3.0-13609214-n -->
+
+    <owl:Class rdf:about="&Kyoto;mass_unit_eng-3.0-13609214-n">
+        <rdfs:label>mass unit</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Kyoto3Middle;physical_units_of_measure"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DOLCE-Lite;q-location-of"/>
+                <owl:someValuesFrom rdf:resource="&Kyoto;mass"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#material__stuff-eng-3.0-14580897-n -->
+
+    <owl:Class rdf:about="&Kyoto;material__stuff-eng-3.0-14580897-n">
+        <rdfs:label>material__stuff</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&DOLCE-Lite;amount-of-matter"/>
+        <rdfs:comment
+            >the tangible substance that goes into the makeup of a physical object</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#measure__quantity__amount-eng-3.0-00033615-n -->
+
+    <owl:Class rdf:about="&Kyoto;measure__quantity__amount-eng-3.0-00033615-n">
+        <rdfs:label
+            >measure__quantitiy__amount</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&DOLCE-Lite;physical-quality"/>
+        <rdfs:comment
+            >how much there is or how many there are of something that you can quantify</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#medicine__medical_specialty-eng-3.0-06043075-n -->
+
+    <owl:Class rdf:about="&Kyoto;medicine__medical_specialty-eng-3.0-06043075-n">
+        <rdfs:label
+            >medicine__medical_specialty</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Kyoto;discipline__subject__subject_area__subject_field__field__field_of_study__study__bailiwic-eng-3.0-05996646-n"/>
+        <rdfs:comment
+            >the branches of medical science that deal with nonsurgical techniques</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#membrane_tissue_layer-eng-3.0-05426243-n -->
+
+    <owl:Class rdf:about="&Kyoto;membrane_tissue_layer-eng-3.0-05426243-n">
+        <rdfs:label
+            >membrane_tissue_layer</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Kyoto;animal_tissue-eng-3.0-05267548-n"/>
+        <rdfs:comment
+            >a pliable sheet of tissue that covers or lines or connects the organs or cells of animals or plants</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#message__content__subject_matter__substance-eng-3.0-06598915-n -->
+
+    <owl:Class rdf:about="&Kyoto;message__content__subject_matter__substance-eng-3.0-06598915-n">
+        <rdfs:label
+            >message__content__subject_matter__substance</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ExtendedDnS;situation"/>
+        <rdfs:comment
+            >what a communication that is about something is about</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#military_unit_military_force_military_group_force-eng-3.0-08198398-n -->
+
+    <owl:Class rdf:about="&Kyoto;military_unit_military_force_military_group_force-eng-3.0-08198398-n">
+        <rdfs:label
+            >military_unit_military_force_military_group_force</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ExtendedDnS;agentive-figure"/>
+        <rdfs:comment
+            >a unit that is part of some military service</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#monetary_unit_eng-3.0-13604718-n -->
+
+    <owl:Class rdf:about="&Kyoto;monetary_unit_eng-3.0-13604718-n">
+        <rdfs:label>monetary unit</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Kyoto;unit_of_measurement__unit-eng-3.0-13583724-n"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#motion__movement__move__motility-eng-3.0-00331950-n -->
+
+    <owl:Class rdf:about="&Kyoto;motion__movement__move__motility-eng-3.0-00331950-n">
+        <rdfs:label
+            >motion__movement__move__motility</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Kyoto3Middle;physical-change"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Kyoto3Middle;pertinent-quality"/>
+                <owl:someValuesFrom rdf:resource="&Kyoto3Middle;position"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment
+            >a change of position that does not entail a change of location</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#music-eng-3.0-07020895-n -->
+
+    <owl:Class rdf:about="&Kyoto;music-eng-3.0-07020895-n">
+        <rdfs:label>music</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&InformationObjects;information-realization"/>
+        <rdfs:comment
+            >an artistic form of auditory communication incorporating instrumental or vocal tones in a structured and continuous manner</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#musical_notation-eng-3.0-06814870-n -->
+
+    <owl:Class rdf:about="&Kyoto;musical_notation-eng-3.0-06814870-n">
+        <rdfs:label
+            >musical_notation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&InformationObjects;information-realization"/>
+        <rdfs:comment
+            >(music) notation used by musicians</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#mythical_being-eng-3.0-09484664-n -->
+
+    <owl:Class rdf:about="&Kyoto;mythical_being-eng-3.0-09484664-n">
+        <rdfs:label>mythical_being</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ExtendedDnS;agentive-figure"/>
+        <rdfs:comment
+            >an imaginary being of myth or fable</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#natural_object-eng-3.0-00019128-n -->
+
+    <owl:Class rdf:about="&Kyoto;natural_object-eng-3.0-00019128-n">
+        <rdfs:label>natural_object</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Kyoto;object__physical_object-eng-3.0-00002684-n"/>
+        <rdfs:comment
+            >an object occurring naturally; not made by man</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#natural_process__natural_action-eng-3.0-13518963-n -->
+
+    <owl:Class rdf:about="&Kyoto;natural_process__natural_action-eng-3.0-13518963-n">
+        <rdfs:label
+            >natural_process__natural_action</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Kyoto;physical_phenomenon-eng-3.0-11419404-n"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DOLCE-Lite;participant"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:complementOf rdf:resource="&ExtendedDnS;agent"/>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment
+            >a process existing in or produced by nature (rather than by the intent of human beings)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#non-governmental_organization -->
+
+    <owl:Class rdf:about="&Kyoto;non-governmental_organization">
+        <rdfs:label
+            >non-governmental organization</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Kyoto;organization_organisation-eng-3.0-08008335-n"/>
+        <rdfs:comment>{08008335}</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#number-eng-3.0-13582013-n -->
+
+    <owl:Class rdf:about="&Kyoto;number-eng-3.0-13582013-n">
+        <rdfs:label>number</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&DOLCE-Lite;physical-region"/>
+        <rdfs:comment
+            >a concept of quantity involving zero and units</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#nutriment__nourishment__nutrition__sustenance__aliment__alimentation__victuals-eng-3.0-07570720-n -->
+
+    <owl:Class rdf:about="&Kyoto;nutriment__nourishment__nutrition__sustenance__aliment__alimentation__victuals-eng-3.0-07570720-n">
+        <rdfs:label
+            >nutriment__nourishment__nutrition__sustenance__aliment__alimentation__victuals</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Kyoto;food__nutrient-eng-3.0-00021265-n"/>
+        <rdfs:comment
+            >a source of materials to nourish the body</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#object__physical_object-eng-3.0-00002684-n -->
+
+    <owl:Class rdf:about="&Kyoto;object__physical_object-eng-3.0-00002684-n">
+        <rdfs:label
+            >object__physical_object</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&DOLCE-Lite;physical-object"/>
+        <rdfs:comment
+            >a tangible and visible entity; an entity that can cast a shadow</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#observing_eng-3.0-00879759-n -->
+
+    <owl:Class rdf:about="&Kyoto;observing_eng-3.0-00879759-n">
+        <rdfs:subClassOf rdf:resource="&DOLCE-Lite;process"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Kyoto;done-by"/>
+                <owl:someValuesFrom rdf:resource="&ExtendedDnS;agent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&FunctionalParticipation;patient"/>
+                <owl:someValuesFrom rdf:resource="&DOLCE-Lite;endurant"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>observing</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#order-eng-3.0-08106934-n -->
+
+    <owl:Class rdf:about="&Kyoto;order-eng-3.0-08106934-n">
+        <rdfs:label>order</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Kyoto;taxonomic-group"/>
+        <rdfs:comment
+            >(biology) taxonomic group containing one or more families</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#organic_process_biological_process-eng-3.0-13526110-n -->
+
+    <owl:Class rdf:about="&Kyoto;organic_process_biological_process-eng-3.0-13526110-n">
+        <rdfs:label
+            >organic_process_biological_process</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Kyoto;natural_process__natural_action-eng-3.0-13518963-n"/>
+        <rdfs:comment
+            >a process occurring in living organisms</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#organism__being-eng-3.0-00004475-n -->
+
+    <owl:Class rdf:about="&Kyoto;organism__being-eng-3.0-00004475-n">
+        <rdfs:label>organism__being</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Kyoto;natural_object-eng-3.0-00019128-n"/>
+        <rdfs:comment
+            >This node is added to allow for a common grouping of plant and animal terms without making a commitment to the intentionality of organism.  In general it is assumed that organisms are constituted by non-agentive objects.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#organization_organisation-eng-3.0-08008335-n -->
+
+    <owl:Class rdf:about="&Kyoto;organization_organisation-eng-3.0-08008335-n">
+        <rdfs:label
+            >organization_organisation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&SocialUnits;organization"/>
+        <rdfs:comment
+            >a group of people who work together</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#passive-change-of-location -->
+
+    <owl:Class rdf:about="&Kyoto;passive-change-of-location">
+        <rdfs:label
+            >passive change of location</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Kyoto;change_of_location__movement_11-eng-3.0-00280586n"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&FunctionalParticipation;patient"/>
+                <owl:someValuesFrom rdf:resource="&DOLCE-Lite;endurant"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment
+            >a transitive change of location</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#pathology-eng-3.0-14204950-n -->
+
+    <owl:Class rdf:about="&Kyoto;pathology-eng-3.0-14204950-n">
+        <rdfs:label>pathology</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ExtendedDnS;situation"/>
+        <rdfs:comment
+            >any deviation from a healthy or normal condition</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#payment-eng-3.0.13278375-n -->
+
+    <owl:Class rdf:about="&Kyoto;payment-eng-3.0.13278375-n">
+        <rdfs:label>payment</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&CommonSenseMapping;commerce-role"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#people-eng-3.0-07942152-n -->
+
+    <owl:Class rdf:about="&Kyoto;people-eng-3.0-07942152-n">
+        <rdfs:label>people</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Collectives;type-based-collective"/>
+        <rdfs:comment
+            >(plural) any group of human beings (men or women or children) collectively</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#periodic_event__recurrent_event-eng-3.0-07296190-n -->
+
+    <owl:Class rdf:about="&Kyoto;periodic_event__recurrent_event-eng-3.0-07296190-n">
+        <rdfs:label>periodic event</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&DOLCE-Lite;accomplishment"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DOLCE-Lite;has-quality"/>
+                <owl:someValuesFrom rdf:resource="&Kyoto;frequency"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#permanence -->
+
+    <owl:Class rdf:about="&Kyoto;permanence">
+        <rdfs:label>permanence</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&TopKyoto3;dispositional"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#person__individual__someone__somebody__mortal__soul-eng-3.0-00007846-n -->
+
+    <owl:Class rdf:about="&Kyoto;person__individual__someone__somebody__mortal__soul-eng-3.0-00007846-n">
+        <rdfs:label
+            >person__individual__someone__somebody__mortal__soul</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&SocialUnits;socially-constructed-person"/>
+        <rdfs:comment>a human being</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#physical_phenomenon-eng-3.0-11419404-n -->
+
+    <owl:Class rdf:about="&Kyoto;physical_phenomenon-eng-3.0-11419404-n">
+        <rdfs:label
+            >physical_phenomenon</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ExtendedDnS;physical-phenomenon"/>
+        <rdfs:comment
+            >a natural phenomenon involving the physical properties of matter and energy</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#physicist-eng-3.0-10428004-n -->
+
+    <owl:Class rdf:about="&Kyoto;physicist-eng-3.0-10428004-n">
+        <rdfs:label>physicist</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ExtendedDnS;agent-driven-role"/>
+        <rdfs:comment
+            >a scientist trained in physics</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#pitched_battle-eng-3.0-00956485-n -->
+
+    <owl:Class rdf:about="&Kyoto;pitched_battle-eng-3.0-00956485-n">
+        <rdfs:label>pitched_battle</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ExtendedDnS;activity"/>
+        <rdfs:comment
+            >a fierce battle fought in close combat between troops in predetermined positions at a chosen time and place</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#plant-role -->
+
+    <owl:Class rdf:about="&Kyoto;plant-role">
+        <rdfs:label>plant-role</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&Kyoto3Middle;organism-role"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&ExtendedDnS;played-by"/>
+                        <owl:allValuesFrom rdf:resource="&Kyoto;plant__flora__plant_life-eng-3.0-00017222-n"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#plant__flora__plant_life-eng-3.0-00017222-n -->
+
+    <owl:Class rdf:about="&Kyoto;plant__flora__plant_life-eng-3.0-00017222-n">
+        <rdfs:label
+            >plant__flora__plant_life</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Kyoto;organism__being-eng-3.0-00004475-n"/>
+        <rdfs:comment
+            >(botany) a living organism lacking the power of locomotion</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#plant_part_plant_structure-eng-3.0-13086908-n -->
+
+    <owl:Class rdf:about="&Kyoto;plant_part_plant_structure-eng-3.0-13086908-n">
+        <rdfs:label
+            >plant_part_plant_structure</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&CommonSenseMapping;biological-object"/>
+        <rdfs:comment
+            >any part of a plant or fungus</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#platform-eng-3.0-03961939-n -->
+
+    <owl:Class rdf:about="&Kyoto;platform-eng-3.0-03961939-n">
+        <rdfs:label>platform</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Kyoto;surface-eng-3.0-04362025-n"/>
+        <rdfs:comment
+            >a raised horizontal surface</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#political_orientation__ideology__political_theory-eng-3.0-06212839-n -->
+
+    <owl:Class rdf:about="&Kyoto;political_orientation__ideology__political_theory-eng-3.0-06212839-n">
+        <rdfs:label
+            >political_orientation__ideology__political_theory</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ExtendedDnS;social-description"/>
+        <rdfs:comment
+            >an orientation that characterizes the thinking of a group or nation</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#position__post__berth__office__spot__billet__place__situation-eng-3.0-00586262-n -->
+
+    <owl:Class rdf:about="&Kyoto;position__post__berth__office__spot__billet__place__situation-eng-3.0-00586262-n">
+        <rdfs:label
+            >position__post__berth__office__spot__billet__place__situation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ExtendedDnS;non-agentive-social-object"/>
+        <rdfs:comment
+            >a job in an organization</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#position__spatial_relation-eng-3.0-05074774-n -->
+
+    <owl:Class rdf:about="&Kyoto;position__spatial_relation-eng-3.0-05074774-n">
+        <rdfs:label
+            >position__spatial_relation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ExtendedDnS;relation"/>
+        <rdfs:comment
+            >the spatial property of a place where or way in which something is situated</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#possession_1__ownership_2-eng-3.0-00809465-n -->
+
+    <owl:Class rdf:about="&Kyoto;possession_1__ownership_2-eng-3.0-00809465-n">
+        <rdfs:label>possession</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Kyoto3Middle;relational_state"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Kyoto;done-by"/>
+                <owl:someValuesFrom rdf:resource="&DOLCE-Lite;endurant"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&FunctionalParticipation;patient"/>
+                <owl:someValuesFrom rdf:resource="&DOLCE-Lite;endurant"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#program__programme__computer_program__computer_programme-eng-3.0-06568978-n -->
+
+    <owl:Class rdf:about="&Kyoto;program__programme__computer_program__computer_programme-eng-3.0-06568978-n">
+        <rdfs:label
+            >program__programme__computer_program__computer_programme</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&InformationObjects;information-realization"/>
+        <rdfs:comment
+            >(computer science) a sequence of instructions that a computer can interpret and execute</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#property-eng-3.0-04916342-n -->
+
+    <owl:Class rdf:about="&Kyoto;property-eng-3.0-04916342-n">
+        <rdfs:label>property</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&DOLCE-Lite;quality"/>
+        <rdfs:comment
+            >a basic or essential attribute shared by all members of a class</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#protection_eng-3.0-00817680-n -->
+
+    <owl:Class rdf:about="&Kyoto;protection_eng-3.0-00817680-n">
+        <rdfs:subClassOf rdf:resource="&DOLCE-Lite;process"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&FunctionalParticipation;patient"/>
+                <owl:someValuesFrom rdf:resource="&DOLCE-Lite;endurant"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>protection</rdfs:comment>
+        <rdfs:comment
+            >the activity of protecting someone or something:</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#protein-eng-3.0-14728724-n -->
+
+    <owl:Class rdf:about="&Kyoto;protein-eng-3.0-14728724-n">
+        <rdfs:label>protein</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&DOLCE-Lite;amount-of-matter"/>
+        <rdfs:comment
+            >any of a large group of nitrogenous organic compounds that are essential constituents of living cells; consist of polymers of amino acids; essential in the diet of animals for growth and for repair of tissues; can be obtained from meat and eggs and milk and legumes</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#providing__supplying-eng-3.0-01057200-n -->
+
+    <owl:Class rdf:about="&Kyoto;providing__supplying-eng-3.0-01057200-n">
+        <rdfs:label>providing</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&DOLCE-Lite;accomplishment"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Kyoto;has-source"/>
+                <owl:someValuesFrom rdf:resource="&DOLCE-Lite;endurant"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Kyoto;has-destination"/>
+                <owl:someValuesFrom rdf:resource="&DOLCE-Lite;endurant"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&FunctionalParticipation;patient"/>
+                <owl:someValuesFrom rdf:resource="&DOLCE-Lite;endurant"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#purification-eng-3.0-00253270-n -->
+
+    <owl:Class rdf:about="&Kyoto;purification-eng-3.0-00253270-n">
+        <rdfs:label>purification</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Kyoto;improvement-eng-3.0-00248977-n"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#quality-eng-3.0-04723816-n -->
+
+    <owl:Class rdf:about="&Kyoto;quality-eng-3.0-04723816-n">
+        <rdfs:label>quality</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&DOLCE-Lite;quality"/>
+        <rdfs:comment
+            >an essential and distinguishing attribute of something or someone</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#quantity -->
+
+    <owl:Class rdf:about="&Kyoto;quantity">
+        <rdfs:label>quantity</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Kyoto;measure__quantity__amount-eng-3.0-00033615-n"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DOLCE-Lite;q-location"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&Kyoto;number-eng-3.0-13582013-n"/>
+                            <rdf:Description rdf:about="&TopKyoto22;indefinite_quality_region"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#rank-eng-3.0-14429985-n -->
+
+    <owl:Class rdf:about="&Kyoto;rank-eng-3.0-14429985-n">
+        <rdfs:label>rank</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&DOLCE-Lite;abstract-quality"/>
+        <rdfs:comment>relative status</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#rate-eng-3.0-15286249-n -->
+
+    <owl:Class rdf:about="&Kyoto;rate-eng-3.0-15286249-n">
+        <rdfs:label>rate</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ExtendedDnS;indicator"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#reappearance-eng-3.0-07321967-n -->
+
+    <owl:Class rdf:about="&Kyoto;reappearance-eng-3.0-07321967-n">
+        <rdfs:label>reappearance</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Kyoto;appearance-eng-3.0-07321772-n"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#recoverability -->
+
+    <owl:Class rdf:about="&Kyoto;recoverability">
+        <rdfs:label>recoverability</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&TopKyoto3;dispositional"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#recreation-eng-3.0-00426928-n -->
+
+    <owl:Class rdf:about="&Kyoto;recreation-eng-3.0-00426928-n">
+        <rdfs:label>recreation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ExtendedDnS;activity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#region__space__space_region-eng-3.0-08630039-n -->
+
+    <owl:Class rdf:about="&Kyoto;region__space__space_region-eng-3.0-08630039-n">
+        <rdfs:label
+            >region__space__space_region</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&DOLCE-Lite;space-region"/>
+        <rdfs:comment
+            >the extended spatial location of something</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#relation-eng-3.0-00031921-n -->
+
+    <owl:Class rdf:about="&Kyoto;relation-eng-3.0-00031921-n">
+        <rdfs:label>relation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ExtendedDnS;relation"/>
+        <rdfs:comment
+            >an abstraction belonging to or characteristic of two entities or parts together</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#removal-eng-3.0-00391599-n -->
+
+    <owl:Class rdf:about="&Kyoto;removal-eng-3.0-00391599-n">
+        <rdfs:label>removal</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Kyoto;change_of_integrity-eng-3.0-00376063-n"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#representation-eng-3.0-04076846-n -->
+
+    <owl:Class rdf:about="&Kyoto;representation-eng-3.0-04076846-n">
+        <rdfs:label>representation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&InformationObjects;information-realization"/>
+        <rdfs:comment
+            >a creation that is a visual or tangible rendering of someone or something</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#reproductive_structure-eng-3.0-11675842-n -->
+
+    <owl:Class rdf:about="&Kyoto;reproductive_structure-eng-3.0-11675842-n">
+        <rdfs:label
+            >reproductive_structure</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Kyoto;plant_part_plant_structure-eng-3.0-13086908-n"/>
+        <rdfs:comment
+            >the parts of a plant involved in its reproduction</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#research_1-eng-3.0-00636921-n -->
+
+    <owl:Class rdf:about="&Kyoto;research_1-eng-3.0-00636921-n">
+        <rdfs:label>research</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Plans;information-gathering"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#right-eng-3.0-05174653-n -->
+
+    <owl:Class rdf:about="&Kyoto;right-eng-3.0-05174653-n">
+        <rdfs:label>right</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ExtendedDnS;regulation"/>
+        <rdfs:comment
+            >an abstract idea of that which is due to a person or governmental body by law or tradition or nature; it is something that nobody can take away&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#sacred_text__sacred_writing__religious_writing__religious_text-eng-3.0-06429590-n -->
+
+    <owl:Class rdf:about="&Kyoto;sacred_text__sacred_writing__religious_writing__religious_text-eng-3.0-06429590-n">
+        <rdfs:label
+            >sacred_text__sacred_writing__religious_writing__religious_text</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&InformationObjects;information-realization"/>
+        <rdfs:comment
+            >writing that is venerated for the worship of a deity</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#school-eng-3.0-08276720-n -->
+
+    <owl:Class rdf:about="&Kyoto;school-eng-3.0-08276720-n">
+        <rdfs:label>school</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&SocialUnits;institution"/>
+        <rdfs:comment
+            >an educational institution</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#season-eng-3.0-15239579-n -->
+
+    <owl:Class rdf:about="&Kyoto;season-eng-3.0-15239579-n">
+        <rdfs:label>season</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Kyoto;time_period__period_of_time__period-eng-3.0-15113229-n"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#signal__signaling__sign-eng-3.0-06791372-n -->
+
+    <owl:Class rdf:about="&Kyoto;signal__signaling__sign-eng-3.0-06791372-n">
+        <rdfs:label
+            >signal__signaling__sign</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&InformationObjects;linguistic-object"/>
+        <rdfs:comment
+            >any nonverbal action or gesture that encodes a message</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#site-eng-3.0-08651247-n -->
+
+    <owl:Class rdf:about="&Kyoto;site-eng-3.0-08651247-n">
+        <rdfs:label>site</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Kyoto;geographical_area__geographic_area__geographical_region__geographic_region-eng-3.0-08574314-n"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#skeletal_muscle__striated_muscle-eng-3.0-05289861-n -->
+
+    <owl:Class rdf:about="&Kyoto;skeletal_muscle__striated_muscle-eng-3.0-05289861-n">
+        <rdfs:label
+            >skeletal_muscle__striated_muscle</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Kyoto;membrane_tissue_layer-eng-3.0-05426243-n"/>
+        <rdfs:comment
+            >a muscle that is connected at either or both ends to a bone and so move parts of the skeleton; a muscle that is characterized by transverse stripes</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#sound-eng-3.0-07371293-n -->
+
+    <owl:Class rdf:about="&Kyoto;sound-eng-3.0-07371293-n">
+        <rdfs:label>sound</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&DOLCE-Lite;event"/>
+        <rdfs:comment
+            >the sudden occurrence of an audible event</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#species-eng-3.0-08110373-n -->
+
+    <owl:Class rdf:about="&Kyoto;species-eng-3.0-08110373-n">
+        <rdfs:label>species</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Kyoto;taxonomic-group"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&DOLCE-Lite;generic-constituent"/>
+                        <owl:someValuesFrom rdf:resource="&Kyoto;organism__being-eng-3.0-00004475-n"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&DOLCE-Lite;generic-constituent"/>
+                        <owl:allValuesFrom rdf:resource="&Kyoto;organism__being-eng-3.0-00004475-n"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:comment
+            >((biology) taxonomic group whose members can interbreed)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#species-role -->
+
+    <owl:Class rdf:about="&Kyoto;species-role">
+        <rdfs:label>species-role</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Kyoto;taxonomic-group-role"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ExtendedDnS;played-by"/>
+                <owl:allValuesFrom rdf:resource="&Kyoto;species-eng-3.0-08110373-n"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#speed -->
+
+    <owl:Class rdf:about="&Kyoto;speed">
+        <rdfs:label>speed</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Kyoto;magnitude-eng-3.0-05090441-n"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DOLCE-Lite;q-location"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&Kyoto;speed_unit"/>
+                            <rdf:Description rdf:about="&TopKyoto22;indefinite_quality_region"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#speed_unit -->
+
+    <owl:Class rdf:about="&Kyoto;speed_unit">
+        <rdfs:label>speed unit</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Kyoto3Middle;physical_units_of_measure"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DOLCE-Lite;q-location-of"/>
+                <owl:someValuesFrom rdf:resource="&Kyoto;speed"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#sport__athletics-eng-3.0-00523513-n -->
+
+    <owl:Class rdf:about="&Kyoto;sport__athletics-eng-3.0-00523513-n">
+        <rdfs:label
+            >sport__athletics</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Kyoto;recreation-eng-3.0-00426928-n"/>
+        <rdfs:comment
+            >an active diversion requiring physical exertion and competition</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#state-eng-3.0-00024720-n -->
+
+    <owl:Class rdf:about="&Kyoto;state-eng-3.0-00024720-n">
+        <rdfs:label>state</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ExtendedDnS;situation"/>
+        <rdfs:comment
+            >the way something is with respect to its main attributes</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#state__province-eng-3.0-08654360-n -->
+
+    <owl:Class rdf:about="&Kyoto;state__province-eng-3.0-08654360-n">
+        <rdfs:label>state__province</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Kyoto;district__territory__territorial_dominion__dominion-eng-3.0-08552138-n"/>
+        <rdfs:comment
+            >the territory occupied by one of the constituent administrative districts of a nation</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#statement-eng-3.0-06722453-n -->
+
+    <owl:Class rdf:about="&Kyoto;statement-eng-3.0-06722453-n">
+        <rdfs:label>statement</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Kyoto;message__content__subject_matter__substance-eng-3.0-06598915-n"/>
+        <rdfs:comment
+            >a message that is stated or declared; a communication (oral or written) setting forth particulars or facts etc</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#structure__anatomical_structure__complex_body_part__bodily_structure__body_structure-eng-3.0-05225602-n -->
+
+    <owl:Class rdf:about="&Kyoto;structure__anatomical_structure__complex_body_part__bodily_structure__body_structure-eng-3.0-05225602-n">
+        <rdfs:label
+            >structure__anatomical_structure__complex_body_part__bodily_structure__body_structure</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Kyoto;body_part-eng-3.0-05220461-n"/>
+        <rdfs:comment
+            >a particular complex anatomical part of a living thing</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#substance-eng-3.0-00020090-n -->
+
+    <owl:Class rdf:about="&Kyoto;substance-eng-3.0-00020090-n">
+        <rdfs:label>substance</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&DOLCE-Lite;amount-of-matter"/>
+        <rdfs:comment
+            >a particular kind or species of matter with uniform properties</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#surface-eng-3.0-04362025-n -->
+
+    <owl:Class rdf:about="&Kyoto;surface-eng-3.0-04362025-n">
+        <rdfs:label>surface</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&DOLCE-Lite;relevant-part"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#symptom-eng-3.0-14299637-n -->
+
+    <owl:Class rdf:about="&Kyoto;symptom-eng-3.0-14299637-n">
+        <rdfs:label>symptom</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ExtendedDnS;situation"/>
+        <rdfs:comment
+            >(medicine) any sensation or change in bodily function that is experienced by a patient and is associated with a particular disease</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#system_system_of_rules-eng-3.0-05661996-n -->
+
+    <owl:Class rdf:about="&Kyoto;system_system_of_rules-eng-3.0-05661996-n">
+        <rdfs:label
+            >system_system_of_rules</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ExtendedDnS;technique"/>
+        <rdfs:comment
+            >a complex of methods or rules governing behavior</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#taxonomic-group -->
+
+    <owl:Class rdf:about="&Kyoto;taxonomic-group">
+        <rdfs:label>taxonomic-group</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Collections;physical-plurality"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#taxonomic-group-role -->
+
+    <owl:Class rdf:about="&Kyoto;taxonomic-group-role">
+        <rdfs:label
+            >taxonomic-group-role</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&TopKyoto3;physical-plurality-role"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ExtendedDnS;played-by"/>
+                <owl:allValuesFrom rdf:resource="&Kyoto;taxonomic-group"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#temperature -->
+
+    <owl:Class rdf:about="&Kyoto;temperature">
+        <rdfs:label>temperature</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&DOLCE-Lite;physical-quality"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DOLCE-Lite;q-location"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&Kyoto;temperature_unit-eng-3.0-13608598-n"/>
+                            <rdf:Description rdf:about="&TopKyoto22;indefinite_quality_region"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#temperature_unit-eng-3.0-13608598-n -->
+
+    <owl:Class rdf:about="&Kyoto;temperature_unit-eng-3.0-13608598-n">
+        <rdfs:label
+            >temperature unit</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Kyoto3Middle;physical_units_of_measure"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DOLCE-Lite;q-location-of"/>
+                <owl:someValuesFrom rdf:resource="&Kyoto;temperature"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#tenure-eng-3.0-13242719n -->
+
+    <owl:Class rdf:about="&Kyoto;tenure-eng-3.0-13242719n">
+        <rdfs:label>tenure</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Kyoto;right-eng-3.0-05174653-n"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#termination__ending__conclusion-eng-3.0-00209943-n -->
+
+    <owl:Class rdf:about="&Kyoto;termination__ending__conclusion-eng-3.0-00209943-n">
+        <rdfs:label
+            >termination__ending__conclusion</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&DOLCE-Lite;achievement"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&TemporalRelations;concludes"/>
+                <owl:someValuesFrom rdf:resource="&DOLCE-Lite;perdurant"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment
+            >the act of ending something</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#terrorist_organization-eng-3.0-08392137-n -->
+
+    <owl:Class rdf:about="&Kyoto;terrorist_organization-eng-3.0-08392137-n">
+        <rdfs:label
+            >terrorist_organization</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ExtendedDnS;agent-driven-role"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#text__textual_matter-eng-3.0-06387980-n -->
+
+    <owl:Class rdf:about="&Kyoto;text__textual_matter-eng-3.0-06387980-n">
+        <rdfs:label
+            >text__textual_matter</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&InformationObjects;information-realization"/>
+        <rdfs:comment
+            >the words of something written</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#therapy-eng-3.0-00661091-n -->
+
+    <owl:Class rdf:about="&Kyoto;therapy-eng-3.0-00661091-n">
+        <rdfs:label>therapy</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ExtendedDnS;activity"/>
+        <rdfs:comment
+            >(medicine) the act of caring for someone (as by medication or remedial training etc.)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#things_organisms_do -->
+
+    <owl:Class rdf:about="&Kyoto;things_organisms_do">
+        <rdfs:label
+            >things organisms do</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&DOLCE-Lite;accomplishment"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Kyoto;done-by"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&Kyoto;organism__being-eng-3.0-00004475-n"/>
+                            <rdf:Description rdf:about="&Collections;physical-plurality"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#time_period__period_of_time__period-eng-3.0-15113229-n -->
+
+    <owl:Class rdf:about="&Kyoto;time_period__period_of_time__period-eng-3.0-15113229-n">
+        <rdfs:label
+            >time_period__period_of_time__period</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&DOLCE-Lite;temporal-region"/>
+        <rdfs:comment
+            >an amount of time</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#topographic_point_eng-3.0-08664443-n -->
+
+    <owl:Class rdf:about="&Kyoto;topographic_point_eng-3.0-08664443-n">
+        <rdfs:label
+            >topographic point</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&CommonSenseMapping;spatial-feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#town-eng-3.0-08665504-n -->
+
+    <owl:Class rdf:about="&Kyoto;town-eng-3.0-08665504-n">
+        <rdfs:label>town</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Kyoto;district__territory__territorial_dominion__dominion-eng-3.0-08552138-n"/>
+        <rdfs:comment
+            >an urban area with a fixed boundary that is smaller than a city</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#trait-eng-3.0-04616059-n -->
+
+    <owl:Class rdf:about="&Kyoto;trait-eng-3.0-04616059-n">
+        <rdfs:label>trait</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&DOLCE-Lite;quality"/>
+        <rdfs:comment
+            >a distinguishing feature of your personal nature</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#treatment__handling-eng-3.0-01134861-n -->
+
+    <owl:Class rdf:about="&Kyoto;treatment__handling-eng-3.0-01134861-n">
+        <rdfs:subClassOf rdf:resource="&ExtendedDnS;activity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&FunctionalParticipation;patient"/>
+                <owl:someValuesFrom rdf:resource="&DOLCE-Lite;endurant"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment
+            >treatment__handling</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#tube__tubing-eng-3.0-04493505-n -->
+
+    <owl:Class rdf:about="&Kyoto;tube__tubing-eng-3.0-04493505-n">
+        <rdfs:label>tube__tubing</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Kyoto;artifact__artefact-eng-3.0-00021939-n"/>
+        <rdfs:comment
+            >conduit consisting of a long hollow object (usually cylindrical) used to hold and conduct objects or liquids or gases</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#tumor__tumour__neoplasm-eng-3.0-14235200-n -->
+
+    <owl:Class rdf:about="&Kyoto;tumor__tumour__neoplasm-eng-3.0-14235200-n">
+        <rdfs:label
+            >tumor__tumour__neoplasm</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ExtendedDnS;situation"/>
+        <rdfs:comment
+            >an abnormal new mass of tissue that serves no purpose</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#unit_of_measurement__unit-eng-3.0-13583724-n -->
+
+    <owl:Class rdf:about="&Kyoto;unit_of_measurement__unit-eng-3.0-13583724-n">
+        <rdfs:label
+            >unit_of_measurement__unit</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Kyoto;definite_quantity-eng-3.0-13576101-n"/>
+        <rdfs:comment
+            >any division of quantity accepted as a standard of measurement or exchange</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#unity -->
+
+    <owl:Class rdf:about="&Kyoto;unity">
+        <rdfs:label>unity</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&DOLCE-Lite;quality"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#use -->
+
+    <owl:Class rdf:about="&Kyoto;use">
+        <rdfs:subClassOf rdf:resource="&ExtendedDnS;activity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&FunctionalParticipation;use-of"/>
+                <owl:someValuesFrom rdf:resource="&DOLCE-Lite;endurant"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>use</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#utterance__vocalization-eng-3.0-07109847-n -->
+
+    <owl:Class rdf:about="&Kyoto;utterance__vocalization-eng-3.0-07109847-n">
+        <rdfs:label
+            >utterance__vocalization</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&InformationObjects;information-realization"/>
+        <rdfs:comment
+            >the use of uttered sounds for auditory communication</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#vein__vena__venous_blood__vessel-eng-3.0-05418717-n -->
+
+    <owl:Class rdf:about="&Kyoto;vein__vena__venous_blood__vessel-eng-3.0-05418717-n">
+        <rdfs:label
+            >vein__vena__venous_blood__vessel</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Kyoto;structure__anatomical_structure__complex_body_part__bodily_structure__body_structure-eng-3.0-05225602-n"/>
+        <rdfs:comment
+            >a blood vessel that carries blood from the capillaries toward the heart</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#volume -->
+
+    <owl:Class rdf:about="&Kyoto;volume">
+        <rdfs:label>volume</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Kyoto;magnitude-eng-3.0-05090441-n"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DOLCE-Lite;q-location"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&MiddleKyoto2;volume_unit-eng-3.0-13600822-n"/>
+                            <rdf:Description rdf:about="&TopKyoto22;indefinite_quality_region"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#vulnerability -->
+
+    <owl:Class rdf:about="&Kyoto;vulnerability">
+        <rdfs:label>vulnerability</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&TopKyoto3;dispositional"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#weapon__arm__weapon_system-eng-3.0-04565375-n -->
+
+    <owl:Class rdf:about="&Kyoto;weapon__arm__weapon_system-eng-3.0-04565375-n">
+        <rdfs:label
+            >weapon__arm__weapon_system</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Kyoto;artifact-role"/>
+        <rdfs:comment
+            >any instrument or instrumentality used in fighting or hunting</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#weed-eng-3.0-13085113-n -->
+
+    <owl:Class rdf:about="&Kyoto;weed-eng-3.0-13085113-n">
+        <rdfs:label>weed</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Kyoto;plant-role"/>
+        <rdfs:comment
+            >any plant that crowds out cultivated plants</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#weight -->
+
+    <owl:Class rdf:about="&Kyoto;weight">
+        <rdfs:label>weight</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Kyoto;magnitude-eng-3.0-05090441-n"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DOLCE-Lite;q-location"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&Kyoto;weight_unit-eng-3.0-13608788-n"/>
+                            <rdf:Description rdf:about="&TopKyoto22;indefinite_quality_region"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#weight_unit-eng-3.0-13608788-n -->
+
+    <owl:Class rdf:about="&Kyoto;weight_unit-eng-3.0-13608788-n">
+        <rdfs:label>weight unit</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Kyoto3Middle;physical_units_of_measure"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DOLCE-Lite;q-location-of"/>
+                <owl:someValuesFrom rdf:resource="&Kyoto;weight"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#width -->
+
+    <owl:Class rdf:about="&Kyoto;width">
+        <rdfs:label>width</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Kyoto;length"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#wildflower__wild_flower-eng-3.0-11672400-n -->
+
+    <owl:Class rdf:about="&Kyoto;wildflower__wild_flower-eng-3.0-11672400-n">
+        <rdfs:label
+            >wildflower__wild_flower</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Kyoto;flower-eng-3.0-11669921-n"/>
+        <rdfs:comment>double check</rdfs:comment>
+        <rdfs:comment
+            >wild or uncultivated flowering plant</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#word-eng-3.0-06286395-n -->
+
+    <owl:Class rdf:about="&Kyoto;word-eng-3.0-06286395-n">
+        <rdfs:label>word</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&InformationObjects;linguistic-object"/>
+        <rdfs:comment
+            >a unit of language that native speakers can identify</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#workplace__work-eng-3.0-04602044-n -->
+
+    <owl:Class rdf:about="&Kyoto;workplace__work-eng-3.0-04602044-n">
+        <rdfs:label>workplace__work</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&CommonSenseMapping;locative-role"/>
+        <rdfs:comment
+            >a place where work is done</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#writing__written_material__piece_of_writing-eng-3.0-06362953-n -->
+
+    <owl:Class rdf:about="&Kyoto;writing__written_material__piece_of_writing-eng-3.0-06362953-n">
+        <rdfs:label
+            >writing__written_material__piece_of_writing</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&InformationObjects;information-realization"/>
+        <rdfs:comment
+            >the work of a writer; anything expressed in letters of the alphabet (especially when considered from the point of view of style and effect)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto3Middle#abstract-change -->
+
+    <owl:Class rdf:about="&Kyoto3Middle;abstract-change">
+        <rdfs:subClassOf rdf:resource="&Kyoto;change-eng-3.0-00191142-n"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Kyoto3Middle;initial-quality"/>
+                <owl:someValuesFrom rdf:resource="&DOLCE-Lite;abstract-region"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Kyoto3Middle;end-quality"/>
+                <owl:someValuesFrom rdf:resource="&DOLCE-Lite;abstract-region"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment
+            >e.g., a change in scope from local to global would be subsumed here.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto3Middle#abstract_state -->
+
+    <owl:Class rdf:about="&Kyoto3Middle;abstract_state">
+        <rdfs:subClassOf rdf:resource="&DOLCE-Lite;state"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Kyoto3Middle;pertinent-quality"/>
+                <owl:someValuesFrom rdf:resource="&DOLCE-Lite;abstract-quality"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto3Middle#amount-of-matter-change -->
+
+    <owl:Class rdf:about="&Kyoto3Middle;amount-of-matter-change">
+        <rdfs:subClassOf rdf:resource="&Kyoto3Middle;physical-change"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Kyoto3Middle;initial-quality"/>
+                <owl:someValuesFrom rdf:resource="&TopKyoto2;amount-of-matter-region"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Kyoto3Middle;end-quality"/>
+                <owl:someValuesFrom rdf:resource="&TopKyoto2;amount-of-matter-region"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto3Middle#amount-of-matter-state -->
+
+    <owl:Class rdf:about="&Kyoto3Middle;amount-of-matter-state">
+        <rdfs:subClassOf rdf:resource="&Kyoto3Middle;physical_state"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto3Middle#beneficial -->
+
+    <owl:Class rdf:about="&Kyoto3Middle;beneficial">
+        <rdfs:subClassOf rdf:resource="&Kyoto3Middle;goodness_region"/>
+        <rdfs:subClassOf rdf:resource="&TopKyoto2;dispositional-region"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto3Middle#decreased -->
+
+    <owl:Class rdf:about="&Kyoto3Middle;decreased">
+        <rdfs:subClassOf rdf:resource="&Kyoto3Middle;product_of_change"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DOLCE-Lite;q-location-of"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&DOLCE-Lite;quality"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&DOLCE-Lite;inherent-in"/>
+                                <owl:someValuesFrom rdf:resource="&DOLCE-Lite;quality"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Kyoto3Middle;end-quality-of"/>
+                <owl:someValuesFrom rdf:resource="&Kyoto;decrease_in_magnitude"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto3Middle#dispositional_state -->
+
+    <owl:Class rdf:about="&Kyoto3Middle;dispositional_state">
+        <rdfs:subClassOf rdf:resource="&DOLCE-Lite;state"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Kyoto3Middle;pertinent-quality"/>
+                <owl:someValuesFrom rdf:resource="&TopKyoto3;dispositional"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto3Middle#evaluation -->
+
+    <owl:Class rdf:about="&Kyoto3Middle;evaluation">
+        <rdfs:subClassOf rdf:resource="&DOLCE-Lite;perdurant"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Kyoto3Middle;pertinent-quality"/>
+                <owl:someValuesFrom rdf:resource="&Kyoto3Middle;evaluative"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto3Middle#evaluative -->
+
+    <owl:Class rdf:about="&Kyoto3Middle;evaluative">
+        <rdfs:subClassOf rdf:resource="&DOLCE-Lite;quality"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DOLCE-Lite;q-location"/>
+                <owl:someValuesFrom rdf:resource="&Kyoto3Middle;evaluative-region"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto3Middle#evaluative-region -->
+
+    <owl:Class rdf:about="&Kyoto3Middle;evaluative-region">
+        <rdfs:subClassOf rdf:resource="&DOLCE-Lite;region"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DOLCE-Lite;q-location-of"/>
+                <owl:someValuesFrom rdf:resource="&Kyoto3Middle;evaluative"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto3Middle#evaluative_state -->
+
+    <owl:Class rdf:about="&Kyoto3Middle;evaluative_state">
+        <rdfs:subClassOf rdf:resource="&DOLCE-Lite;state"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Kyoto3Middle;pertinent-quality"/>
+                <owl:someValuesFrom rdf:resource="&Kyoto3Middle;evaluative"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto3Middle#feature-change -->
+
+    <owl:Class rdf:about="&Kyoto3Middle;feature-change">
+        <rdfs:subClassOf rdf:resource="&Kyoto3Middle;physical-change"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Kyoto3Middle;initial-quality"/>
+                <owl:someValuesFrom rdf:resource="&TopKyoto2;feature-region"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Kyoto3Middle;end-quality"/>
+                <owl:someValuesFrom rdf:resource="&TopKyoto2;feature-region"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto3Middle#feature-state -->
+
+    <owl:Class rdf:about="&Kyoto3Middle;feature-state">
+        <rdfs:subClassOf rdf:resource="&Kyoto3Middle;physical_state"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto3Middle#frequency-change -->
+
+    <owl:Class rdf:about="&Kyoto3Middle;frequency-change">
+        <rdfs:subClassOf rdf:resource="&Kyoto3Middle;temporal-change"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Kyoto3Middle;initial-quality"/>
+                <owl:someValuesFrom rdf:resource="&MiddleKyoto22;frequency-region"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Kyoto3Middle;end-quality"/>
+                <owl:someValuesFrom rdf:resource="&MiddleKyoto22;frequency-region"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto3Middle#gaseous -->
+
+    <owl:Class rdf:about="&Kyoto3Middle;gaseous">
+        <rdfs:subClassOf rdf:resource="&Kyoto3Middle;phase-region"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto3Middle#goodness -->
+
+    <owl:Class rdf:about="&Kyoto3Middle;goodness">
+        <rdfs:subClassOf rdf:resource="&Kyoto3Middle;evaluative"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DOLCE-Lite;q-location"/>
+                <owl:someValuesFrom rdf:resource="&Kyoto3Middle;goodness_region"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto3Middle#goodness_region -->
+
+    <owl:Class rdf:about="&Kyoto3Middle;goodness_region">
+        <rdfs:subClassOf rdf:resource="&Kyoto3Middle;evaluative-region"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DOLCE-Lite;q-location-of"/>
+                <owl:allValuesFrom rdf:resource="&Kyoto3Middle;goodness"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto3Middle#importance_region -->
+
+    <owl:Class rdf:about="&Kyoto3Middle;importance_region">
+        <rdfs:subClassOf rdf:resource="&Kyoto3Middle;evaluative-region"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DOLCE-Lite;q-location-of"/>
+                <owl:allValuesFrom rdf:resource="&Kyoto;importance"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto3Middle#increased -->
+
+    <owl:Class rdf:about="&Kyoto3Middle;increased">
+        <rdfs:subClassOf rdf:resource="&Kyoto3Middle;product_of_change"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DOLCE-Lite;q-location-of"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&DOLCE-Lite;quality"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&DOLCE-Lite;inherent-in"/>
+                                <owl:someValuesFrom rdf:resource="&DOLCE-Lite;quality"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Kyoto3Middle;end-quality-of"/>
+                <owl:someValuesFrom rdf:resource="&Kyoto;increase_in_magnitude"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto3Middle#length_region -->
+
+    <owl:Class rdf:about="&Kyoto3Middle;length_region">
+        <rdfs:subClassOf rdf:resource="&TopKyoto2;feature-region"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DOLCE-Lite;q-location-of"/>
+                <owl:someValuesFrom rdf:resource="&Kyoto;length"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto3Middle#liquid -->
+
+    <owl:Class rdf:about="&Kyoto3Middle;liquid">
+        <rdfs:subClassOf rdf:resource="&Kyoto3Middle;phase-region"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto3Middle#natural-object-role -->
+
+    <owl:Class rdf:about="&Kyoto3Middle;natural-object-role">
+        <rdfs:subClassOf rdf:resource="&TopKyoto3;physical-object-role"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ExtendedDnS;played-by"/>
+                <owl:allValuesFrom rdf:resource="&Kyoto;natural_object-eng-3.0-00019128-n"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto3Middle#object-role -->
+
+    <owl:Class rdf:about="&Kyoto3Middle;object-role">
+        <rdfs:subClassOf rdf:resource="&TopKyoto3;physical-object-role"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ExtendedDnS;played-by"/>
+                <owl:allValuesFrom rdf:resource="&Kyoto;object__physical_object-eng-3.0-00002684-n"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto3Middle#organism-role -->
+
+    <owl:Class rdf:about="&Kyoto3Middle;organism-role">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&Kyoto3Middle;natural-object-role"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&ExtendedDnS;played-by"/>
+                        <owl:allValuesFrom rdf:resource="&Kyoto;organism__being-eng-3.0-00004475-n"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto3Middle#phase -->
+
+    <owl:Class rdf:about="&Kyoto3Middle;phase">
+        <rdfs:subClassOf rdf:resource="&TopKyoto3;amount-of-matter-quality"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto3Middle#phase-region -->
+
+    <owl:Class rdf:about="&Kyoto3Middle;phase-region">
+        <rdfs:subClassOf rdf:resource="&TopKyoto2;amount-of-matter-region"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DOLCE-Lite;q-location-of"/>
+                <owl:allValuesFrom rdf:resource="&Kyoto3Middle;phase"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto3Middle#physical-change -->
+
+    <owl:Class rdf:about="&Kyoto3Middle;physical-change">
+        <rdfs:subClassOf rdf:resource="&Kyoto;change-eng-3.0-00191142-n"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Kyoto3Middle;end-quality"/>
+                <owl:someValuesFrom rdf:resource="&DOLCE-Lite;physical-region"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Kyoto3Middle;initial-quality"/>
+                <owl:someValuesFrom rdf:resource="&DOLCE-Lite;physical-region"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto3Middle#physical-object-change -->
+
+    <owl:Class rdf:about="&Kyoto3Middle;physical-object-change">
+        <rdfs:subClassOf rdf:resource="&Kyoto3Middle;physical-change"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Kyoto3Middle;end-quality"/>
+                <owl:someValuesFrom rdf:resource="&TopKyoto2;physical-object-region"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Kyoto3Middle;initial-quality"/>
+                <owl:someValuesFrom rdf:resource="&TopKyoto2;physical-object-region"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto3Middle#physical-object-state -->
+
+    <owl:Class rdf:about="&Kyoto3Middle;physical-object-state">
+        <rdfs:subClassOf rdf:resource="&Kyoto3Middle;physical_state"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto3Middle#physical_state -->
+
+    <owl:Class rdf:about="&Kyoto3Middle;physical_state">
+        <rdfs:subClassOf rdf:resource="&DOLCE-Lite;state"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Kyoto3Middle;pertinent-quality"/>
+                <owl:someValuesFrom rdf:resource="&DOLCE-Lite;physical-quality"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto3Middle#physical_units_of_measure -->
+
+    <owl:Class rdf:about="&Kyoto3Middle;physical_units_of_measure">
+        <rdfs:subClassOf rdf:resource="&Kyoto;unit_of_measurement__unit-eng-3.0-13583724-n"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto3Middle#position -->
+
+    <owl:Class rdf:about="&Kyoto3Middle;position">
+        <rdfs:subClassOf rdf:resource="&TopKyoto3;physical-object-quality"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto3Middle#product_of_change -->
+
+    <owl:Class rdf:about="&Kyoto3Middle;product_of_change">
+        <rdfs:subClassOf rdf:resource="&DOLCE-Lite;region"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Kyoto3Middle;end-quality-of"/>
+                <owl:someValuesFrom rdf:resource="&Kyoto;change-eng-3.0-00191142-n"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto3Middle#reduced -->
+
+    <owl:Class rdf:about="&Kyoto3Middle;reduced">
+        <rdfs:subClassOf rdf:resource="&Kyoto3Middle;product_of_change"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Kyoto3Middle;end-quality-of"/>
+                <owl:someValuesFrom rdf:resource="&Kyoto;decrease_in_magnitude"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto3Middle#relational_state -->
+
+    <owl:Class rdf:about="&Kyoto3Middle;relational_state">
+        <rdfs:subClassOf rdf:resource="&DOLCE-Lite;state"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Kyoto3Middle;pertinent-quality"/>
+                <owl:someValuesFrom rdf:resource="&TopKyoto3;relational"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto3Middle#shape -->
+
+    <owl:Class rdf:about="&Kyoto3Middle;shape">
+        <rdfs:subClassOf rdf:resource="&TopKyoto3;feature-quality"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DOLCE-Lite;q-location"/>
+                <owl:someValuesFrom rdf:resource="&Kyoto3Middle;shape_region"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto3Middle#shape_region -->
+
+    <owl:Class rdf:about="&Kyoto3Middle;shape_region">
+        <rdfs:subClassOf rdf:resource="&TopKyoto2;feature-region"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DOLCE-Lite;q-location-of"/>
+                <owl:someValuesFrom rdf:resource="&Kyoto3Middle;shape"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto3Middle#size -->
+
+    <owl:Class rdf:about="&Kyoto3Middle;size">
+        <rdfs:subClassOf rdf:resource="&Kyoto;magnitude-eng-3.0-05090441-n"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto3Middle#solid -->
+
+    <owl:Class rdf:about="&Kyoto3Middle;solid">
+        <rdfs:subClassOf rdf:resource="&Kyoto3Middle;phase-region"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto3Middle#temporal-change -->
+
+    <owl:Class rdf:about="&Kyoto3Middle;temporal-change">
+        <rdfs:subClassOf rdf:resource="&Kyoto;change-eng-3.0-00191142-n"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Kyoto3Middle;initial-quality"/>
+                <owl:someValuesFrom rdf:resource="&DOLCE-Lite;temporal-region"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Kyoto3Middle;end-quality"/>
+                <owl:someValuesFrom rdf:resource="&DOLCE-Lite;temporal-region"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment
+            >Changes in the properties inherent in a perdurant.
+e.g. a change in frequency</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto3Middle#temporal_state -->
+
+    <owl:Class rdf:about="&Kyoto3Middle;temporal_state">
+        <rdfs:subClassOf rdf:resource="&DOLCE-Lite;state"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Kyoto3Middle;pertinent-quality"/>
+                <owl:someValuesFrom rdf:resource="&DOLCE-Lite;temporal-quality"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/MiddleKyoto2#volume_unit-eng-3.0-13600822-n -->
+
+    <owl:Class rdf:about="&MiddleKyoto2;volume_unit-eng-3.0-13600822-n">
+        <rdfs:label>volume unit</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Kyoto3Middle;physical_units_of_measure"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DOLCE-Lite;q-location-of"/>
+                <owl:someValuesFrom rdf:resource="&Kyoto;volume"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/MiddleKyoto2/MiddleKyoto2.1#frequency-region -->
+
+    <owl:Class rdf:about="&MiddleKyoto22;frequency-region">
+        <rdfs:subClassOf rdf:resource="&DOLCE-Lite;temporal-region"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DOLCE-Lite;q-location-of"/>
+                <owl:someValuesFrom rdf:resource="&Kyoto;frequency"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/TopKyoto2/TopKyoto2#indefinite_quality_region -->
+
+    <owl:Class rdf:about="&TopKyoto22;indefinite_quality_region"/>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/TopKyoto2/TopKyoto2.1#amount-of-matter-region -->
+
+    <owl:Class rdf:about="&TopKyoto2;amount-of-matter-region"/>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/TopKyoto2/TopKyoto2.1#dispositional-region -->
+
+    <owl:Class rdf:about="&TopKyoto2;dispositional-region"/>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/TopKyoto2/TopKyoto2.1#feature-region -->
+
+    <owl:Class rdf:about="&TopKyoto2;feature-region"/>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/TopKyoto2/TopKyoto2.1#physical-object-region -->
+
+    <owl:Class rdf:about="&TopKyoto2;physical-object-region"/>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/TopKyoto3#amount-of-matter-quality -->
+
+    <owl:Class rdf:about="&TopKyoto3;amount-of-matter-quality">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DOLCE-Lite;q-location"/>
+                <owl:allValuesFrom rdf:resource="&Kyoto3Middle;phase-region"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/TopKyoto3#dispositional -->
+
+    <owl:Class rdf:about="&TopKyoto3;dispositional"/>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/TopKyoto3#feature-quality -->
+
+    <owl:Class rdf:about="&TopKyoto3;feature-quality"/>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/TopKyoto3#material-artifact-role -->
+
+    <owl:Class rdf:about="&TopKyoto3;material-artifact-role"/>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/TopKyoto3#physical-object-quality -->
+
+    <owl:Class rdf:about="&TopKyoto3;physical-object-quality"/>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/TopKyoto3#physical-object-role -->
+
+    <owl:Class rdf:about="&TopKyoto3;physical-object-role"/>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/TopKyoto3#physical-plurality-role -->
+
+    <owl:Class rdf:about="&TopKyoto3;physical-plurality-role"/>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/TopKyoto3#relational -->
+
+    <owl:Class rdf:about="&TopKyoto3;relational"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/Collections.owl#non-physical-collection -->
+
+    <owl:Class rdf:about="&Collections;non-physical-collection">
+        <rdfs:label
+            >non-physical-collection</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/Collections.owl#physical-plurality -->
+
+    <owl:Class rdf:about="&Collections;physical-plurality">
+        <rdfs:label
+            >physical-plurality</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/Collectives.owl#simple-planned-collective -->
+
+    <owl:Class rdf:about="&Collectives;simple-planned-collective">
+        <rdfs:label
+            >simple-planned-collective</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/Collectives.owl#type-based-collective -->
+
+    <owl:Class rdf:about="&Collectives;type-based-collective">
+        <rdfs:label
+            >type-based-collective</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/CommonSenseMapping.owl#biological-object -->
+
+    <owl:Class rdf:about="&CommonSenseMapping;biological-object">
+        <rdfs:label
+            >biological-object</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/CommonSenseMapping.owl#collection-role -->
+
+    <owl:Class rdf:about="&CommonSenseMapping;collection-role">
+        <rdfs:label>collection-role</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/CommonSenseMapping.owl#commerce-role -->
+
+    <owl:Class rdf:about="&CommonSenseMapping;commerce-role">
+        <rdfs:label>commerce-role</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/CommonSenseMapping.owl#country -->
+
+    <owl:Class rdf:about="&CommonSenseMapping;country">
+        <rdfs:label>country</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/CommonSenseMapping.owl#geographical-object -->
+
+    <owl:Class rdf:about="&CommonSenseMapping;geographical-object">
+        <rdfs:label
+            >geographical-object</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/CommonSenseMapping.owl#geographical-place -->
+
+    <owl:Class rdf:about="&CommonSenseMapping;geographical-place">
+        <rdfs:label
+            >geographical-place</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/CommonSenseMapping.owl#locative-role -->
+
+    <owl:Class rdf:about="&CommonSenseMapping;locative-role">
+        <rdfs:label>locative-role</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/CommonSenseMapping.owl#spatial-feature -->
+
+    <owl:Class rdf:about="&CommonSenseMapping;spatial-feature">
+        <rdfs:label>spatial-feature</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/CommonSenseMapping.owl#substance-role -->
+
+    <owl:Class rdf:about="&CommonSenseMapping;substance-role">
+        <rdfs:label>substance-role</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#abstract-quality -->
+
+    <owl:Class rdf:about="&DOLCE-Lite;abstract-quality">
+        <rdfs:label
+            >abstract-quality</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#abstract-region -->
+
+    <owl:Class rdf:about="&DOLCE-Lite;abstract-region">
+        <rdfs:label>abstract-region</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#accomplishment -->
+
+    <owl:Class rdf:about="&DOLCE-Lite;accomplishment"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#achievement -->
+
+    <owl:Class rdf:about="&DOLCE-Lite;achievement"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#amount-of-matter -->
+
+    <owl:Class rdf:about="&DOLCE-Lite;amount-of-matter">
+        <rdfs:label
+            >amount-of-matter</rdfs:label>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DOLCE-Lite;has-quality"/>
+                <owl:someValuesFrom rdf:resource="&Kyoto;quantity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DOLCE-Lite;has-quality"/>
+                <owl:someValuesFrom rdf:resource="&Kyoto;mass"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#endurant -->
+
+    <owl:Class rdf:about="&DOLCE-Lite;endurant"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#event -->
+
+    <owl:Class rdf:about="&DOLCE-Lite;event">
+        <rdfs:label>event</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#particular -->
+
+    <owl:Class rdf:about="&DOLCE-Lite;particular">
+        <rdfs:label>particular</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#perdurant -->
+
+    <owl:Class rdf:about="&DOLCE-Lite;perdurant"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#physical-endurant -->
+
+    <owl:Class rdf:about="&DOLCE-Lite;physical-endurant">
+        <rdfs:label
+            >physical-endurant</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#physical-object -->
+
+    <owl:Class rdf:about="&DOLCE-Lite;physical-object">
+        <rdfs:label>physical-object</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#physical-quality -->
+
+    <owl:Class rdf:about="&DOLCE-Lite;physical-quality">
+        <rdfs:label
+            >physical-quality</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#physical-region -->
+
+    <owl:Class rdf:about="&DOLCE-Lite;physical-region">
+        <rdfs:label>physical-region</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#process -->
+
+    <owl:Class rdf:about="&DOLCE-Lite;process"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#quality -->
+
+    <owl:Class rdf:about="&DOLCE-Lite;quality"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#region -->
+
+    <owl:Class rdf:about="&DOLCE-Lite;region">
+        <rdfs:label>region</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#relevant-part -->
+
+    <owl:Class rdf:about="&DOLCE-Lite;relevant-part">
+        <rdfs:label>relevant-part</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#space-region -->
+
+    <owl:Class rdf:about="&DOLCE-Lite;space-region">
+        <rdfs:label>space-region</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#spatial-location_q -->
+
+    <owl:Class rdf:about="&DOLCE-Lite;spatial-location_q">
+        <rdfs:label
+            >spatial-location_q</rdfs:label>
+        <rdfs:comment
+            >Every instance of 2spatial-location_q&quot; should have 
+1.an object property assertion using inherent-in (with some physical object)
+
+2. an a q-location</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#state -->
+
+    <owl:Class rdf:about="&DOLCE-Lite;state"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#temporal-quality -->
+
+    <owl:Class rdf:about="&DOLCE-Lite;temporal-quality"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#temporal-region -->
+
+    <owl:Class rdf:about="&DOLCE-Lite;temporal-region">
+        <rdfs:label>temporal-region</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#action -->
+
+    <owl:Class rdf:about="&ExtendedDnS;action">
+        <rdfs:label>action</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#activity -->
+
+    <owl:Class rdf:about="&ExtendedDnS;activity">
+        <rdfs:label>activity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#agent -->
+
+    <owl:Class rdf:about="&ExtendedDnS;agent"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#agent-driven-role -->
+
+    <owl:Class rdf:about="&ExtendedDnS;agent-driven-role">
+        <rdfs:label
+            >agent-driven-role</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#agentive-figure -->
+
+    <owl:Class rdf:about="&ExtendedDnS;agentive-figure">
+        <rdfs:label>agentive-figure</rdfs:label>
+        <rdfs:comment
+            >non-Rigid
+     all subsumbed terms should be non-rigid</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#cognitive-event -->
+
+    <owl:Class rdf:about="&ExtendedDnS;cognitive-event">
+        <rdfs:label>cognitive-event</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#collection -->
+
+    <owl:Class rdf:about="&ExtendedDnS;collection">
+        <rdfs:label>collection</rdfs:label>
+        <rdfs:comment
+            >07951464-n 14 366 collection aggregation accumulation assemblage
+00031264-n 03 794 group grouping</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#figure -->
+
+    <owl:Class rdf:about="&ExtendedDnS;figure">
+        <rdfs:label>figure</rdfs:label>
+        <rdfs:comment
+            >These are non-rigid terms that name individuals, e.g., &quot;the king of France&quot;.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#indicator -->
+
+    <owl:Class rdf:about="&ExtendedDnS;indicator">
+        <rdfs:label>indicator</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#information-encoding-system -->
+
+    <owl:Class rdf:about="&ExtendedDnS;information-encoding-system">
+        <rdfs:label
+            >information-encoding-system</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#material-artifact -->
+
+    <owl:Class rdf:about="&ExtendedDnS;material-artifact">
+        <rdfs:label
+            >material-artifact</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#non-agentive-social-object -->
+
+    <owl:Class rdf:about="&ExtendedDnS;non-agentive-social-object">
+        <rdfs:label
+            >non-agentive-social-object</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#physical-phenomenon -->
+
+    <owl:Class rdf:about="&ExtendedDnS;physical-phenomenon">
+        <rdfs:label
+            >physical-phenomenon</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#regulation -->
+
+    <owl:Class rdf:about="&ExtendedDnS;regulation">
+        <rdfs:label>regulation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#relation -->
+
+    <owl:Class rdf:about="&ExtendedDnS;relation">
+        <rdfs:label>relation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#role -->
+
+    <owl:Class rdf:about="&ExtendedDnS;role">
+        <rdfs:label>role</rdfs:label>
+        <rdfs:comment
+            >non-Rigid
+     All subsumbed terms should be non-Rigid
+
+There is a fine line between socially constructed persons and roles that (hyp) no longer exist if figure is eliminated.  For this reason, I will not move these terms until I make a determination about whether to keep or pitch &quot;figure&quot;.  Both socially constructed objects and roles are defined by descriptions and classify endurants.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#situation -->
+
+    <owl:Class rdf:about="&ExtendedDnS;situation">
+        <rdfs:label>situation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#social-description -->
+
+    <owl:Class rdf:about="&ExtendedDnS;social-description">
+        <rdfs:label
+            >social-description</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#social-relationship -->
+
+    <owl:Class rdf:about="&ExtendedDnS;social-relationship">
+        <rdfs:label
+            >social-relationship</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#technique -->
+
+    <owl:Class rdf:about="&ExtendedDnS;technique">
+        <rdfs:label>technique</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#theory -->
+
+    <owl:Class rdf:about="&ExtendedDnS;theory">
+        <rdfs:label>theory</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/InformationObjects.owl#classification-system -->
+
+    <owl:Class rdf:about="&InformationObjects;classification-system">
+        <rdfs:label
+            >classification-system</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/InformationObjects.owl#information-realization -->
+
+    <owl:Class rdf:about="&InformationObjects;information-realization">
+        <rdfs:label
+            >information-realization</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/InformationObjects.owl#linguistic-object -->
+
+    <owl:Class rdf:about="&InformationObjects;linguistic-object">
+        <rdfs:label
+            >linguistic-object</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/InformationObjects.owl#subject -->
+
+    <owl:Class rdf:about="&InformationObjects;subject">
+        <rdfs:label>subject</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/MentalObjects.owl#mental-object -->
+
+    <owl:Class rdf:about="&MentalObjects;mental-object">
+        <rdfs:label>mental-object</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/Plans.owl#information-gathering -->
+
+    <owl:Class rdf:about="&Plans;information-gathering"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/SemioticCommunicationTheory.owl#interpretation-situation -->
+
+    <owl:Class rdf:about="&SemioticCommunicationTheory;interpretation-situation">
+        <rdfs:label
+            >interpretation-situation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/SocialUnits.owl#institution -->
+
+    <owl:Class rdf:about="&SocialUnits;institution"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/SocialUnits.owl#organization -->
+
+    <owl:Class rdf:about="&SocialUnits;organization"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/SocialUnits.owl#socially-constructed-person -->
+
+    <owl:Class rdf:about="&SocialUnits;socially-constructed-person">
+        <rdfs:label
+            >socially-constructed-person</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#AllDisjointClasses -->
+
+    <owl:Class rdf:about="&owl;AllDisjointClasses">
+        <rdfs:label
+            >AllDisjointClasses</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#Thing -->
+
+    <owl:Class rdf:about="&owl;Thing"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#centigrade -->
+
+    <Kyoto:temperature_unit-eng-3.0-13608598-n rdf:about="&Kyoto;centigrade">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <rdfs:label>centigrade</rdfs:label>
+    </Kyoto:temperature_unit-eng-3.0-13608598-n>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#fahrenheit -->
+
+    <Kyoto:temperature_unit-eng-3.0-13608598-n rdf:about="&Kyoto;fahrenheit">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <rdfs:label>fahrenheit</rdfs:label>
+    </Kyoto:temperature_unit-eng-3.0-13608598-n>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#foot -->
+
+    <Kyoto:linear_unit_linear__measure-eng-3.0-13603305-n rdf:about="&Kyoto;foot">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <rdfs:label>foot</rdfs:label>
+    </Kyoto:linear_unit_linear__measure-eng-3.0-13603305-n>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#hectare -->
+
+    <owl:Thing rdf:about="&Kyoto;hectare">
+        <rdf:type rdf:resource="&Kyoto;area_unit"/>
+        <rdfs:label>hectare</rdfs:label>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#kilometre -->
+
+    <owl:Thing rdf:about="&Kyoto;kilometre">
+        <rdf:type rdf:resource="&Kyoto;linear_unit_linear__measure-eng-3.0-13603305-n"/>
+        <rdfs:label>kilometre</rdfs:label>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#metre -->
+
+    <Kyoto:linear_unit_linear__measure-eng-3.0-13603305-n rdf:about="&Kyoto;metre">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <rdfs:label>metre</rdfs:label>
+    </Kyoto:linear_unit_linear__measure-eng-3.0-13603305-n>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#millimeter -->
+
+    <Kyoto:linear_unit_linear__measure-eng-3.0-13603305-n rdf:about="&Kyoto;millimeter">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <rdfs:label>millimeter</rdfs:label>
+    </Kyoto:linear_unit_linear__measure-eng-3.0-13603305-n>
+    
+
+
+    <!-- http://www.kyoto-project.eu/ontologies/Kyoto#percentage -->
+
+    <Kyoto:unit_of_measurement__unit-eng-3.0-13583724-n rdf:about="&Kyoto;percentage">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <rdfs:label>percentage</rdfs:label>
+    </Kyoto:unit_of_measurement__unit-eng-3.0-13583724-n>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+

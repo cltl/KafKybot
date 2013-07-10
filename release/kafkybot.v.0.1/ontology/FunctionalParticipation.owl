@@ -1,0 +1,500 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY DOLCE-Lite "http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#" >
+    <!ENTITY ExtendedDnS "http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#" >
+    <!ENTITY TemporalRelations "http://www.loa-cnr.it/ontologies/TemporalRelations.owl#" >
+    <!ENTITY FunctionalParticipation "http://www.loa-cnr.it/ontologies/FunctionalParticipation.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.loa-cnr.it/ontologies/FunctionalParticipation.owl#"
+     xml:base="http://www.loa-cnr.it/ontologies/FunctionalParticipation.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:DOLCE-Lite="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:FunctionalParticipation="http://www.loa-cnr.it/ontologies/FunctionalParticipation.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:TemporalRelations="http://www.loa-cnr.it/ontologies/TemporalRelations.owl#"
+     xmlns:ExtendedDnS="http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#">
+    <owl:Ontology rdf:about="">
+        <owl:versionInfo rdf:datatype="&xsd;string">397</owl:versionInfo>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >An Ontology of functional participation relations, based on traditional literature on thematic roles. OWL engineering by Aldo Gangemi.</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Imports: Temporal, Extended DnS</rdfs:comment>
+        <owl:imports rdf:resource="http://www.loa-cnr.it/ontologies/ExtendedDnS.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#participant -->
+
+    <owl:ObjectProperty rdf:about="&DOLCE-Lite;participant"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#participant-in -->
+
+    <owl:ObjectProperty rdf:about="&DOLCE-Lite;participant-in"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#total-constant-participant -->
+
+    <owl:ObjectProperty rdf:about="&DOLCE-Lite;total-constant-participant"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#total-constant-participant-in -->
+
+    <owl:ObjectProperty rdf:about="&DOLCE-Lite;total-constant-participant-in"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/FunctionalParticipation.owl#causally-follows -->
+
+    <owl:ObjectProperty rdf:about="#causally-follows">
+        <rdfs:domain rdf:resource="&DOLCE-Lite;perdurant"/>
+        <rdfs:range rdf:resource="&ExtendedDnS;activity"/>
+        <owl:inverseOf rdf:resource="#causally-precedes"/>
+        <rdfs:subPropertyOf rdf:resource="&TemporalRelations;follows"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/FunctionalParticipation.owl#causally-precedes -->
+
+    <owl:ObjectProperty rdf:about="#causally-precedes">
+        <rdfs:range rdf:resource="&DOLCE-Lite;perdurant"/>
+        <rdfs:domain rdf:resource="&ExtendedDnS;activity"/>
+        <rdfs:subPropertyOf rdf:resource="&TemporalRelations;precedes"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/FunctionalParticipation.owl#functional-participant -->
+
+    <owl:ObjectProperty rdf:about="#functional-participant">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >This relation constrains participation within the scope of a description: a perdurant is participated by an object according to a description and its components.</rdfs:comment>
+        <rdfs:range rdf:resource="&DOLCE-Lite;endurant"/>
+        <rdfs:subPropertyOf rdf:resource="&DOLCE-Lite;participant"/>
+        <rdfs:domain rdf:resource="&DOLCE-Lite;perdurant"/>
+        <owl:inverseOf rdf:resource="#functional-participant-in"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/FunctionalParticipation.owl#functional-participant-in -->
+
+    <owl:ObjectProperty rdf:about="#functional-participant-in">
+        <rdfs:domain rdf:resource="&DOLCE-Lite;endurant"/>
+        <rdfs:subPropertyOf rdf:resource="&DOLCE-Lite;participant-in"/>
+        <rdfs:range rdf:resource="&DOLCE-Lite;perdurant"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/FunctionalParticipation.owl#generic-target -->
+
+    <owl:ObjectProperty rdf:about="#generic-target">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A functional participation relation holding between activities and targeted endurants.It catches the everyday language notion of being the destination of an action. Unfortunately, such a notion can&#39;t be formalized in general, because it is sensible to the particular plan that drives the action. Possibly, once a rich taxonomy of actions and related personal and social plans is developed, a better axiomatization can be provided.</rdfs:comment>
+        <rdfs:range rdf:resource="&DOLCE-Lite;endurant"/>
+        <rdfs:domain rdf:resource="&ExtendedDnS;activity"/>
+        <rdfs:subPropertyOf rdf:resource="#functional-participant"/>
+        <owl:inverseOf rdf:resource="#generic-target-of"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/FunctionalParticipation.owl#generic-target-of -->
+
+    <owl:ObjectProperty rdf:about="#generic-target-of">
+        <rdfs:domain rdf:resource="&DOLCE-Lite;endurant"/>
+        <rdfs:range rdf:resource="&ExtendedDnS;activity"/>
+        <rdfs:subPropertyOf rdf:resource="#functional-participant-in"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/FunctionalParticipation.owl#has-state -->
+
+    <owl:ObjectProperty rdf:about="#has-state">
+        <rdfs:domain rdf:resource="&DOLCE-Lite;endurant"/>
+        <rdfs:range rdf:resource="&DOLCE-Lite;state"/>
+        <rdfs:subPropertyOf rdf:resource="#substrate-of"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/FunctionalParticipation.owl#instrument -->
+
+    <owl:ObjectProperty rdf:about="#instrument">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A functional usage participation relation holding between activities and physical objects.It catches the everyday language notion of being the tool, support or devisce of an action. Unfortunately, such a notion can&#39;t be formalized in general, because it is sensible to the particular plan that drives the action. Possibly, once a rich taxonomy of actions and related personal and social plans is developed, a better axiomatization can be provided.</rdfs:comment>
+        <rdfs:range rdf:resource="&DOLCE-Lite;physical-object"/>
+        <rdfs:domain rdf:resource="&ExtendedDnS;activity"/>
+        <rdfs:subPropertyOf rdf:resource="#use-of"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/FunctionalParticipation.owl#instrument-of -->
+
+    <owl:ObjectProperty rdf:about="#instrument-of">
+        <rdfs:domain rdf:resource="&DOLCE-Lite;physical-object"/>
+        <rdfs:range rdf:resource="&ExtendedDnS;activity"/>
+        <owl:inverseOf rdf:resource="#instrument"/>
+        <rdfs:subPropertyOf rdf:resource="#used-in"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/FunctionalParticipation.owl#patient -->
+
+    <owl:ObjectProperty rdf:about="#patient">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A functional participation relation assuming a relatively static role played by the endurant (e.g. not conceiving a plan, being subjected to some manipulation without involvement, etc.).Unfortunately, such a notion can&#39;t be formalized in general, because it is sensible to the particular plan that drives the action. Possibly, once a rich taxonomy of actions and related personal and social plans is developed, a better axiomatization can be provided.</rdfs:comment>
+        <rdfs:range rdf:resource="&DOLCE-Lite;endurant"/>
+        <rdfs:domain rdf:resource="&DOLCE-Lite;perdurant"/>
+        <rdfs:subPropertyOf rdf:resource="#functional-participant"/>
+        <owl:inverseOf rdf:resource="#patient-of"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/FunctionalParticipation.owl#patient-of -->
+
+    <owl:ObjectProperty rdf:about="#patient-of">
+        <rdfs:domain rdf:resource="&DOLCE-Lite;endurant"/>
+        <rdfs:range rdf:resource="&DOLCE-Lite;perdurant"/>
+        <rdfs:subPropertyOf rdf:resource="#functional-participant-in"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/FunctionalParticipation.owl#performed-by -->
+
+    <owl:ObjectProperty rdf:about="#performed-by">
+        <rdfs:domain rdf:resource="&ExtendedDnS;action"/>
+        <rdfs:range rdf:resource="&ExtendedDnS;agent"/>
+        <rdfs:subPropertyOf rdf:resource="#functional-participant"/>
+        <owl:inverseOf rdf:resource="#performs"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/FunctionalParticipation.owl#performs -->
+
+    <owl:ObjectProperty rdf:about="#performs">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A functional participation relation holding between agents and actions. It catches the everyday language notion of being the initiator of an action, or having a leading or primary role. Unfortunately, such a notion can&#39;t be formalized in general, because it is sensible to the particular plan that drives the action. Possibly, once a rich taxonomy of actions and related personal and social plans is developed, a better axiomatization can be provided.</rdfs:comment>
+        <rdfs:range rdf:resource="&ExtendedDnS;action"/>
+        <rdfs:domain rdf:resource="&ExtendedDnS;agent"/>
+        <rdfs:subPropertyOf rdf:resource="#functional-participant-in"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/FunctionalParticipation.owl#prescribed-by -->
+
+    <owl:ObjectProperty rdf:about="#prescribed-by">
+        <rdfs:domain rdf:resource="&ExtendedDnS;action"/>
+        <rdfs:range rdf:resource="&ExtendedDnS;agent"/>
+        <rdfs:subPropertyOf rdf:resource="#performed-by"/>
+        <owl:inverseOf rdf:resource="#prescribes"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/FunctionalParticipation.owl#prescribes -->
+
+    <owl:ObjectProperty rdf:about="#prescribes">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >The power of enforcing a plan of action to other agents.</rdfs:comment>
+        <rdfs:range rdf:resource="&ExtendedDnS;action"/>
+        <rdfs:domain rdf:resource="&ExtendedDnS;agent"/>
+        <rdfs:subPropertyOf rdf:resource="#performs"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/FunctionalParticipation.owl#product -->
+
+    <owl:ObjectProperty rdf:about="#product">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A functional participation relation that assumes a meet relation between an activity and the life of an endurant.Unfortunately, such a notion can&#39;t be formalized in general, because it is sensible to the particular project that drives the action. Possibly, once a rich taxonomy of actions and related personal and social plans is developed, a better axiomatization can be provided.</rdfs:comment>
+        <rdfs:range rdf:resource="&DOLCE-Lite;endurant"/>
+        <rdfs:domain rdf:resource="&ExtendedDnS;activity"/>
+        <rdfs:subPropertyOf rdf:resource="#functional-participant"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/FunctionalParticipation.owl#product-of -->
+
+    <owl:ObjectProperty rdf:about="#product-of">
+        <rdfs:domain rdf:resource="&DOLCE-Lite;endurant"/>
+        <rdfs:range rdf:resource="&ExtendedDnS;activity"/>
+        <rdfs:subPropertyOf rdf:resource="#functional-participant-in"/>
+        <owl:inverseOf rdf:resource="#product"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/FunctionalParticipation.owl#resource -->
+
+    <owl:ObjectProperty rdf:about="#resource">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >An amount of matter can be a resource in some activity, if it has some role bound to the course that sequences the activity in a same description (typically a plan).</rdfs:comment>
+        <rdfs:range rdf:resource="&DOLCE-Lite;amount-of-matter"/>
+        <rdfs:domain rdf:resource="&ExtendedDnS;activity"/>
+        <rdfs:subPropertyOf rdf:resource="#use-of"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/FunctionalParticipation.owl#resource-for -->
+
+    <owl:ObjectProperty rdf:about="#resource-for">
+        <rdfs:domain rdf:resource="&DOLCE-Lite;amount-of-matter"/>
+        <rdfs:range rdf:resource="&ExtendedDnS;activity"/>
+        <owl:inverseOf rdf:resource="#resource"/>
+        <rdfs:subPropertyOf rdf:resource="#used-in"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/FunctionalParticipation.owl#result -->
+
+    <owl:ObjectProperty rdf:about="#result">
+        <rdfs:range rdf:resource="&DOLCE-Lite;perdurant"/>
+        <rdfs:domain rdf:resource="&ExtendedDnS;activity"/>
+        <rdfs:subPropertyOf rdf:resource="#causally-precedes"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/FunctionalParticipation.owl#result-of -->
+
+    <owl:ObjectProperty rdf:about="#result-of">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A perdurant p1 results from another one p2 if they are sequenced within a same course, if a same endurant participates in both perdurants, and if p1 follows p2.</rdfs:comment>
+        <rdfs:domain rdf:resource="&DOLCE-Lite;perdurant"/>
+        <rdfs:range rdf:resource="&ExtendedDnS;activity"/>
+        <rdfs:subPropertyOf rdf:resource="#causally-follows"/>
+        <owl:inverseOf rdf:resource="#result"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/FunctionalParticipation.owl#state-of -->
+
+    <owl:ObjectProperty rdf:about="#state-of">
+        <rdfs:range rdf:resource="&DOLCE-Lite;endurant"/>
+        <rdfs:domain rdf:resource="&DOLCE-Lite;state"/>
+        <owl:inverseOf rdf:resource="#has-state"/>
+        <rdfs:subPropertyOf rdf:resource="#substrate"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/FunctionalParticipation.owl#substrate -->
+
+    <owl:ObjectProperty rdf:about="#substrate">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A functional participation relation assuming a total constant participation, beyond certain roles and courses defined by a description.</rdfs:comment>
+        <rdfs:range rdf:resource="&DOLCE-Lite;endurant"/>
+        <rdfs:domain rdf:resource="&DOLCE-Lite;perdurant"/>
+        <rdfs:subPropertyOf rdf:resource="&DOLCE-Lite;total-constant-participant"/>
+        <rdfs:subPropertyOf rdf:resource="#functional-participant"/>
+        <owl:inverseOf rdf:resource="#substrate-of"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/FunctionalParticipation.owl#substrate-of -->
+
+    <owl:ObjectProperty rdf:about="#substrate-of">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A functional participation relation assuming a total constant participation, beyond certain roles and courses defined by a description.</rdfs:comment>
+        <rdfs:domain rdf:resource="&DOLCE-Lite;endurant"/>
+        <rdfs:range rdf:resource="&DOLCE-Lite;perdurant"/>
+        <rdfs:subPropertyOf rdf:resource="&DOLCE-Lite;total-constant-participant-in"/>
+        <rdfs:subPropertyOf rdf:resource="#functional-participant-in"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/FunctionalParticipation.owl#target -->
+
+    <owl:ObjectProperty rdf:about="#target">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Targeting at an endurant, which in principle can avoid bearing modifications.</rdfs:comment>
+        <rdfs:range rdf:resource="&DOLCE-Lite;endurant"/>
+        <rdfs:domain rdf:resource="&DOLCE-Lite;perdurant"/>
+        <rdfs:subPropertyOf rdf:resource="#patient"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/FunctionalParticipation.owl#target-of -->
+
+    <owl:ObjectProperty rdf:about="#target-of">
+        <rdfs:domain rdf:resource="&DOLCE-Lite;endurant"/>
+        <rdfs:range rdf:resource="&DOLCE-Lite;perdurant"/>
+        <rdfs:subPropertyOf rdf:resource="#patient-of"/>
+        <owl:inverseOf rdf:resource="#target"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/FunctionalParticipation.owl#theme -->
+
+    <owl:ObjectProperty rdf:about="#theme">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A perdurant can have some information object as patient participant, e.g. in a communication activity.</rdfs:comment>
+        <rdfs:domain rdf:resource="&DOLCE-Lite;perdurant"/>
+        <rdfs:range rdf:resource="&ExtendedDnS;information-object"/>
+        <rdfs:subPropertyOf rdf:resource="#patient"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/FunctionalParticipation.owl#theme-of -->
+
+    <owl:ObjectProperty rdf:about="#theme-of">
+        <rdfs:range rdf:resource="&DOLCE-Lite;perdurant"/>
+        <rdfs:domain rdf:resource="&ExtendedDnS;information-object"/>
+        <rdfs:subPropertyOf rdf:resource="#patient-of"/>
+        <owl:inverseOf rdf:resource="#theme"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/FunctionalParticipation.owl#use-of -->
+
+    <owl:ObjectProperty rdf:about="#use-of">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A functional participation between an action and an endurant that supports the goals of a performer.It catches the everyday language notion of being exploited during an action by someone/something that initiates or leads  it.Unfortunately, such a notion can&#39;t be formalized in general, because it is sensible to the particular plan that drives the action. Possibly, once a rich taxonomy of actions and related personal and social plans is developed, a better axiomatization can be provided.</rdfs:comment>
+        <rdfs:range rdf:resource="&DOLCE-Lite;endurant"/>
+        <rdfs:domain rdf:resource="&ExtendedDnS;action"/>
+        <rdfs:subPropertyOf rdf:resource="#functional-participant"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/FunctionalParticipation.owl#used-in -->
+
+    <owl:ObjectProperty rdf:about="#used-in">
+        <rdfs:domain rdf:resource="&DOLCE-Lite;endurant"/>
+        <rdfs:range rdf:resource="&ExtendedDnS;action"/>
+        <rdfs:subPropertyOf rdf:resource="#functional-participant-in"/>
+        <owl:inverseOf rdf:resource="#use-of"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/TemporalRelations.owl#follows -->
+
+    <owl:ObjectProperty rdf:about="&TemporalRelations;follows"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/TemporalRelations.owl#precedes -->
+
+    <owl:ObjectProperty rdf:about="&TemporalRelations;precedes">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#amount-of-matter -->
+
+    <owl:Class rdf:about="&DOLCE-Lite;amount-of-matter"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#endurant -->
+
+    <owl:Class rdf:about="&DOLCE-Lite;endurant"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#perdurant -->
+
+    <owl:Class rdf:about="&DOLCE-Lite;perdurant"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#physical-object -->
+
+    <owl:Class rdf:about="&DOLCE-Lite;physical-object"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#state -->
+
+    <owl:Class rdf:about="&DOLCE-Lite;state"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#action -->
+
+    <owl:Class rdf:about="&ExtendedDnS;action"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#activity -->
+
+    <owl:Class rdf:about="&ExtendedDnS;activity"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#agent -->
+
+    <owl:Class rdf:about="&ExtendedDnS;agent"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#information-object -->
+
+    <owl:Class rdf:about="&ExtendedDnS;information-object"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+

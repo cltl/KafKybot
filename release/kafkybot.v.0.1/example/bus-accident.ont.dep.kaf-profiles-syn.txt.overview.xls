@@ -1,0 +1,17 @@
+event:say:	1	participant:report:p1	1
+event:die:	1	participant:people:p1	1
+event:respond:	1	participant:firefighter:p1	1
+event:collide:	1	participant:bus:p1	1
+participant:road:p2	2	event:use:	1	event:come:	1
+participant:people:p1	1	event:die:	1
+participant:people:p2	3	event:kill:	1	event:involve:	1	event:injure:	1
+participant:number:p2	1	event:confirm:	1
+event:come:	1	participant:road:p2	1
+participant:firefighter:p1	1	event:respond:	1
+event:confirm:	1	participant:number:p2	1
+event:use:	1	participant:road:p2	1
+participant:bus:p1	1	event:collide:	1
+event:injure:	1	participant:people:p2	1
+event:involve:	1	participant:people:p2	1
+participant:report:p1	1	event:say:	1
+event:kill:	1	participant:people:p2	1

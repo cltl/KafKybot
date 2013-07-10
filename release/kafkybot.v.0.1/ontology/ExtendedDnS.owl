@@ -1,0 +1,3187 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY DOLCE-Lite "http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#" >
+    <!ENTITY ExtendedDnS "http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#" >
+    <!ENTITY SpatialRelations "http://www.loa-cnr.it/ontologies/SpatialRelations.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#"
+     xml:base="http://www.loa-cnr.it/ontologies/ExtendedDnS.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:DOLCE-Lite="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:SpatialRelations="http://www.loa-cnr.it/ontologies/SpatialRelations.owl#"
+     xmlns:ExtendedDnS="http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#">
+    <owl:Ontology rdf:about="">
+        <owl:versionInfo rdf:datatype="&xsd;string">397</owl:versionInfo>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >The DnS (Descriptions and Situation) ontology, with an extended vocabulary for social reification. OWL engineering by Aldo Gangemi.</rdfs:comment>
+        <owl:versionInfo rdf:datatype="&xsd;string">classified</owl:versionInfo>
+        <owl:imports rdf:resource="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl"/>
+        <owl:imports rdf:resource="http://www.loa-cnr.it/ontologies/SpatialRelations.owl"/>
+        <owl:imports rdf:resource="http://www.loa-cnr.it/ontologies/TemporalRelations.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#constant-participant-in -->
+
+    <owl:ObjectProperty rdf:about="&DOLCE-Lite;constant-participant-in">
+        <rdfs:domain rdf:resource="&DOLCE-Lite;endurant"/>
+        <rdfs:subPropertyOf rdf:resource="&DOLCE-Lite;participant-in"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#generic-constituent -->
+
+    <owl:ObjectProperty rdf:about="&DOLCE-Lite;generic-constituent"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#generic-constituent-of -->
+
+    <owl:ObjectProperty rdf:about="&DOLCE-Lite;generic-constituent-of"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#generically-dependent-on -->
+
+    <owl:ObjectProperty rdf:about="&DOLCE-Lite;generically-dependent-on"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#immediate-relation -->
+
+    <owl:ObjectProperty rdf:about="&DOLCE-Lite;immediate-relation"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#immediate-relation-i -->
+
+    <owl:ObjectProperty rdf:about="&DOLCE-Lite;immediate-relation-i"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#life-of -->
+
+    <owl:ObjectProperty rdf:about="&DOLCE-Lite;life-of"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#mediated-relation -->
+
+    <owl:ObjectProperty rdf:about="&DOLCE-Lite;mediated-relation"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#mediated-relation-i -->
+
+    <owl:ObjectProperty rdf:about="&DOLCE-Lite;mediated-relation-i"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#part -->
+
+    <owl:ObjectProperty rdf:about="&DOLCE-Lite;part"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#participant -->
+
+    <owl:ObjectProperty rdf:about="&DOLCE-Lite;participant"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#participant-in -->
+
+    <owl:ObjectProperty rdf:about="&DOLCE-Lite;participant-in">
+        <rdfs:domain rdf:resource="&DOLCE-Lite;endurant"/>
+        <rdfs:subPropertyOf rdf:resource="&DOLCE-Lite;immediate-relation-i"/>
+        <owl:inverseOf rdf:resource="&DOLCE-Lite;participant"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#proper-part -->
+
+    <owl:ObjectProperty rdf:about="&DOLCE-Lite;proper-part"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#proper-part-of -->
+
+    <owl:ObjectProperty rdf:about="&DOLCE-Lite;proper-part-of"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#specific-constant-constituent -->
+
+    <owl:ObjectProperty rdf:about="&DOLCE-Lite;specific-constant-constituent"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#specifically-constantly-dependent-on -->
+
+    <owl:ObjectProperty rdf:about="&DOLCE-Lite;specifically-constantly-dependent-on"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#temporary-participant-in -->
+
+    <owl:ObjectProperty rdf:about="&DOLCE-Lite;temporary-participant-in">
+        <rdfs:subPropertyOf rdf:resource="&DOLCE-Lite;participant-in"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#temporary-proper-part -->
+
+    <owl:ObjectProperty rdf:about="&DOLCE-Lite;temporary-proper-part"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#temporary-proper-part-of -->
+
+    <owl:ObjectProperty rdf:about="&DOLCE-Lite;temporary-proper-part-of"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#total-constant-participant -->
+
+    <owl:ObjectProperty rdf:about="&DOLCE-Lite;total-constant-participant"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#about -->
+
+    <owl:ObjectProperty rdf:about="#about">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >The relation between information objects and entities they are about. The difference with &#39;expresses&#39; is that the last requires a situation to be about something. E.g. Dante&#39;s Comedy is about facts like Dante&#39;s travel to the hereafter. The Comedy expresses a script as well as various related meanings, while the facts talked about are not &#39;expressed&#39;.Given that descriptions are expressed by at least one IO, and that interpretations of IOs requires conceiving a description, and the (plausible) claim that being about something can only be done in context, i.e. within a situation, we can propose that the conceived description is satisfied by the situation (the context) of the entity the IO is about.On this basis, about would result to be a mediated relation. This is still a proposal, then we keep about here as a primitive for some time.</rdfs:comment>
+        <rdfs:range rdf:resource="&DOLCE-Lite;particular"/>
+        <owl:inverseOf rdf:resource="#aboutness-of"/>
+        <rdfs:domain rdf:resource="#information-object"/>
+        <rdfs:subPropertyOf rdf:resource="#references"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#aboutness-of -->
+
+    <owl:ObjectProperty rdf:about="#aboutness-of">
+        <rdfs:domain rdf:resource="&DOLCE-Lite;particular"/>
+        <rdfs:range rdf:resource="#information-object"/>
+        <rdfs:subPropertyOf rdf:resource="#referenced-by"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#acted-by -->
+
+    <owl:ObjectProperty rdf:about="#acted-by">
+        <rdfs:subPropertyOf rdf:resource="&DOLCE-Lite;mediated-relation-i"/>
+        <owl:inverseOf rdf:resource="#acts-for"/>
+        <rdfs:range rdf:resource="#agent"/>
+        <rdfs:domain rdf:resource="#figure"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#acts-for -->
+
+    <owl:ObjectProperty rdf:about="#acts-for">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Figures are not dependent on roles defined or used in the same descriptions they are defined or used, but they can act because they depute some powers to some of those roles. In other words, a figure selected by some agentive role can play that role because there are other roles in the descriptions that define or use the figure. Those roles select endurants that result to act for the figure.For example, an employee acts for an organization that deputes the role (e.g. turner) that classifies the employee. Simply put, a guy working as a turner at FIAT acts for (or on behalf of) FIAT.In complex figures, like organizations or societies, a total agency is possible when an endurant plays a delegate, or representative role of the figure.</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&DOLCE-Lite;mediated-relation"/>
+        <rdfs:domain rdf:resource="#agent"/>
+        <rdfs:range rdf:resource="#figure"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#admits -->
+
+    <owl:ObjectProperty rdf:about="#admits">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >The composition of d-uses and valued-by relations: a description d-uses a parameter that is valued by a region.</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&DOLCE-Lite;mediated-relation"/>
+        <rdfs:range rdf:resource="&DOLCE-Lite;region"/>
+        <rdfs:domain rdf:resource="#description"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#admitted-by -->
+
+    <owl:ObjectProperty rdf:about="#admitted-by">
+        <rdfs:subPropertyOf rdf:resource="&DOLCE-Lite;mediated-relation-i"/>
+        <rdfs:domain rdf:resource="&DOLCE-Lite;region"/>
+        <owl:inverseOf rdf:resource="#admits"/>
+        <rdfs:range rdf:resource="#description"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#adopted-by -->
+
+    <owl:ObjectProperty rdf:about="#adopted-by">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A relation between agents and descriptions, requiring previous creation by a rational agent, and internal representation by a physical agent, directly, or acted by some social agent. It can involve or not an actual desire to perform the possibly expected actions.</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&DOLCE-Lite;immediate-relation-i"/>
+        <owl:inverseOf rdf:resource="#adopts"/>
+        <rdfs:domain rdf:resource="#description"/>
+        <rdfs:range rdf:resource="#rational-agent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#adopts -->
+
+    <owl:ObjectProperty rdf:about="#adopts">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A relation between agents and descriptions, requiring previous creation by a rational agent, and internal representation by a physical agent, directly, or acted by some social agent. It can involve or not an actual desire to perform the possibly expected actions.</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&DOLCE-Lite;immediate-relation"/>
+        <rdfs:range rdf:resource="#description"/>
+        <rdfs:domain rdf:resource="#rational-agent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#attitude-target-of -->
+
+    <owl:ObjectProperty rdf:about="#attitude-target-of">
+        <rdfs:domain rdf:resource="#course"/>
+        <rdfs:subPropertyOf rdf:resource="#modal-target-of"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#agent-driven-role"/>
+                    <rdf:Description rdf:about="#agentive-figure"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#attitude-towards -->
+
+    <owl:ObjectProperty rdf:about="#attitude-towards">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >It is the immediate relation between roles or figures, and tasks. It is the descriptive counterpart of the &#39;participant-in&#39; relation for agentive roles or figures.In other words, it is used to state attitudes, attention or even subjection that an object can have wrt an action or process. Formally, a modality target is a task that sequences a perdurant that has a participant that plays a role bound to that modality target with a certain modality.For example, a person is usually obliged to drive in a way that prevents hurting other persons. Or a person can have the right to express her ideas.Another, more complex example: a BDI application to a certain ordered set of tasks including  initial conditions (beliefs), final conditions (desires), and ways to reach goals (intentions). In other words, to move from beliefs to goals is a way of bounding one or more agent(s) to a sequence of actions.</rdfs:comment>
+        <owl:inverseOf rdf:resource="#attitude-target-of"/>
+        <rdfs:range rdf:resource="#course"/>
+        <rdfs:subPropertyOf rdf:resource="#modal-target"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#agent-driven-role"/>
+                    <rdf:Description rdf:about="#agentive-figure"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#c-sat -->
+
+    <owl:ObjectProperty rdf:about="#c-sat">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >C-SAT - like R-SAT - concerns entities that exist in a situation entirely prior to the description. Moreover, it assumes redundant satisfaction. But, differently from P-SAT and R-SAT, no qualified satisfaction is assumed. In fact, C-SAT implies no dependency of a situation on its description. C-SAT typically applies to different views of existing situations, as for regulative descriptions (disclaimer: the situation can be already created by complying to the regulation, e.g executing it as a plan, but in this case there actually exists a plan that has the regulation as part), narratives, symbolic interpretations, etc.</rdfs:comment>
+        <owl:inverseOf rdf:resource="#c-sat-by"/>
+        <rdfs:range rdf:resource="#description"/>
+        <rdfs:subPropertyOf rdf:resource="#satisfies"/>
+        <rdfs:domain rdf:resource="#situation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#c-sat-by -->
+
+    <owl:ObjectProperty rdf:about="#c-sat-by">
+        <rdfs:domain rdf:resource="#description"/>
+        <rdfs:subPropertyOf rdf:resource="#satisfied-by"/>
+        <rdfs:range rdf:resource="#situation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#characterized-by -->
+
+    <owl:ObjectProperty rdf:about="#characterized-by">
+        <owl:inverseOf rdf:resource="#characterizes"/>
+        <rdfs:domain rdf:resource="#collection"/>
+        <rdfs:subPropertyOf rdf:resource="#intensionally-referenced-by"/>
+        <rdfs:range rdf:resource="#role"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#characterizes -->
+
+    <owl:ObjectProperty rdf:about="#characterizes">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A role r characterizes a collection c when proper subsets of the members of c play different roles r,...,rn that are all used by a same description or deputed by a same figure.</rdfs:comment>
+        <rdfs:range rdf:resource="#collection"/>
+        <rdfs:subPropertyOf rdf:resource="#intensionally-references"/>
+        <rdfs:domain rdf:resource="#role"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#classified-by -->
+
+    <owl:ObjectProperty rdf:about="#classified-by">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A.K.A. &#39;selected-by&#39;.The referencing relation between concepts defined by descriptions and constituents of situations. It can be understood as a reification of a &#39;satisfiability&#39; relation holding between elements of  theories and elements of models.It has a time index, but this should not be intended as a partial compresence, since the time only refers to a part of the classified particular life or extension.</rdfs:comment>
+        <rdfs:domain rdf:resource="&DOLCE-Lite;particular"/>
+        <rdfs:range rdf:resource="#concept"/>
+        <rdfs:subPropertyOf rdf:resource="#intensionally-referenced-by"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#classifies -->
+
+    <owl:ObjectProperty rdf:about="#classifies">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A.K.A. &#39;selects&#39;.The referencing relation between concepts defined by  descriptions, and constituents of situations. It can be understood as a  reification of a &#39;satisfiability&#39; relation holding between elements of theories and elements of models.It has a time index, but this should not be intended as a partial compresence, since the time only refers to a part of the classified particular life or extension.</rdfs:comment>
+        <rdfs:range rdf:resource="&DOLCE-Lite;particular"/>
+        <owl:inverseOf rdf:resource="#classified-by"/>
+        <rdfs:domain rdf:resource="#concept"/>
+        <rdfs:subPropertyOf rdf:resource="#intensionally-references"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#co-participates-with -->
+
+    <owl:ObjectProperty rdf:about="#co-participates-with">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A relation holding between two endurants participating in a same perdurant. This typically subsumes many common sense, verbally encoded, relations, such as &quot;making&quot;, &quot;moving&quot;, &quot;transforming&quot;, etc.</rdfs:comment>
+        <rdfs:domain rdf:resource="&DOLCE-Lite;endurant"/>
+        <rdfs:range rdf:resource="&DOLCE-Lite;endurant"/>
+        <rdfs:subPropertyOf rdf:resource="&DOLCE-Lite;mediated-relation"/>
+        <owl:inverseOf rdf:resource="#co-participates-with"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#component -->
+
+    <owl:ObjectProperty rdf:about="#component">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >&#39;Component&#39; is a proper part with a role (or function) in a system or a context. Roles can be different for the same entity, and the evaluation of them changes according to the kind of entity. For instance, components of endurants can &#39;play functional roles&#39; in a whole, while components of perdurants are the  essential &#39;episodes&#39; in their whole.As a functional part relation, component is not transitive, because functions depend on intentions and/or designs, and something intentionally essential for a direct whole, can be non-essential for another, indirect whole.</rdfs:comment>
+        <rdfs:domain rdf:resource="&DOLCE-Lite;particular"/>
+        <rdfs:range rdf:resource="&DOLCE-Lite;particular"/>
+        <rdfs:subPropertyOf rdf:resource="&DOLCE-Lite;proper-part"/>
+        <owl:inverseOf rdf:resource="#component-of"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#component-of -->
+
+    <owl:ObjectProperty rdf:about="#component-of">
+        <rdfs:range rdf:resource="&DOLCE-Lite;particular"/>
+        <rdfs:domain rdf:resource="&DOLCE-Lite;particular"/>
+        <rdfs:subPropertyOf rdf:resource="&DOLCE-Lite;proper-part-of"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#covered-by -->
+
+    <owl:ObjectProperty rdf:about="#covered-by">
+        <rdfs:domain rdf:resource="#collection"/>
+        <rdfs:subPropertyOf rdf:resource="#intensionally-referenced-by"/>
+        <rdfs:range rdf:resource="#role"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#covers -->
+
+    <owl:ObjectProperty rdf:about="#covers">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >The role shared by all members of a collection has a covering relation towards the collection.</rdfs:comment>
+        <rdfs:range rdf:resource="#collection"/>
+        <owl:inverseOf rdf:resource="#covered-by"/>
+        <rdfs:subPropertyOf rdf:resource="#intensionally-references"/>
+        <rdfs:domain rdf:resource="#role"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#created-by -->
+
+    <owl:ObjectProperty rdf:about="#created-by">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >An important relation between agents and descriptions is creation, implying that a given description is *specifically* dependent on a rational agent.</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&DOLCE-Lite;immediate-relation-i"/>
+        <owl:inverseOf rdf:resource="#creates"/>
+        <rdfs:domain rdf:resource="#description"/>
+        <rdfs:range rdf:resource="#rational-agent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#creates -->
+
+    <owl:ObjectProperty rdf:about="#creates">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >An important relation between agents and descriptions is creation,  implying that a given description is *specifically* dependent on a rational agent.</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&DOLCE-Lite;immediate-relation"/>
+        <rdfs:range rdf:resource="#description"/>
+        <rdfs:domain rdf:resource="#rational-agent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#d-used-by -->
+
+    <owl:ObjectProperty rdf:about="#d-used-by">
+        <rdfs:subPropertyOf rdf:resource="#component-of"/>
+        <owl:inverseOf rdf:resource="#d-uses"/>
+        <rdfs:range rdf:resource="#description"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#concept"/>
+                    <rdf:Description rdf:about="#figure"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#d-uses -->
+
+    <owl:ObjectProperty rdf:about="#d-uses">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Descriptions can d-use (descriptively use) concepts or figures, provided that used ones are defined by some description.</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="#component"/>
+        <rdfs:domain rdf:resource="#description"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#concept"/>
+                    <rdf:Description rdf:about="#figure"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#defined-by -->
+
+    <owl:ObjectProperty rdf:about="#defined-by">
+        <rdfs:subPropertyOf rdf:resource="#d-used-by"/>
+        <rdfs:range rdf:resource="#description"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#concept"/>
+                    <rdf:Description rdf:about="#figure"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#defines -->
+
+    <owl:ObjectProperty rdf:about="#defines">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Descriptions define either concepts or (social) figures. Once defined, they can be d-used by other descriptions.</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="#d-uses"/>
+        <owl:inverseOf rdf:resource="#defined-by"/>
+        <rdfs:domain rdf:resource="#description"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#concept"/>
+                    <rdf:Description rdf:about="#figure"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#deputed-by -->
+
+    <owl:ObjectProperty rdf:about="#deputed-by">
+        <rdfs:subPropertyOf rdf:resource="&DOLCE-Lite;immediate-relation-i"/>
+        <rdfs:range rdf:resource="#figure"/>
+        <rdfs:domain rdf:resource="#role"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#deputes -->
+
+    <owl:ObjectProperty rdf:about="#deputes">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Figures can depute roles that are played by endurants that are supposed to &#39;act for&#39; the figure.</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&DOLCE-Lite;immediate-relation"/>
+        <owl:inverseOf rdf:resource="#deputed-by"/>
+        <rdfs:domain rdf:resource="#figure"/>
+        <rdfs:range rdf:resource="#role"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#direct-predecessor -->
+
+    <owl:ObjectProperty rdf:about="#direct-predecessor">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Anti-transitive predecessor.</rdfs:comment>
+        <rdfs:domain rdf:resource="&DOLCE-Lite;particular"/>
+        <rdfs:range rdf:resource="&DOLCE-Lite;particular"/>
+        <rdfs:subPropertyOf rdf:resource="#predecessor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#direct-successor -->
+
+    <owl:ObjectProperty rdf:about="#direct-successor">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Anti-transitive succession.</rdfs:comment>
+        <rdfs:domain rdf:resource="&DOLCE-Lite;particular"/>
+        <rdfs:range rdf:resource="&DOLCE-Lite;particular"/>
+        <owl:inverseOf rdf:resource="#direct-predecessor"/>
+        <rdfs:subPropertyOf rdf:resource="#successor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#empowered-for -->
+
+    <owl:ObjectProperty rdf:about="#empowered-for">
+        <rdfs:subPropertyOf rdf:resource="#attitude-target-of"/>
+        <rdfs:domain rdf:resource="#task"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#agent-driven-role"/>
+                    <rdf:Description rdf:about="#agentive-figure"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#empowered-to -->
+
+    <owl:ObjectProperty rdf:about="#empowered-to">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A relation between a role and a power allowed towards some function/task.This is dispositional, and implies that a participation classified by this relation is an &#39;empowered participation&#39;.</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="#attitude-towards"/>
+        <owl:inverseOf rdf:resource="#empowered-for"/>
+        <rdfs:range rdf:resource="#task"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#agent-driven-role"/>
+                    <rdf:Description rdf:about="#agentive-figure"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#expanded-by -->
+
+    <owl:ObjectProperty rdf:about="#expanded-by">
+        <rdfs:subPropertyOf rdf:resource="&DOLCE-Lite;proper-part-of"/>
+        <rdfs:domain rdf:resource="#description"/>
+        <rdfs:range rdf:resource="#description"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#expands -->
+
+    <owl:ObjectProperty rdf:about="#expands">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A partial order relation that holds between descriptions. It represents the proper part relation between a description and another description featuring the same properties of the former, with at least an additional one.Descriptions can be expanded either by adding other descriptions as parts, or by refining concepts or figures that are d-used by them.Specializing the concepts or figures that are d-used by them is on the contrary a case of description specialization.For descriptions, an intention to expand must be present (unless purely formal theories are considered, but even in this case a criterion of relevance is usually active).</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&DOLCE-Lite;proper-part"/>
+        <rdfs:domain rdf:resource="#description"/>
+        <rdfs:range rdf:resource="#description"/>
+        <owl:inverseOf rdf:resource="#expanded-by"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#expected-by -->
+
+    <owl:ObjectProperty rdf:about="#expected-by">
+        <rdfs:subPropertyOf rdf:resource="&DOLCE-Lite;mediated-relation-i"/>
+        <rdfs:domain rdf:resource="&DOLCE-Lite;perdurant"/>
+        <rdfs:range rdf:resource="#description"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#expected-setting -->
+
+    <owl:ObjectProperty rdf:about="#expected-setting">
+        <rdfs:subPropertyOf rdf:resource="&DOLCE-Lite;mediated-relation-i"/>
+        <rdfs:domain rdf:resource="#concept"/>
+        <rdfs:range rdf:resource="#situation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#expected-setting-for -->
+
+    <owl:ObjectProperty rdf:about="#expected-setting-for">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A double composition is needed here for linking situations and descriptions components, since many possible constituents could be available in the situation. The first one constrains the classifies relation through description components, the second one constrains it through situation constituents.</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&DOLCE-Lite;mediated-relation"/>
+        <rdfs:range rdf:resource="#concept"/>
+        <owl:inverseOf rdf:resource="#expected-setting"/>
+        <rdfs:domain rdf:resource="#situation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#expects -->
+
+    <owl:ObjectProperty rdf:about="#expects">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >The composition of d-uses and sequences relations: a description d-uses a course that sequences a perdurant.</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&DOLCE-Lite;mediated-relation"/>
+        <rdfs:range rdf:resource="&DOLCE-Lite;perdurant"/>
+        <rdfs:domain rdf:resource="#description"/>
+        <owl:inverseOf rdf:resource="#expected-by"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#exploited-by -->
+
+    <owl:ObjectProperty rdf:about="#exploited-by">
+        <rdfs:domain rdf:resource="&DOLCE-Lite;endurant"/>
+        <rdfs:subPropertyOf rdf:resource="#involved-in"/>
+        <rdfs:range rdf:resource="#method"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#exploits -->
+
+    <owl:ObjectProperty rdf:about="#exploits">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A method can exploit an involved endurant when it plays a device-like role.</rdfs:comment>
+        <rdfs:range rdf:resource="&DOLCE-Lite;endurant"/>
+        <owl:inverseOf rdf:resource="#exploited-by"/>
+        <rdfs:subPropertyOf rdf:resource="#involves"/>
+        <rdfs:domain rdf:resource="#method"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#expressed-by -->
+
+    <owl:ObjectProperty rdf:about="#expressed-by">
+        <rdfs:domain rdf:resource="#description"/>
+        <owl:inverseOf rdf:resource="#expresses"/>
+        <rdfs:range rdf:resource="#information-object"/>
+        <rdfs:subPropertyOf rdf:resource="#referenced-by"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#expresses -->
+
+    <owl:ObjectProperty rdf:about="#expresses">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A relation between information objects that are used as representations (signs) and the content (meaning, conceptualization) they represent. In this ontology content is reified as a &#39;description&#39;.Information objects are &#39;systemic&#39; objects created by the system of rules of a semiotic code. For the representation between the physical implementation of information objects (physical representations) and information objects, the &#39;realized-by&#39; relation  is used.</rdfs:comment>
+        <rdfs:range rdf:resource="#description"/>
+        <rdfs:domain rdf:resource="#information-object"/>
+        <rdfs:subPropertyOf rdf:resource="#references"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#extensionally-equivalent -->
+
+    <owl:ObjectProperty rdf:about="#extensionally-equivalent">
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Two or more collections can be extensionally equivalent and still not be the same collection. Each collection needs a unifying description which provides its intensional identity criterion.</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&DOLCE-Lite;immediate-relation"/>
+        <rdfs:range rdf:resource="#collection"/>
+        <rdfs:domain rdf:resource="#collection"/>
+        <owl:inverseOf rdf:resource="#extensionally-equivalent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#functionally-unified-by -->
+
+    <owl:ObjectProperty rdf:about="#functionally-unified-by">
+        <rdfs:domain rdf:resource="&DOLCE-Lite;physical-object"/>
+        <rdfs:range rdf:resource="#description"/>
+        <owl:inverseOf rdf:resource="#functionally-unifies"/>
+        <rdfs:subPropertyOf rdf:resource="#referenced-by"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#functionally-unifies -->
+
+    <owl:ObjectProperty rdf:about="#functionally-unifies">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A description can provide its unity criterion to a physical object. In this case we say that the description *functionally unifies* the physical object. This relation is equivalent to a composition of a description that unifies a collection whose members are (usually connected) proper parts of a physical object.Ideally, this notion should be used to provide a definition to physical objects, but this application would destroy the distinction between a &#39;perceived&#39; object (an endurant whose unity depends on the perception competence of an agent), and a &#39;functional&#39; object, since each perceived object would be such because it is functionally unified by a description conceived by the perceiving agent. In DOLCE we still apply to the distinction between perception and function.</rdfs:comment>
+        <rdfs:range rdf:resource="&DOLCE-Lite;physical-object"/>
+        <rdfs:domain rdf:resource="#description"/>
+        <rdfs:subPropertyOf rdf:resource="#references"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#has-in-scope -->
+
+    <owl:ObjectProperty rdf:about="#has-in-scope">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >When there is an &#39;epistemological layering&#39;, i.e. a description d involves another description d&#39; (one of the roles in d classifies d&#39;), a situation that satisfies d&#39;, will be in the scope of d as well.For example, a judgment procedure will have a legal case in its scope, but being a legal case depends on satisfying some legal description not identical to that procedure.Another example: a plan assessment is a technique to evaluate a plan execute, and the assessment &#39;has in scope&#39; the plan execution.</rdfs:comment>
+        <rdfs:domain rdf:resource="#description"/>
+        <rdfs:subPropertyOf rdf:resource="#references"/>
+        <rdfs:range rdf:resource="#situation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#has-method -->
+
+    <owl:ObjectProperty rdf:about="#has-method">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >An activity expected by a method.</rdfs:comment>
+        <rdfs:domain rdf:resource="#activity"/>
+        <rdfs:subPropertyOf rdf:resource="#expected-by"/>
+        <rdfs:range rdf:resource="#method"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#in-scope-of -->
+
+    <owl:ObjectProperty rdf:about="#in-scope-of">
+        <rdfs:range rdf:resource="#description"/>
+        <owl:inverseOf rdf:resource="#has-in-scope"/>
+        <rdfs:subPropertyOf rdf:resource="#referenced-by"/>
+        <rdfs:domain rdf:resource="#situation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#instantiated-by -->
+
+    <owl:ObjectProperty rdf:about="#instantiated-by">
+        <rdfs:subPropertyOf rdf:resource="#specialized-by"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#collection"/>
+                    <rdf:Description rdf:about="#concept"/>
+                    <rdf:Description rdf:about="#description"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#collection"/>
+                    <rdf:Description rdf:about="#concept"/>
+                    <rdf:Description rdf:about="#description"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#instantiates -->
+
+    <owl:ObjectProperty rdf:about="#instantiates">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >The maximal specialization achievable according to some criterion. Only applicable to social objects that logically reify set-related entities (relations, classes, sets).</rdfs:comment>
+        <owl:inverseOf rdf:resource="#instantiated-by"/>
+        <rdfs:subPropertyOf rdf:resource="#specializes"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#collection"/>
+                    <rdf:Description rdf:about="#concept"/>
+                    <rdf:Description rdf:about="#description"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#collection"/>
+                    <rdf:Description rdf:about="#concept"/>
+                    <rdf:Description rdf:about="#description"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#intensionally-referenced-by -->
+
+    <owl:ObjectProperty rdf:about="#intensionally-referenced-by">
+        <rdfs:range rdf:resource="&DOLCE-Lite;non-physical-object"/>
+        <rdfs:domain rdf:resource="&DOLCE-Lite;particular"/>
+        <rdfs:subPropertyOf rdf:resource="#referenced-by"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#intensionally-references -->
+
+    <owl:ObjectProperty rdf:about="#intensionally-references">
+        <rdfs:domain rdf:resource="&DOLCE-Lite;non-physical-object"/>
+        <rdfs:range rdf:resource="&DOLCE-Lite;particular"/>
+        <owl:inverseOf rdf:resource="#intensionally-referenced-by"/>
+        <rdfs:subPropertyOf rdf:resource="#references"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#internally-represented-in -->
+
+    <owl:ObjectProperty rdf:about="#internally-represented-in">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >The relation between descriptions and agents. Agents have inner (a.k.a. &#39;mental&#39;) states and are endowed with, or produce, representations or conceptualizations, both corresponding here to &#39;descriptions&#39;. The relation has a time index, but this should not be intended as a partial compresence, since time only refers to the part of the agent&#39;s life in which it represents the description (a.k.a. &#39;conceives&#39;, now rejected because of its strong human-rationality connotation). Provisionally, internally-represents is introduced here as an immediate (primitive) relation, but other options are under study. The first involves mediating internal representation through an ontology of mental states and events, while the second is semiotic: since descriptions are expressed by at least one information object, representing internally requires at least one creation/interpretation of an information object, therefore internally-represents would be a &#39;mediated&#39; relation.</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&DOLCE-Lite;immediate-relation-i"/>
+        <rdfs:range rdf:resource="#agentive-physical-object"/>
+        <rdfs:domain rdf:resource="#description"/>
+        <owl:inverseOf rdf:resource="#internally-represents"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#internally-represents -->
+
+    <owl:ObjectProperty rdf:about="#internally-represents">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >The relation between agents and descriptions. Agents have inner (a.k.a. &#39;mental&#39;) states and are endowed with, or produce, representations or conceptualizations, both corresponding here to &#39;descriptions&#39;. The relation has a time index, but this should not be intended as a partial compresence, since time only refers to the part of the agent&#39;s life in which it represents the description (a.k.a. &#39;conceives&#39;, now rejected because of  its strong human-rationality connotation). Provisionally, internally-represents is introduced here as an immediate (primitive) relation, but other options are under study. The first involves mediating internal representation through an ontology of mental states and events, while the second is semiotic: since descriptions are expressed by at least one information object, representing internally requires at least one creation/interpretation of an information object, therefore internally-represents would be a &#39;mediated&#39; relation.</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&DOLCE-Lite;immediate-relation"/>
+        <rdfs:domain rdf:resource="#agentive-physical-object"/>
+        <rdfs:range rdf:resource="#description"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#interpreted-by -->
+
+    <owl:ObjectProperty rdf:about="#interpreted-by">
+        <rdfs:subPropertyOf rdf:resource="&DOLCE-Lite;immediate-relation-i"/>
+        <rdfs:range rdf:resource="#agent"/>
+        <rdfs:domain rdf:resource="#information-object"/>
+        <owl:inverseOf rdf:resource="#interprets"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#interprets -->
+
+    <owl:ObjectProperty rdf:about="#interprets">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >The relation between agents and information objects. In order to interpret something, an agent should conceive a description that results to be &#39;expressed by&#39; that information object.Interprets implies that an expressed description is conceived by the agent (i.e., when an agent interprets an IO, it conceives of a description expressed by the IO; of course two agents can conceive of different descriptions, then resulting in different interpretations).</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&DOLCE-Lite;immediate-relation"/>
+        <rdfs:domain rdf:resource="#agent"/>
+        <rdfs:range rdf:resource="#information-object"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#involved-in -->
+
+    <owl:ObjectProperty rdf:about="#involved-in">
+        <rdfs:domain rdf:resource="&DOLCE-Lite;endurant"/>
+        <rdfs:subPropertyOf rdf:resource="&DOLCE-Lite;mediated-relation-i"/>
+        <rdfs:range rdf:resource="#description"/>
+        <owl:inverseOf rdf:resource="#involves"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#involves -->
+
+    <owl:ObjectProperty rdf:about="#involves">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >The composition of d-uses and played-by relations: a description d-uses a role that is played by an endurant.</rdfs:comment>
+        <rdfs:range rdf:resource="&DOLCE-Lite;endurant"/>
+        <rdfs:subPropertyOf rdf:resource="&DOLCE-Lite;mediated-relation"/>
+        <rdfs:domain rdf:resource="#description"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#made-by -->
+
+    <owl:ObjectProperty rdf:about="#made-by">
+        <rdfs:domain rdf:resource="&DOLCE-Lite;endurant"/>
+        <rdfs:range rdf:resource="&DOLCE-Lite;endurant"/>
+        <rdfs:subPropertyOf rdf:resource="#co-participates-with"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#makes -->
+
+    <owl:ObjectProperty rdf:about="#makes">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A particular case of an endurant participating in a perdurant that meets (is connected to the beginning of) the life of another endurant.</rdfs:comment>
+        <rdfs:domain rdf:resource="&DOLCE-Lite;endurant"/>
+        <rdfs:range rdf:resource="&DOLCE-Lite;endurant"/>
+        <rdfs:subPropertyOf rdf:resource="#co-participates-with"/>
+        <owl:inverseOf rdf:resource="#made-by"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#member -->
+
+    <owl:ObjectProperty rdf:about="#member">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Being a (generic, temporary) constituent in a countable collection, for example: member of a society, bacterium in a colony, etc.</rdfs:comment>
+        <rdfs:range rdf:resource="&DOLCE-Lite;endurant"/>
+        <rdfs:subPropertyOf rdf:resource="&DOLCE-Lite;generic-constituent"/>
+        <rdfs:domain rdf:resource="#collection"/>
+        <owl:inverseOf rdf:resource="#member-of"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#member-of -->
+
+    <owl:ObjectProperty rdf:about="#member-of">
+        <rdfs:domain rdf:resource="&DOLCE-Lite;endurant"/>
+        <rdfs:subPropertyOf rdf:resource="&DOLCE-Lite;generic-constituent-of"/>
+        <rdfs:range rdf:resource="#collection"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#metaphorically-played-by -->
+
+    <owl:ObjectProperty rdf:about="#metaphorically-played-by">
+        <rdfs:range rdf:resource="&DOLCE-Lite;endurant"/>
+        <owl:inverseOf rdf:resource="#metaphorically-plays"/>
+        <rdfs:subPropertyOf rdf:resource="#played-by"/>
+        <rdfs:domain rdf:resource="#role"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#metaphorically-plays -->
+
+    <owl:ObjectProperty rdf:about="#metaphorically-plays">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >An endurant of type e1 metaphorically plays a role (defined in a description d2), when that role comes from a metaphorical mapping between the description d1 that grants a unity criterion to endurants of type e1, and another description d2 that grants a unity criterion to endurants of type e2.</rdfs:comment>
+        <rdfs:domain rdf:resource="&DOLCE-Lite;endurant"/>
+        <rdfs:subPropertyOf rdf:resource="#plays"/>
+        <rdfs:range rdf:resource="#role"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#method-of -->
+
+    <owl:ObjectProperty rdf:about="#method-of">
+        <rdfs:range rdf:resource="#activity"/>
+        <rdfs:subPropertyOf rdf:resource="#expects"/>
+        <owl:inverseOf rdf:resource="#has-method"/>
+        <rdfs:domain rdf:resource="#method"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#modal-target -->
+
+    <owl:ObjectProperty rdf:about="#modal-target">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >The relation between roles and courses. Modal target subrelations can be seen as &#39;reifications&#39; of the operators of modal logics.</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&DOLCE-Lite;immediate-relation"/>
+        <rdfs:range rdf:resource="#course"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#agentive-figure"/>
+                    <rdf:Description rdf:about="#non-agentive-figure"/>
+                    <rdf:Description rdf:about="#role"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#modal-target-of -->
+
+    <owl:ObjectProperty rdf:about="#modal-target-of">
+        <rdfs:subPropertyOf rdf:resource="&DOLCE-Lite;immediate-relation-i"/>
+        <rdfs:domain rdf:resource="#course"/>
+        <owl:inverseOf rdf:resource="#modal-target"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#agentive-figure"/>
+                    <rdf:Description rdf:about="#non-agentive-figure"/>
+                    <rdf:Description rdf:about="#role"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#obligation-for -->
+
+    <owl:ObjectProperty rdf:about="#obligation-for">
+        <rdfs:subPropertyOf rdf:resource="#attitude-target-of"/>
+        <rdfs:domain rdf:resource="#task"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#agent-driven-role"/>
+                    <rdf:Description rdf:about="#agentive-figure"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#obliged-to -->
+
+    <owl:ObjectProperty rdf:about="#obliged-to">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A relation between a role and a duty binding towards some function/task.This is dispositional, and implies that a participation classified by this relation is a &#39;due participation&#39;.</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="#attitude-towards"/>
+        <owl:inverseOf rdf:resource="#obligation-for"/>
+        <rdfs:range rdf:resource="#task"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#agent-driven-role"/>
+                    <rdf:Description rdf:about="#agentive-figure"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#optionally-used-by -->
+
+    <owl:ObjectProperty rdf:about="#optionally-used-by">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A task (as any other concept) can be optional within some plan (or any description). In this case, it can be ignored in plan execution without affecting the satisfaction of the plan.Within plans, an task said to be optional should be placed in a way that preserves the topology (the connectedness) of the maximal task, except for sequential tasks, where it can be skipped without affecting the control structure. In fact, an optional task must either be component of a bag or sequential task, or have the concurrent task or the any-order task as a direct predecessor.</rdfs:comment>
+        <rdfs:domain rdf:resource="#concept"/>
+        <rdfs:subPropertyOf rdf:resource="#d-used-by"/>
+        <rdfs:range rdf:resource="#description"/>
+        <owl:inverseOf rdf:resource="#optionally-uses"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#optionally-uses -->
+
+    <owl:ObjectProperty rdf:about="#optionally-uses">
+        <rdfs:range rdf:resource="#concept"/>
+        <rdfs:subPropertyOf rdf:resource="#d-uses"/>
+        <rdfs:domain rdf:resource="#description"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#ordered-by -->
+
+    <owl:ObjectProperty rdf:about="#ordered-by">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >a.k.a. &#39;expressed according to&#39;. The relation between information objects and the languages, codes, grammars, etc. that they are ordered by. E.g. Dante&#39;s Comedy is ordered by Middle Age Italian language (in this case, a complex of encoding systems).In principle, any description can be used as an encoding system, but in practice, only some combinatorial systems are used for encoding (see module on &#39;information objects&#39;).</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&DOLCE-Lite;mediated-relation"/>
+        <rdfs:range rdf:resource="#description"/>
+        <rdfs:domain rdf:resource="#information-object"/>
+        <owl:inverseOf rdf:resource="#orders"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#orders -->
+
+    <owl:ObjectProperty rdf:about="#orders">
+        <rdfs:subPropertyOf rdf:resource="&DOLCE-Lite;mediated-relation-i"/>
+        <rdfs:domain rdf:resource="#description"/>
+        <rdfs:range rdf:resource="#information-object"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#p-sat -->
+
+    <owl:ObjectProperty rdf:about="#p-sat">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >P-SAT assumes two satisfaction semantics: redundant satisfaction and qualified satisfaction. In order to allow for a correct implementation of the qualified satisfaction, P-SAT requires that the description exists prior to at least some of the entities in the setting of the satisfying situation. Ontologically, it results that P-SAT also implies a specific dependency of the situation on its description. P-SAT typically applies to plans, projects, designs, methods, techniques, game rules, instructions, punishment rules, constitutive descriptions, sanctions, and strategies.A sample P-SAT qualified satisfaction axiom for plans is given in OWL.</rdfs:comment>
+        <rdfs:range rdf:resource="#description"/>
+        <rdfs:subPropertyOf rdf:resource="#satisfies"/>
+        <rdfs:domain rdf:resource="#situation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#p-sat-by -->
+
+    <owl:ObjectProperty rdf:about="#p-sat-by">
+        <rdfs:domain rdf:resource="#description"/>
+        <owl:inverseOf rdf:resource="#p-sat"/>
+        <rdfs:subPropertyOf rdf:resource="#satisfied-by"/>
+        <rdfs:range rdf:resource="#situation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#parametrized-by -->
+
+    <owl:ObjectProperty rdf:about="#parametrized-by">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >The mediated relation between an entity and a parameter through the region at which the entity is localized and that is the value for the parameter.</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&DOLCE-Lite;mediated-relation-i"/>
+        <rdfs:domain rdf:resource="&DOLCE-Lite;particular"/>
+        <rdfs:range rdf:resource="#parameter"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#parametrizes -->
+
+    <owl:ObjectProperty rdf:about="#parametrizes">
+        <rdfs:subPropertyOf rdf:resource="&DOLCE-Lite;mediated-relation"/>
+        <rdfs:range rdf:resource="&DOLCE-Lite;particular"/>
+        <rdfs:domain rdf:resource="#parameter"/>
+        <owl:inverseOf rdf:resource="#parametrized-by"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#personified-by -->
+
+    <owl:ObjectProperty rdf:about="#personified-by">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A figure can personify a particular, e.g. the holy grail or a goddess, or an organization, which personifies a (postulated) collective.</rdfs:comment>
+        <rdfs:domain rdf:resource="&DOLCE-Lite;particular"/>
+        <rdfs:range rdf:resource="#figure"/>
+        <rdfs:subPropertyOf rdf:resource="#referenced-by"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#personifies -->
+
+    <owl:ObjectProperty rdf:about="#personifies">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A figure can personify a particular, e.g. the holy grail or a goddess, or an organization, which personifies a (postulated) collective.</rdfs:comment>
+        <rdfs:range rdf:resource="&DOLCE-Lite;particular"/>
+        <rdfs:domain rdf:resource="#figure"/>
+        <owl:inverseOf rdf:resource="#personified-by"/>
+        <rdfs:subPropertyOf rdf:resource="#references"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#played-by -->
+
+    <owl:ObjectProperty rdf:about="#played-by">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >This is the immediate relation between roles and endurants. A role classifies the position (function, use, relevance, ...) of an endurant within a context (description). Roles can be ordered, interdependent, at different layers. etc.</rdfs:comment>
+        <rdfs:range rdf:resource="&DOLCE-Lite;endurant"/>
+        <rdfs:subPropertyOf rdf:resource="#classifies"/>
+        <rdfs:domain rdf:resource="#role"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#plays -->
+
+    <owl:ObjectProperty rdf:about="#plays">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >This is the immediate relation between roles and endurants. A role classifies the position (function, use, relevance, ...) of an endurant within a context (description). Roles can be ordered, interdependent, at different layers. etc.</rdfs:comment>
+        <rdfs:domain rdf:resource="&DOLCE-Lite;endurant"/>
+        <rdfs:subPropertyOf rdf:resource="#classified-by"/>
+        <owl:inverseOf rdf:resource="#played-by"/>
+        <rdfs:range rdf:resource="#role"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#predecessor -->
+
+    <owl:ObjectProperty rdf:about="#predecessor">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >To be understood as &#39;entity x  has predecessor y&#39;.This is the transitive version, but it results to be a complex property in OWL-DL, and transitivity should be overruled.</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&DOLCE-Lite;immediate-relation-i"/>
+        <rdfs:range rdf:resource="&DOLCE-Lite;particular"/>
+        <rdfs:domain rdf:resource="&DOLCE-Lite;particular"/>
+        <owl:inverseOf rdf:resource="#successor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#r-sat -->
+
+    <owl:ObjectProperty rdf:about="#r-sat">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >R-SAT assumes redundant satisfaction and qualified satisfaction, but it works out that semantics with entities in the situation that entirely exist prior to the description.This seems paradoxical, since a description hardly motivates what happens if it is not present to any agent involved in things happening. For this reason, we postulate a so-called specific retroactive dependency (SRD), meaning that the creator of the description is willing to attribute the status of a scientific law to that description, despite it could not be present before the situation. R-SAT typically applies to explanations that are considered as well-founded in science (physical, social, or cognitive), reverse engineering, criminal investigation, etc. Consider that the actual validity of the explanation is not addressed by the description, but by external evaluation descriptions.</rdfs:comment>
+        <rdfs:range rdf:resource="#description"/>
+        <owl:inverseOf rdf:resource="#r-sat-by"/>
+        <rdfs:subPropertyOf rdf:resource="#satisfies"/>
+        <rdfs:domain rdf:resource="#situation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#r-sat-by -->
+
+    <owl:ObjectProperty rdf:about="#r-sat-by">
+        <rdfs:domain rdf:resource="#description"/>
+        <rdfs:subPropertyOf rdf:resource="#satisfied-by"/>
+        <rdfs:range rdf:resource="#situation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#realized-by -->
+
+    <owl:ObjectProperty rdf:about="#realized-by">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >a.k.a. support.A (usually physical) representation (p. endurant, p. perdurant, p. quality, p. region, or p. situation) realizes a non-physical object according to a system of rules.The main use of this relation is between information objects and the entities through which information objects are used and interpreted. E.g. a paper copy of the 1861 edition of Dante&#39;s Comedy, with Dore&#39;s illustrations, realizes the Comedy (as an information object).There is a sense in which any entity that realizes an IO also realizes an IO about itself.For example, a painting realizing information about a woman also realizes information about its own information. Of course, the converse of the previous axiom does not hold in general.For example, the information about a woman can be realized by entities different from that woman (as when referring to an absent woman). In other words, an entity (in a semiotic perspective) always realizes two information objects: one about itself, and another about something else.In the non-representation cases, the information objects are identical (an entity only realizes information about itself).Therefore entities, once they have a relevance in a society, can have semiotic properties. Even physical artifacts that are not built primarily for communicative purposes  e.g. a chair  can be considered as realizing some IO that expresses a design description (cf. system-design), and is about a context (situation) of use, fruition, or just affordance that satisfies the design.</rdfs:comment>
+        <rdfs:domain rdf:resource="&DOLCE-Lite;non-physical-object"/>
+        <rdfs:subPropertyOf rdf:resource="#intensionally-references"/>
+        <rdfs:range rdf:resource="#physical-realization"/>
+        <owl:inverseOf rdf:resource="#realizes"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#realizes -->
+
+    <owl:ObjectProperty rdf:about="#realizes">
+        <rdfs:range rdf:resource="&DOLCE-Lite;non-physical-object"/>
+        <rdfs:subPropertyOf rdf:resource="#intensionally-referenced-by"/>
+        <rdfs:domain rdf:resource="#physical-realization"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#referenced-by -->
+
+    <owl:ObjectProperty rdf:about="#referenced-by">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A relation holding between non-physical objects and entities whatsoever (thus including non-physical objects themselves). An intuition for the references relation could be that a non-physical object adds &#39;information&#39;  to an entity. In fact, non-physical objects depend on a communication setting. In most cases, this is the characteristic relation that provides  a unity criterion to objects, events, etc. For example, cars are objects and not mere aggregates because there is a project, a design, a social value, a functional structure, a personal emotional structure, etc. attached to them. This attachment can be represented by means of &#39;non-physical objects&#39; that &#39;reference&#39; cars. The most obvious application is for situations, which do not exist without a description, although they still are extensional entities: a situation without a part is no more the same situation, but a situation is not a mere aggregate, since it has references to a description as its unity criterion. Adding information to an entity can also be thought as an intentional solution to a holistic stance. Defenders of this view -within different frameworks- are Kant, Brentano, Husserl, Gestalt psychologists, Merleau-Ponty ... References is distinguished according to the kinds of non-physical objects and referenced ground entities: referencing between descriptions and situations is called &#39;SATISFIED-BY&#39;, while referencing between description components and situation components is called &#39;CLASSIFIES&#39;. &#39;SETTING-FOR&#39; is a referencing relation between a situation and the entities in its setting (it was formerly a constitution relation, but since situation appear to be social objects from the DOLCE viewpoint, the constitution solution is no more applicable). &#39;EXPRESSES&#39; is bound to information objects and the meaning (description of a representation or conceptualization) in which they are involved. &#39;REALIZED-BY&#39; is bound to information objects and physical representations that are used to communicate them, etc. &#39;ABOUT&#39; is bound to information objects and entities whatsoever (aboutness of intentionality).</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&DOLCE-Lite;immediate-relation-i"/>
+        <rdfs:range rdf:resource="&DOLCE-Lite;non-physical-object"/>
+        <rdfs:domain rdf:resource="&DOLCE-Lite;particular"/>
+        <owl:inverseOf rdf:resource="#references"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#references -->
+
+    <owl:ObjectProperty rdf:about="#references">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A relation holding between non-physical objects and entities whatsoever (thus including non-physical objects themselves). An intuition for the references relation could be that a non-physical object adds  &#39;information&#39; to an entity. In fact, non-physical objects depend on a communication setting. In most cases, this is the characteristic relation that provides a unity criterion to objects, events, etc.  For example, cars are objects and not mere aggregates because there is a  project, a design, a social value, a functional structure, a  personal emotional structure, etc. attached to them. This attachment can be represented by means of &#39;non-physical objects&#39; that &#39;reference&#39; cars. The most obvious application is for situations, which do not exist without a description, although they still are extensional entities: a situation without a part is no more the same situation, but a situation is not a mere aggregate, since it has references to a description  as its unity criterion. Adding information to an entity can also be thought as an intentional solution to a holistic stance. Defenders of this view -within different frameworks- are  Kant, Brentano, Husserl, Gestalt psychologists, Merleau-Ponty ... References is distinguished according to the kinds of non-physical objects and referenced  ground entities: referencing between descriptions and situations is called &#39;SATISFIED-BY&#39;, while referencing between description components and situation components is called &#39;CLASSIFIES&#39;. &#39;SETTING-FOR&#39; is a referencing relation between situation and the entities in its setting (it was formerly a constitution relation, but since situation appear to be social objects from the DOLCE viewpoint, the constitution solution is no more applicable). &#39;EXPRESSES&#39; is bound to information objects and the meaning (description of a representation or conceptualization) in which they are involved. &#39;REALIZED-BY&#39; is bound to information objects and physical representations that are used to communicate them, etc. &#39;ABOUT&#39; is bound to information objects and entities whatsoever (aboutness of intentionality).</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&DOLCE-Lite;immediate-relation"/>
+        <rdfs:domain rdf:resource="&DOLCE-Lite;non-physical-object"/>
+        <rdfs:range rdf:resource="&DOLCE-Lite;particular"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#refined-by -->
+
+    <owl:ObjectProperty rdf:about="#refined-by">
+        <rdfs:subPropertyOf rdf:resource="&DOLCE-Lite;proper-part-of"/>
+        <rdfs:domain rdf:resource="#social-object"/>
+        <rdfs:range rdf:resource="#social-object"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#refines -->
+
+    <owl:ObjectProperty rdf:about="#refines">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Concepts and figures can be refined by adding components, e.g. an elementary task can become complex, a complex task can increase its complexity, maximal tasks can be composed, etc.A description gets expanded if one of the concepts or figures it uses are refined.Refinement applies also to collections, situations, and information objects.Descriptions are refined by adding component descriptions.</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&DOLCE-Lite;proper-part"/>
+        <owl:inverseOf rdf:resource="#refined-by"/>
+        <rdfs:domain rdf:resource="#social-object"/>
+        <rdfs:range rdf:resource="#social-object"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#regulated-by -->
+
+    <owl:ObjectProperty rdf:about="#regulated-by">
+        <owl:inverseOf rdf:resource="#regulates"/>
+        <rdfs:range rdf:resource="#regulation"/>
+        <rdfs:subPropertyOf rdf:resource="#satisfies"/>
+        <rdfs:domain rdf:resource="#situation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#regulates -->
+
+    <owl:ObjectProperty rdf:about="#regulates">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A regulation states reified conditions on how a situation should look like. Regulations are mostly taken as descriptions for the social world.</rdfs:comment>
+        <rdfs:domain rdf:resource="#regulation"/>
+        <rdfs:subPropertyOf rdf:resource="#satisfied-by"/>
+        <rdfs:range rdf:resource="#situation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#required-by -->
+
+    <owl:ObjectProperty rdf:about="#required-by">
+        <rdfs:subPropertyOf rdf:resource="&DOLCE-Lite;immediate-relation-i"/>
+        <owl:inverseOf rdf:resource="#requires"/>
+        <rdfs:domain rdf:resource="#social-object"/>
+        <rdfs:range rdf:resource="#social-object"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#requires -->
+
+    <owl:ObjectProperty rdf:about="#requires">
+        <rdfs:subPropertyOf rdf:resource="&DOLCE-Lite;immediate-relation"/>
+        <rdfs:domain rdf:resource="#social-object"/>
+        <rdfs:range rdf:resource="#social-object"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#requisite -->
+
+    <owl:ObjectProperty rdf:about="#requisite">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Requisites are constraints over the attributes of entities. Within DnS, a requisite-for relation holds between parameters (that bound regions to certain value ranges), and either roles, figures or courses. When a situation satisfies a description with parameters, endurants and perdurants in the situation must have attributes that range within the boundaries stated by parameters (in DOLCE terms, entities must have qualities that are mapped to certain value ranges of regions).</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&DOLCE-Lite;immediate-relation-i"/>
+        <rdfs:range rdf:resource="#parameter"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#course"/>
+                    <rdf:Description rdf:about="#figure"/>
+                    <rdf:Description rdf:about="#information-object"/>
+                    <rdf:Description rdf:about="#role"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#requisite-for -->
+
+    <owl:ObjectProperty rdf:about="#requisite-for">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Requisites are constraints over the attributes of entities. Within DnS, a requisite-for relation holds between parameters (that bound regions to certain value ranges), and either roles, figures or courses. When a situation satisfies a description with parameters, endurants and perdurants in the situation must have attributes that range within the boundaries stated by parameters (in DOLCE terms, entities must have qualities that are mapped to certain value ranges of regions).</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&DOLCE-Lite;immediate-relation"/>
+        <rdfs:domain rdf:resource="#parameter"/>
+        <owl:inverseOf rdf:resource="#requisite"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#course"/>
+                    <rdf:Description rdf:about="#figure"/>
+                    <rdf:Description rdf:about="#information-object"/>
+                    <rdf:Description rdf:about="#role"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#right-task-for -->
+
+    <owl:ObjectProperty rdf:about="#right-task-for">
+        <rdfs:subPropertyOf rdf:resource="#attitude-target-of"/>
+        <owl:inverseOf rdf:resource="#right-to"/>
+        <rdfs:domain rdf:resource="#task"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#agent-driven-role"/>
+                    <rdf:Description rdf:about="#agentive-figure"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#right-to -->
+
+    <owl:ObjectProperty rdf:about="#right-to">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A relation between a role and a right allowance towards some function/task.This is dispositional, and implies that a participation classified by this relation is a &#39;righteous participation&#39;.</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="#attitude-towards"/>
+        <rdfs:range rdf:resource="#task"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#agent-driven-role"/>
+                    <rdf:Description rdf:about="#agentive-figure"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#satisfied-by -->
+
+    <owl:ObjectProperty rdf:about="#satisfied-by">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >See also comment on &#39;satisfies&#39; for a different explanation.This is the     primitive relation between descriptions and situations. It can be     understood as a reification of the &#39;satisfiability&#39; relation of formal     semantics that holds between theories and models. A theory is reified as a description, thus acquiring a life-cycle: a theory     can be changed, versioned, discussed, issued, etc. &#39;Theory&#39; can be a &#39;potential&#39; theory in the sense that most conceptualizations     that could be formalized, could also be reified, e.g. plans, norms,     stories, projects, diagnoses, methods, etc. No position is taken on the     extensionality of descriptions. For example, if a theory is required to be     reified in fine detail, if it changes an axiom, it could be considered no     more the same theory. On the other hand, if theories are reified without such a strong assumption,     some axioms can be changed just like non-essential parts of physical     objects, with the theory preserving its identity.In case a theory is considered extensional, it might be considered a member of     a class of &#39;theory changing history&#39;. The &#39;refines&#39; relation provides this     possibility.A model is reified as a situation, thus a *class* of models that can satisfy a     theory is reified as a situation type (class). Situations can depend on     descriptions, but not vice-versa (constructivist stance). Components of     descriptions &#39;classify&#39; entities of situations.There are at least three     satisfaction subrelations, and a lot of conditions can be stated for     allowing an automatic matching of satisfaction. See the FOL version of DLP     for details.</rdfs:comment>
+        <rdfs:domain rdf:resource="#description"/>
+        <rdfs:subPropertyOf rdf:resource="#intensionally-references"/>
+        <owl:inverseOf rdf:resource="#satisfies"/>
+        <rdfs:range rdf:resource="#situation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#satisfies -->
+
+    <owl:ObjectProperty rdf:about="#satisfies">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >See &#39;satisfied-by&#39;.</rdfs:comment>
+        <rdfs:range rdf:resource="#description"/>
+        <rdfs:subPropertyOf rdf:resource="#intensionally-referenced-by"/>
+        <rdfs:domain rdf:resource="#situation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#sequenced-by -->
+
+    <owl:ObjectProperty rdf:about="#sequenced-by">
+        <rdfs:domain rdf:resource="&DOLCE-Lite;perdurant"/>
+        <rdfs:subPropertyOf rdf:resource="#classified-by"/>
+        <rdfs:range rdf:resource="#course"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#sequences -->
+
+    <owl:ObjectProperty rdf:about="#sequences">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >This is the immediate relation between courses and perdurants. A course can be either atomic, being a simple &#39;perdurant role&#39;, or it can be complex, thus creating an abstract ordering over a temporal or causal sequence of processes or actions. The ontology of plans develops in detail intentional complex courses.</rdfs:comment>
+        <rdfs:range rdf:resource="&DOLCE-Lite;perdurant"/>
+        <rdfs:subPropertyOf rdf:resource="#classifies"/>
+        <rdfs:domain rdf:resource="#course"/>
+        <owl:inverseOf rdf:resource="#sequenced-by"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#setting -->
+
+    <owl:ObjectProperty rdf:about="#setting">
+        <rdfs:domain rdf:resource="&DOLCE-Lite;particular"/>
+        <rdfs:subPropertyOf rdf:resource="#referenced-by"/>
+        <owl:inverseOf rdf:resource="#setting-for"/>
+        <rdfs:range rdf:resource="#situation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#setting-for -->
+
+    <owl:ObjectProperty rdf:about="#setting-for">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >The relation between a situation and the entities that are referenced by it. (At least some of, or all) such entities must be classified by concepts defined by the description that the situation is supposed to satisfy.</rdfs:comment>
+        <rdfs:range rdf:resource="&DOLCE-Lite;particular"/>
+        <rdfs:subPropertyOf rdf:resource="#references"/>
+        <rdfs:domain rdf:resource="#situation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#situation-place -->
+
+    <owl:ObjectProperty rdf:about="#situation-place">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A highly mediated relation used to talk of the endurant(s) that is roughly associated to the regions in which the constituents of a situation are located. The locator endurant is supposed to be a situation constituent on its own.</rdfs:comment>
+        <rdfs:range rdf:resource="&DOLCE-Lite;endurant"/>
+        <rdfs:domain rdf:resource="#situation"/>
+        <rdfs:subPropertyOf rdf:resource="&SpatialRelations;approximate-location"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#situation-place-of -->
+
+    <owl:ObjectProperty rdf:about="#situation-place-of">
+        <rdfs:domain rdf:resource="&DOLCE-Lite;endurant"/>
+        <rdfs:range rdf:resource="#situation"/>
+        <owl:inverseOf rdf:resource="#situation-place"/>
+        <rdfs:subPropertyOf rdf:resource="&SpatialRelations;approximate-location-of"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#specialized-by -->
+
+    <owl:ObjectProperty rdf:about="#specialized-by">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Specialization as reification of a partial-order relation between type- or set-reified social objects, i.e. descriptions, concepts, and collections.For example, concepts that are apparently classified by other concepts; e.g. a manager that plays the role of buyer, where the role manager actually specializes the role buyer. Descriptions can be specialized by other descriptions that specialize their concepts. For descriptions, an intention to specialize must be present (unless purely formal theories are considered, but even in this case a criterion of relevance is usually active). Specialization does not imply expansion (proper part) for descriptions. If there exists a concept that is defined by the specialized description, which is not d-used in the specializing one, the second only specializes a part of the first. If there exists a concept that is defined by the specializing description, which is not d-used by the specialized one, the first both specializes and expands the second.</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&DOLCE-Lite;immediate-relation-i"/>
+        <owl:inverseOf rdf:resource="#specializes"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#collection"/>
+                    <rdf:Description rdf:about="#concept"/>
+                    <rdf:Description rdf:about="#description"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#collection"/>
+                    <rdf:Description rdf:about="#concept"/>
+                    <rdf:Description rdf:about="#description"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#specializes -->
+
+    <owl:ObjectProperty rdf:about="#specializes">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Specialization as reification of a partial-order relation between social objects. For example, concepts that are apparently classified by other concepts; e.g. a manager that plays the role of buyer, where the role manager actually specializes the role buyer. Descriptions can be specialized by other descriptions that specialize their concepts or figures. For descriptions, an intention to specialize must be present (unless purely formal theories are considered, but even in this case a criterion of relevance is usually active). Specialization does not imply expansion (proper part) for descriptions. If there exists a concept that is defined by the specialized description, which is not d-used in the specializing one, the second only specializes a part of the first. If there exists a concept that is defined by the specializing description, which is not d-used by the specialized one, the first both specializes and expands the second.</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&DOLCE-Lite;immediate-relation"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#collection"/>
+                    <rdf:Description rdf:about="#concept"/>
+                    <rdf:Description rdf:about="#description"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#collection"/>
+                    <rdf:Description rdf:about="#concept"/>
+                    <rdf:Description rdf:about="#description"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#successor -->
+
+    <owl:ObjectProperty rdf:about="#successor">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >To be understood as &#39;entity x  has successor y&#39;. Succession does not exclude connection, but it excludes overlapping. It can be direct or indirect, and assumes a choice (temporal, spatial, abstract, etc.) Cf. the cognitive &#39;path&#39; schema. This is the transitive version.</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&DOLCE-Lite;immediate-relation"/>
+        <rdfs:domain rdf:resource="&DOLCE-Lite;particular"/>
+        <rdfs:range rdf:resource="&DOLCE-Lite;particular"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#temporary-component -->
+
+    <owl:ObjectProperty rdf:about="#temporary-component">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Being component at time t. It holds for endurants only. This is important to model components that can change or be lost over time without affecting the identity of the whole.</rdfs:comment>
+        <rdfs:range rdf:resource="&DOLCE-Lite;endurant"/>
+        <rdfs:domain rdf:resource="&DOLCE-Lite;endurant"/>
+        <rdfs:subPropertyOf rdf:resource="&DOLCE-Lite;temporary-proper-part"/>
+        <rdfs:subPropertyOf rdf:resource="#component"/>
+        <owl:inverseOf rdf:resource="#temporary-component-of"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#temporary-component-of -->
+
+    <owl:ObjectProperty rdf:about="#temporary-component-of">
+        <rdfs:domain rdf:resource="&DOLCE-Lite;endurant"/>
+        <rdfs:range rdf:resource="&DOLCE-Lite;endurant"/>
+        <rdfs:subPropertyOf rdf:resource="&DOLCE-Lite;temporary-proper-part-of"/>
+        <rdfs:subPropertyOf rdf:resource="#component-of"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#unified-by -->
+
+    <owl:ObjectProperty rdf:about="#unified-by">
+        <rdfs:domain rdf:resource="#collection"/>
+        <rdfs:range rdf:resource="#description"/>
+        <rdfs:subPropertyOf rdf:resource="#referenced-by"/>
+        <owl:inverseOf rdf:resource="#unifies"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#unifies -->
+
+    <owl:ObjectProperty rdf:about="#unifies">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Based on characterizing roles, collections specifically depend on some description.We can therefore build a new relation of unification between collections and the descriptions on which they depend. Unification is axiomatized by means of sufficient conditions, and is not temporalized, since changing the description (differently from changing some members) creates a new collection.</rdfs:comment>
+        <rdfs:range rdf:resource="#collection"/>
+        <rdfs:domain rdf:resource="#description"/>
+        <rdfs:subPropertyOf rdf:resource="#references"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#used-by -->
+
+    <owl:ObjectProperty rdf:about="#used-by">
+        <rdfs:range rdf:resource="&DOLCE-Lite;endurant"/>
+        <rdfs:domain rdf:resource="&DOLCE-Lite;endurant"/>
+        <rdfs:subPropertyOf rdf:resource="#co-participates-with"/>
+        <owl:inverseOf rdf:resource="#uses"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#uses -->
+
+    <owl:ObjectProperty rdf:about="#uses">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >The use relations between endurants: an endurant e1 uses e2 within a perdurant in which both are participating. A rule then states that if e1 uses e2, e2 is used *in* a perdurant.</rdfs:comment>
+        <rdfs:domain rdf:resource="&DOLCE-Lite;endurant"/>
+        <rdfs:range rdf:resource="&DOLCE-Lite;endurant"/>
+        <rdfs:subPropertyOf rdf:resource="#co-participates-with"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#value-for -->
+
+    <owl:ObjectProperty rdf:about="#value-for">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >The &quot;selected by&quot; relations holding between regions and parameters. At least one region is supposed to be a value for a parameter.</rdfs:comment>
+        <rdfs:domain rdf:resource="&DOLCE-Lite;region"/>
+        <rdfs:subPropertyOf rdf:resource="#classified-by"/>
+        <rdfs:range rdf:resource="#parameter"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#valued-by -->
+
+    <owl:ObjectProperty rdf:about="#valued-by">
+        <rdfs:range rdf:resource="&DOLCE-Lite;region"/>
+        <rdfs:subPropertyOf rdf:resource="#classifies"/>
+        <rdfs:domain rdf:resource="#parameter"/>
+        <owl:inverseOf rdf:resource="#value-for"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/SpatialRelations.owl#approximate-location -->
+
+    <owl:ObjectProperty rdf:about="&SpatialRelations;approximate-location"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/SpatialRelations.owl#approximate-location-of -->
+
+    <owl:ObjectProperty rdf:about="&SpatialRelations;approximate-location-of"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#accomplishment -->
+
+    <owl:Class rdf:about="&DOLCE-Lite;accomplishment"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#endurant -->
+
+    <owl:Class rdf:about="&DOLCE-Lite;endurant"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#event -->
+
+    <owl:Class rdf:about="&DOLCE-Lite;event"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#non-physical-object -->
+
+    <owl:Class rdf:about="&DOLCE-Lite;non-physical-object"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#particular -->
+
+    <owl:Class rdf:about="&DOLCE-Lite;particular"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#perdurant -->
+
+    <owl:Class rdf:about="&DOLCE-Lite;perdurant"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#physical-endurant -->
+
+    <owl:Class rdf:about="&DOLCE-Lite;physical-endurant"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#physical-object -->
+
+    <owl:Class rdf:about="&DOLCE-Lite;physical-object"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#physical-quality -->
+
+    <owl:Class rdf:about="&DOLCE-Lite;physical-quality"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#process -->
+
+    <owl:Class rdf:about="&DOLCE-Lite;process"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#region -->
+
+    <owl:Class rdf:about="&DOLCE-Lite;region"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#spatio-temporal-particular -->
+
+    <owl:Class rdf:about="&DOLCE-Lite;spatio-temporal-particular"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#state -->
+
+    <owl:Class rdf:about="&DOLCE-Lite;state"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#action -->
+
+    <owl:Class rdf:about="#action">
+        <rdfs:subClassOf rdf:resource="&DOLCE-Lite;accomplishment"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DOLCE-Lite;participant"/>
+                <owl:someValuesFrom rdf:resource="#agent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DOLCE-Lite;generically-dependent-on"/>
+                <owl:someValuesFrom rdf:resource="#cognitive-state"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A Perdurant that exemplifies the intentionality of an agent. Could it be aborted, incomplete, mislead, while remaining a (potential) accomplishment ... The point here is that having a result depends on a method, then an action remains an action under incomplete results. As a matter of fact, if we neutralize intentionality, a purely topological, post-hoc view is at odds with the notion of incomplete accomplishments.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#activity -->
+
+    <owl:Class rdf:about="#activity">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#action"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&DOLCE-Lite;generically-dependent-on"/>
+                        <owl:someValuesFrom rdf:resource="#plan"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&DOLCE-Lite;part"/>
+                        <owl:someValuesFrom rdf:resource="#action"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#sequenced-by"/>
+                        <owl:someValuesFrom rdf:resource="#task"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >In dependency terms, an activity is an action that is generically constantly dependent on a (at least partly) shared plan adopted by participants. This condition implies that an action must be sequenced by a task.Intuitively, activities are complex actions that are at least partly conventionally planned.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#agent -->
+
+    <owl:Class rdf:about="#agent">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&DOLCE-Lite;endurant"/>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="#agentive-physical-object"/>
+                            <rdf:Description rdf:about="#agentive-social-object"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A catch-all class used to join agentive objects (either physical or social). Agents are dispositionally so, in the sense that they internally represent descriptions, and in particular plans, goals and possible actions, but they do not necessarily act. In everyday language, agent is used in this sense, but also to tell that something has acted in a certain way, or to say that something has an initiator or leading role in some action. In DLP, the performs relation encodes these notions.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#agent-driven-role -->
+
+    <owl:Class rdf:about="#agent-driven-role">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#role"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#played-by"/>
+                        <owl:allValuesFrom rdf:resource="#agent"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >AKA Agentive-role.A role that can only be played by agents.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#agentive-figure -->
+
+    <owl:Class rdf:about="#agentive-figure">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#agentive-social-object"/>
+                    <rdf:Description rdf:about="#figure"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#defined-by"/>
+                        <owl:someValuesFrom rdf:resource="#constitutive-description"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#personifies"/>
+                        <owl:someValuesFrom rdf:resource="&DOLCE-Lite;particular"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#plays"/>
+                        <owl:someValuesFrom rdf:resource="#role"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#refined-by"/>
+                <owl:allValuesFrom rdf:resource="#agentive-figure"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Agentive figures are those which are assigned (agentive) roles from a society or community; hence, they can act like a physical agent. Typical agentive figures are societies, organizations, and in general all socially constructed persons. Agentive figures are not dependent on roles defined or used in the same descriptions they are defined or used, but they can act because they depute some powers to some of those roles. In other words, a figure classified by some agentive role can play that role because there are other roles in the descriptions that define or use the figure. Those roles classifies endurants that result to act for the figure. For example, an employee acts for an organization that deputes the role (e.g. turner) that classifies the employee. Simply put, a guy working as a turner at FIAT acts for (or on behalf of) FIAT. In complex figures, like organizations or companies, a total agency is possible when an endurant plays a delegate or representative role of the figure. Since figures are social objects, it is conceivable to find agentive figures that act for other agentive figures.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#agentive-physical-object -->
+
+    <owl:Class rdf:about="#agentive-physical-object">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&DOLCE-Lite;physical-object"/>
+                    <rdf:Description rdf:about="#agent"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#internally-represents"/>
+                <owl:someValuesFrom rdf:resource="#plan"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="#non-agentive-physical-object"/>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Within Physical objects, a special place have those to which we ascribe generic intentionality (compatibly to Brentano&#39;s distinction i.e., the ability to represent something to oneself, intentionality is here represented as the ability to internally represent a description). 
+In particular, we call Agentive, as opposite to Non-agentive, those that are able to internally represent a plan. 
+In general, we assume that agentive objects are constituted by non-agentive objects: an organism is constituted by bodily organs, a robot is constituted by some machinery, and so on. 
+Among non-agentive physical objects we have for example houses, bodily organs, pieces of wood, etc.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#agentive-social-object -->
+
+    <owl:Class rdf:about="#agentive-social-object">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#agent"/>
+                    <rdf:Description rdf:about="#social-object"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#adopts"/>
+                <owl:someValuesFrom rdf:resource="#plan"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="#non-agentive-social-object"/>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A social object that is assumed to adopt a plan. Since social objects are dependent on physical ones, adoption involves that a social object is acted-by physical agents that &#39;internally represents&#39; that plan. 
+For example, an institution can adopt the plan to promote or regulate some activities, but this is possible by means of the powers conferred to it by some legal system, through its representatives, and that plan has to be executed by means of the physical agents that &#39;act for&#39; the institution.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#cognitive-event -->
+
+    <owl:Class rdf:about="#cognitive-event">
+        <rdfs:subClassOf rdf:resource="&DOLCE-Lite;event"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DOLCE-Lite;total-constant-participant"/>
+                <owl:someValuesFrom rdf:resource="#agentive-physical-object"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >An event occurring in the (embodied) mind.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#cognitive-modal-description -->
+
+    <owl:Class rdf:about="#cognitive-modal-description">
+        <rdfs:subClassOf rdf:resource="#modal-description"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#d-uses"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="#role"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="#attitude-towards"/>
+                                <owl:someValuesFrom rdf:resource="#task"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#internally-represented-in"/>
+                <owl:someValuesFrom rdf:resource="#agentive-physical-object"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#d-uses"/>
+                <owl:someValuesFrom rdf:resource="#task"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >The modal descriptions depending on some mental attitude (i.e. internally represented by a physical agent), represented here by means of a relation between roles and tasks.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#cognitive-state -->
+
+    <owl:Class rdf:about="#cognitive-state">
+        <rdfs:subClassOf rdf:resource="&DOLCE-Lite;state"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DOLCE-Lite;total-constant-participant"/>
+                <owl:someValuesFrom rdf:resource="#agentive-physical-object"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A state of the (embodied) mind</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#collection -->
+
+    <owl:Class rdf:about="#collection">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#non-agentive-social-object"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#covered-by"/>
+                        <owl:someValuesFrom rdf:resource="#role"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#unified-by"/>
+                <owl:someValuesFrom rdf:resource="#description"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#refined-by"/>
+                <owl:allValuesFrom rdf:resource="#collection"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#specialized-by"/>
+                <owl:allValuesFrom rdf:resource="#collection"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DOLCE-Lite;part"/>
+                <owl:allValuesFrom rdf:resource="#collection"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="#concept"/>
+        <owl:disjointWith rdf:resource="#description"/>
+        <owl:disjointWith rdf:resource="#figure"/>
+        <owl:disjointWith rdf:resource="#information-object"/>
+        <owl:disjointWith rdf:resource="#non-agentive-figure"/>
+        <owl:disjointWith rdf:resource="#situation"/>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Collections are social objects which, although not defined by a description, depend both on member entities and on some concepts or figures, hence indirectly on descriptions. While we could talk in general of collections of any kind of entities (events, objects, abstracts, etc.), we restrict here our attention to collections of endurants, and to the concepts that classify them (i.e. roles).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#collective -->
+
+    <owl:Class rdf:about="#collective">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#collection"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#member"/>
+                        <owl:allValuesFrom rdf:resource="#agent"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A collection with only agents as members.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#communication-event -->
+
+    <owl:Class rdf:about="#communication-event">
+        <rdfs:subClassOf rdf:resource="&DOLCE-Lite;accomplishment"/>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Here communication is taken in a rather wide sense, being possible as an (intentional) activity as well as a phenomenon.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#concept -->
+
+    <owl:Class rdf:about="#concept">
+        <rdfs:subClassOf rdf:resource="#non-agentive-social-object"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DOLCE-Lite;part"/>
+                <owl:allValuesFrom rdf:resource="#concept"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#refined-by"/>
+                <owl:allValuesFrom rdf:resource="#concept"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#defined-by"/>
+                <owl:someValuesFrom rdf:resource="#description"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#specialized-by"/>
+                <owl:allValuesFrom rdf:resource="#concept"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="#description"/>
+        <owl:disjointWith rdf:resource="#information-object"/>
+        <owl:disjointWith rdf:resource="#non-agentive-figure"/>
+        <owl:disjointWith rdf:resource="#situation"/>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >AKA C-Description. A non-physical object that is defined by a description s, and whose function is classifying entities from a ground ontology in order to build situations that can satisfy s.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#constitutive-description -->
+
+    <owl:Class rdf:about="#constitutive-description">
+        <rdfs:subClassOf rdf:resource="#description"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#defines"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="#figure"/>
+                            <rdf:Description rdf:about="#role"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A description whose purpose is defining a figure.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#course -->
+
+    <owl:Class rdf:about="#course">
+        <rdfs:subClassOf rdf:resource="#concept"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#defined-by"/>
+                <owl:someValuesFrom rdf:resource="#description"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#specialized-by"/>
+                <owl:someValuesFrom rdf:resource="#course"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DOLCE-Lite;part"/>
+                <owl:allValuesFrom rdf:resource="#course"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="#parameter"/>
+        <owl:disjointWith rdf:resource="#role"/>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A concept that classifies (in particular, it &#39;sequences&#39;) perdurants (processes, events, or states), as a component of some description. Courses are the descriptive counterpart of perdurants, and, since perdurants have endurants as participants, they are usually the function of some role.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#description -->
+
+    <owl:Class rdf:about="#description">
+        <rdfs:subClassOf rdf:resource="#non-agentive-social-object"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#refined-by"/>
+                <owl:allValuesFrom rdf:resource="#description"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#specialized-by"/>
+                <owl:allValuesFrom rdf:resource="#description"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#expressed-by"/>
+                <owl:someValuesFrom rdf:resource="#information-object"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#d-uses"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="#concept"/>
+                            <rdf:Description rdf:about="#figure"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="#information-object"/>
+        <owl:disjointWith rdf:resource="#non-agentive-figure"/>
+        <owl:disjointWith rdf:resource="#situation"/>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A description is a social object which represents a conceptualization (e.g. a mental object or state), hence it is generically dependent on some agent and communicable. Descriptions define or use concepts or figures, are expressed by an information object and can be satisfied by situations. The typology of descriptions is still preliminary.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#description-role -->
+
+    <owl:Class rdf:about="#description-role">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#role"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#played-by"/>
+                        <owl:allValuesFrom rdf:resource="#description"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A role played by descriptions only. Usable for metalinguistic notions, like those that deal with granular partitions of knowledge, strata of reality, argumentation, etc.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#desire -->
+
+    <owl:Class rdf:about="#desire">
+        <rdfs:subClassOf rdf:resource="#cognitive-modal-description"/>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Desires are characterized here as modal description dependent on the cognitive (or &#39;mental&#39;) states of an agent. It is difficult to say more than that without reusing an ontology of cognitive states.Informally: a desire is a description that involves some (possible or actual) &#39;desire towards&#39; attitude by an agent, and is ultimately motivated by evolutionary features of an organism (or by built-in features if the agent is artificial), which are (or used to be) an advantage for it.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#figure -->
+
+    <owl:Class rdf:about="#figure">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#social-object"/>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="#agentive-figure"/>
+                            <rdf:Description rdf:about="#non-agentive-figure"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:disjointWith rdf:resource="#information-object"/>
+        <owl:disjointWith rdf:resource="#situation"/>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >a.k.a. &#39;social individual&#39;. Figures are social objects defined or used by descriptions, but differently from concepts, they do not classify entities. Examples of figures are organizations, political-geographic objects, sacred symbols, etc.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#flux -->
+
+    <owl:Class rdf:about="#flux">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&DOLCE-Lite;process"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&DOLCE-Lite;specific-constant-constituent"/>
+                        <owl:someValuesFrom rdf:resource="&DOLCE-Lite;accomplishment"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Fluxes are processes that (also) contain accomplishments as constituents. In other words, fluxes emerge out of accomplishments.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#gestalt -->
+
+    <owl:Class rdf:about="#gestalt">
+        <rdfs:subClassOf rdf:resource="#theory"/>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A perceptual structure, from the descriptive viewpoint. In other words, this encodes the conditions by which a configuration, structure, or arrangement is perceived as a meaningful whole by a perceiving agent.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#goal -->
+
+    <owl:Class rdf:about="#goal">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#desire"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&DOLCE-Lite;proper-part-of"/>
+                        <owl:someValuesFrom rdf:resource="#method"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >We are proposing here a restrictive notion of goal that relies upon its desirability by some agent, which does not necessarily play a role in the execution of the plan the goal is a part of. For example, an agent can have an attitude towards some task defined in a plan, e.g. duty towards, which is different from desiring it (desire towards). We might say that a goal is usually desired by the creator or beneficiary of a plan. The minimal constraint for a goal is that it is a proper part of a plan. For example, a desire to start a relationship can become a goal if someone decides to take action (or lets someone else take it for her sake) to obtain it.
+A goal is different from anobjective, because the second one is independent from the cognitive state of a particular physical agent.
+In practice, an agent (physical or social) may aim at realizing an objective even though the realizing situation conflicts with a goal-situation of the same agent.
+In &#39;private&#39; plans of a physical agent,  realizing situations usually coincide with goal-situations.
+Different cases occur with plans endorsed by social agents like organizations, institutions, etc., which are more clearly aimed at realizing objectives.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#indicator -->
+
+    <owl:Class rdf:about="#indicator">
+        <rdfs:subClassOf rdf:resource="#parameter"/>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A parameter valued by regions that are used asindicators for some behaviour or event to be checked.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#information-encoding-system -->
+
+    <owl:Class rdf:about="#information-encoding-system">
+        <rdfs:subClassOf rdf:resource="#description"/>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >An information encoding system is a description that involves information objects. They can be divided into 1) axiomatic systems, which provide roles and operations to define formal descriptions (e.g. theories), 2) combinatorial systems, which provide roles and operations to create valid information objects (e.g. grammars), 3) classification systems, which are contexts of (ev. ordered) lists of information objects, and 4) informal encoding systems, which provide roles and operations to define informal descriptions (e.g. narratives).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#information-object -->
+
+    <owl:Class rdf:about="#information-object">
+        <rdfs:subClassOf rdf:resource="#non-agentive-social-object"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#ordered-by"/>
+                <owl:someValuesFrom rdf:resource="#description"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#refined-by"/>
+                <owl:allValuesFrom rdf:resource="#information-object"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#realized-by"/>
+                <owl:someValuesFrom rdf:resource="#physical-realization"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DOLCE-Lite;part"/>
+                <owl:allValuesFrom rdf:resource="#information-object"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="#non-agentive-figure"/>
+        <owl:disjointWith rdf:resource="#situation"/>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Information objects are social objects. They are realized by some entity. They are ordered (expressed according to) by some system for information encoding. Consequently, they are dependent from an encoding as well as from a concrete realization.They can express a description (the ontological equivalent of a meaning/conceptualization), can be about any entity, and can be interpreted by an agent.From a communication perspective, an information object can play the role of &quot;message&quot;. From a semiotic perspective, it playes the role of &quot;expression&quot;.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#life-cycle -->
+
+    <owl:Class rdf:about="#life-cycle">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#course"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#sequences"/>
+                        <owl:allValuesFrom>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&DOLCE-Lite;life-of"/>
+                                <owl:someValuesFrom rdf:resource="&DOLCE-Lite;endurant"/>
+                            </owl:Restriction>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >The course of events typical of the life of an object (kind).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#logical-role -->
+
+    <owl:Class rdf:about="#logical-role">
+        <rdfs:subClassOf rdf:resource="#description-role"/>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A role used to express logical levels within some layering description or granular partition. A typical example is the Linnean taxonomic ordering, where Phylum or Species are hierarchical roles.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#material-artifact -->
+
+    <owl:Class rdf:about="#material-artifact">
+        <rdfs:subClassOf rdf:resource="#non-agentive-physical-object"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DOLCE-Lite;proper-part"/>
+                <owl:someValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#member-of"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="#collection"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="#unified-by"/>
+                                        <owl:someValuesFrom>
+                                            <owl:Class>
+                                                <owl:unionOf rdf:parseType="Collection">
+                                                    <rdf:Description rdf:about="#plan"/>
+                                                    <rdf:Description rdf:about="#project"/>
+                                                </owl:unionOf>
+                                            </owl:Class>
+                                        </owl:someValuesFrom>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >No easy definition of artifactual properties is possible, hence it is better to rely on alternative descriptions and roles: a physical object that shows or is known to have an artifactual origin that counts in the tasks an ontology is supposed to support, will be a material artifact. On the other hand, physical objects that do not show that origin, or that origin is unimportant for the task of the ontology, will be physical bodies. Formally, a restriction is provided here that requires that the collection whose members are (at least some of the) proper parts of a material artifact is *unified* by a plan or project.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#method -->
+
+    <owl:Class rdf:about="#method">
+        <rdfs:subClassOf rdf:resource="#description"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#d-uses"/>
+                <owl:someValuesFrom rdf:resource="#role"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#d-uses"/>
+                <owl:someValuesFrom rdf:resource="#task"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A description that contains a specification to do, realize, behave, etc. Subclasses are plan, technique, practice, project, etc.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#modal-description -->
+
+    <owl:Class rdf:about="#modal-description">
+        <rdfs:subClassOf rdf:resource="#description"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#d-uses"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="#role"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="#modal-target"/>
+                                <owl:someValuesFrom rdf:resource="#course"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#d-uses"/>
+                <owl:someValuesFrom rdf:resource="#course"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A modal description is any part of a description that has a unity criterion consisting in the specification of a modal target (some course), and it can be a right, power, duty, etc. Notice that modal descriptions can appear in conventionalized descriptions as well as in idiosyncratic assessements, narratives, promises, etc. From the formal semantic viewpoint, a modal description is the reification of a relation involving a modal logic operator.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#non-agentive-figure -->
+
+    <owl:Class rdf:about="#non-agentive-figure">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#figure"/>
+                    <rdf:Description rdf:about="#non-agentive-social-object"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#defined-by"/>
+                        <owl:someValuesFrom rdf:resource="#constitutive-description"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#personifies"/>
+                        <owl:someValuesFrom rdf:resource="&DOLCE-Lite;particular"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#plays"/>
+                        <owl:someValuesFrom rdf:resource="#role"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#refined-by"/>
+                <owl:allValuesFrom rdf:resource="#non-agentive-figure"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="#situation"/>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A typology of non-agentive figures is currently under investigation.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#non-agentive-physical-object -->
+
+    <owl:Class rdf:about="#non-agentive-physical-object">
+        <rdfs:subClassOf rdf:resource="&DOLCE-Lite;physical-object"/>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Within physical objects, a special place have those to which we ascribe intentions, beliefs, and desires. These are called Agentive, as opposite to Non-agentive. Intentionality is understood here as the capability of heading for/dealing with objects or states of the world. This is an important area of ontological investigation we haven&#39;t properly explored yet, so our suggestions are really very preliminary. A possible modelling of case roles has been started within the descriptions plugin that could be embedded within basic DOLCE. In general, we assume that agentive objects are constituted by non-agentive objects: an organism is constituted by bodily organs, a robot is constituted by some machinery, and so on. Among non-agentive physical objects we have for example houses, body organs, pieces of wood, etc.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#non-agentive-social-object -->
+
+    <owl:Class rdf:about="#non-agentive-social-object">
+        <rdfs:subClassOf rdf:resource="#social-object"/>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A social object that is not agentive in the sense of adopting a plan or being acted by some physical agent. See &#39;agentive-social-object&#39; for more detail.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#objective -->
+
+    <owl:Class rdf:about="#objective">
+        <rdfs:subClassOf rdf:resource="#modal-description"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DOLCE-Lite;proper-part-of"/>
+                <owl:someValuesFrom rdf:resource="#method"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >The purpose of an agent, either physical or social. It is different from a desire or goal, because it is independent from the cognitive state of a particular physical agent.
+In practice, an agent (physical or social) may aim at realizing an objective even though the realizing situation conflicts with a goal-situation of the same agent.
+In &#39;private&#39; plans of a physical agent,  realizing situations usually coincide with goal-situations.
+Different cases occur with plans endorsed by social agents like organizations, institutions, etc.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#parameter -->
+
+    <owl:Class rdf:about="#parameter">
+        <rdfs:subClassOf rdf:resource="#concept"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#specialized-by"/>
+                <owl:allValuesFrom rdf:resource="#parameter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#defined-by"/>
+                <owl:someValuesFrom rdf:resource="#description"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#valued-by"/>
+                <owl:someValuesFrom rdf:resource="&DOLCE-Lite;region"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="#role"/>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A concept that classifies (in particular, it is &#39;valued by&#39;) regions, as defined by some description. Parameters are the descriptive counterpart of regions, and, as regions represent the qualities of perdurants or endurants, they can be requisites for some role or course.A parameter has at least one region that is a value for it.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#path -->
+
+    <owl:Class rdf:about="#path">
+        <rdfs:subClassOf rdf:resource="#course"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#sequences"/>
+                <owl:someValuesFrom rdf:resource="#phenomenon"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A course used to sequence phenomena (non-intentional processes).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#phenomenon -->
+
+    <owl:Class rdf:about="#phenomenon">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&DOLCE-Lite;accomplishment"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&DOLCE-Lite;specifically-constantly-dependent-on"/>
+                        <owl:allValuesFrom>
+                            <owl:Class>
+                                <owl:complementOf rdf:resource="#cognitive-state"/>
+                            </owl:Class>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#sequenced-by"/>
+                        <owl:allValuesFrom>
+                            <owl:Class>
+                                <owl:complementOf rdf:resource="#task"/>
+                            </owl:Class>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A phenomenon is basically a process that does not include any intentional active participation. Therefore, it cannot be sequenced by a task.It can be seen as an accomplishment when some intentionality puts boundaries on it (although it is not claimed to be inherently intentional). On the other hand, a purely physical phenomenon does not seem to have inherent boundaries either ... and also for biological processes as well as economic processes this seems to be disputable. If the boundary hypothesis is discarded, phenomenon should migrate under process.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#physical-phenomenon -->
+
+    <owl:Class rdf:about="#physical-phenomenon">
+        <rdfs:subClassOf rdf:resource="#phenomenon"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DOLCE-Lite;participant"/>
+                <owl:someValuesFrom rdf:resource="&DOLCE-Lite;physical-endurant"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A phenomenon having a physical endurant as participant.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#physical-realization -->
+
+    <owl:Class rdf:about="#physical-realization">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&DOLCE-Lite;spatio-temporal-particular"/>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&DOLCE-Lite;physical-endurant"/>
+                            <rdf:Description rdf:about="&DOLCE-Lite;physical-quality"/>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="&DOLCE-Lite;perdurant"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="&DOLCE-Lite;participant"/>
+                                        <owl:someValuesFrom rdf:resource="&DOLCE-Lite;physical-endurant"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="#situation"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="#setting-for"/>
+                                        <owl:someValuesFrom>
+                                            <owl:Class>
+                                                <owl:unionOf rdf:parseType="Collection">
+                                                    <rdf:Description rdf:about="&DOLCE-Lite;physical-endurant"/>
+                                                    <rdf:Description rdf:about="&DOLCE-Lite;physical-quality"/>
+                                                    <owl:Restriction>
+                                                        <owl:onProperty rdf:resource="&DOLCE-Lite;participant"/>
+                                                        <owl:someValuesFrom rdf:resource="&DOLCE-Lite;physical-endurant"/>
+                                                    </owl:Restriction>
+                                                </owl:unionOf>
+                                            </owl:Class>
+                                        </owl:someValuesFrom>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:unionOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#realizes"/>
+                        <owl:someValuesFrom rdf:resource="&DOLCE-Lite;non-physical-object"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Any physical particular that realizes a non-physical endurant. Such physical particulars can be either physical endurants, physical qualities, physical regions, perdurants with at least one physical participant, or a situation with one physical entity in its setting.Ultimately, a physical realization depends on at least one physical endurant (each of the others physical entity types depend on a physical endurant to be considered as such).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#plan -->
+
+    <owl:Class rdf:about="#plan">
+        <rdfs:subClassOf rdf:resource="#method"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DOLCE-Lite;proper-part"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="#goal"/>
+                            <rdf:Description rdf:about="#objective"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A plan is a method for executing or performing a procedure or a stage of a procedure. A plan must use both at least one role played by an agent, and at least one task. Finally, a plan has a goal as proper part, and can also have regulations and other descriptions as proper parts.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#practice -->
+
+    <owl:Class rdf:about="#practice">
+        <rdfs:subClassOf rdf:resource="#method"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#adopted-by"/>
+                <owl:someValuesFrom rdf:resource="#agentive-social-object"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A social method carried out explicitly or by tradition, spontaneously emerged, or moderately or strongly regulated.
+A practice has more relaxed constraints than a plan, and it&#39;s characterized by its adoption a agentive social object, e.g. a community.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#project -->
+
+    <owl:Class rdf:about="#project">
+        <rdfs:subClassOf rdf:resource="#plan"/>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A project is a proactively satisfied method. Additionally to a plan, a project includes at least one &#39;product&#39; role to be played by some endurant (e.g. a house), or one &#39;result&#39; role played by a perdurant with a definite participant (e.g. a restored state of a house).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#rational-agent -->
+
+    <owl:Class rdf:about="#rational-agent">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#agent"/>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="#rational-physical-object"/>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="#agentive-social-object"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="#acted-by"/>
+                                        <owl:someValuesFrom rdf:resource="#rational-physical-object"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Either a rational physical object (e.g. an animal capable of meta-representations), or a social object acted by a rational physical object (e.g. an organization).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#rational-physical-object -->
+
+    <owl:Class rdf:about="#rational-physical-object">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#agentive-physical-object"/>
+                    <rdf:Description rdf:about="#rational-agent"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#internally-represents"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="#description"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="#involves"/>
+                                <owl:someValuesFrom rdf:resource="#description"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >In this ontology, a rational object is encoded as having the ability to internally represent meta-descriptions (descriptions that have other descriptions playing roles used by them). Other theories of rational agency assume desires and intentions for these objects, but in principle any agent can have desires and intentions: the very difference seems to be the ability to choose among different desires or intentions by going &#39;meta-level&#39;.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#reconstructed-flux -->
+
+    <owl:Class rdf:about="#reconstructed-flux">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#flux"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&DOLCE-Lite;part"/>
+                        <owl:allValuesFrom rdf:resource="&DOLCE-Lite;accomplishment"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Reconstructed fluxes are fluxes that only contain accomplishments as members.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#regulation -->
+
+    <owl:Class rdf:about="#regulation">
+        <rdfs:subClassOf rdf:resource="#social-description"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DOLCE-Lite;proper-part"/>
+                <owl:someValuesFrom rdf:resource="#cognitive-modal-description"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A description usually requiring a C-SAT satisfaction for a situation. Norms, codes of practice, etc. are examples.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#relation -->
+
+    <owl:Class rdf:about="#relation">
+        <rdfs:subClassOf rdf:resource="#theory"/>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A non-social relation(ship): formal, linguistic, etc. It is considered here a theory, because relations are established in order to give an ordering to some reality.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#role -->
+
+    <owl:Class rdf:about="#role">
+        <rdfs:subClassOf rdf:resource="#concept"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#defined-by"/>
+                <owl:someValuesFrom rdf:resource="#description"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#specialized-by"/>
+                <owl:allValuesFrom rdf:resource="#role"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Also known as &#39;functional role&#39;.A concept that classifies (in particular, it is &#39;played by&#39;) endurants, as used in some description. Roles are the descriptive counterpart of endurants, and, as endurants participate in perdurants, they usually have courses as modal targets (see).The typology of roles is still preliminary.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#situation -->
+
+    <owl:Class rdf:about="#situation">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#non-agentive-social-object"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#satisfies"/>
+                        <owl:someValuesFrom rdf:resource="#description"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#setting-for"/>
+                        <owl:someValuesFrom rdf:resource="&DOLCE-Lite;particular"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DOLCE-Lite;part"/>
+                <owl:allValuesFrom rdf:resource="#situation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#refined-by"/>
+                <owl:allValuesFrom rdf:resource="#situation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A situation is a social object that appears in the domain of an ontology only because there is a description whose components can &#39;carve up&#39; a view (setting) on that domain. A situation has to satisfy a description (see below for ways of defining the satisfies relation), and it has to be setting for at least one entity.In other words, it is the ontological counterpart (with due local differences or restrictions) of settings (situations from SC, contexts, episodes, states of affairs, structures, configurations, cases, etc.).A perdurant is usually the only mandatory constituent of a setting.Two descriptions of a same situation are possible, otherwise we would result in a solipsistic ontology. The time and space (and possibly other qualities) of a situation are the time and space of the perdurants in the setting.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#social-description -->
+
+    <owl:Class rdf:about="#social-description">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#description"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&DOLCE-Lite;generically-dependent-on"/>
+                        <owl:someValuesFrom rdf:resource="#collective"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Examples of Social Descriptions are laws, norms, shares, peace treaties, etc., which are generically dependent on societies.Social descriptions are dependent on a community of agents.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#social-object -->
+
+    <owl:Class rdf:about="#social-object">
+        <rdfs:subClassOf rdf:resource="&DOLCE-Lite;non-physical-object"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DOLCE-Lite;generically-dependent-on"/>
+                <owl:someValuesFrom rdf:resource="#communication-event"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A catch-all class for entities from the social world. It includes agentive and non-agentive socially-constructed objects: descriptions, concepts, figures, collections, information objects. It could be equivalent to &#39;non-physical object&#39;, but we leave the possibility open of &#39;private&#39; non-physical objects.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#social-relationship -->
+
+    <owl:Class rdf:about="#social-relationship">
+        <rdfs:subClassOf rdf:resource="#social-description"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#involves"/>
+                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">2</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#involves"/>
+                <owl:someValuesFrom rdf:resource="#rational-agent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A social description defining roles for the interaction of rational agents.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#social-role -->
+
+    <owl:Class rdf:about="#social-role">
+        <rdfs:subClassOf rdf:resource="#role"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DOLCE-Lite;generically-dependent-on"/>
+                <owl:someValuesFrom rdf:resource="#collective"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A role created and maintained by a society.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#status -->
+
+    <owl:Class rdf:about="#status">
+        <rdfs:subClassOf rdf:resource="#agent-driven-role"/>
+        <rdfs:subClassOf rdf:resource="#social-role"/>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A role that involves responsibility, e.g. both duties and rights, in order to perform some task. It usually involves additional rights and/or powers in contexts (descriptions) different from the one that defines the status.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#symmetric-role -->
+
+    <owl:Class rdf:about="#symmetric-role">
+        <rdfs:subClassOf rdf:resource="#role"/>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A role played exactly by two objects at the same time, e.g.: brother, sibling.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#task -->
+
+    <owl:Class rdf:about="#task">
+        <rdfs:subClassOf rdf:resource="#course"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#specialized-by"/>
+                <owl:someValuesFrom rdf:resource="#task"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#defined-by"/>
+                <owl:someValuesFrom rdf:resource="#method"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A course used to sequence activities or other controllable perdurants (some states, processes), usually within methods. They must be defined by a method, but can be *used* by other kinds of descriptions. They are desire targets of some role played by an agent. Tasks can be complex, and ordered according to an abstract succession relation. Tasks can relate to ground activities or decision making; the last kind deals with typical flowchart content. A task is different both from a flowchart node, and from an action or action type.Tasks can be considered shortcuts for plans, since at least one role played by an agent has a desire attitude towards them (possibly different from the one that puts the task into action). In principle, tasks could be transformed into explicit plans.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#technique -->
+
+    <owl:Class rdf:about="#technique">
+        <rdfs:subClassOf rdf:resource="#method"/>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A technique is a practical method to obtain some modification in the environment (or evaluation of an environment) that fulfils some task.
+Differently from a plan, a technique does not necessarily contains a goal or objective as a proper part.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#theory -->
+
+    <owl:Class rdf:about="#theory">
+        <rdfs:subClassOf rdf:resource="#description"/>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >This is used in a wide cultural sense: a theory about something, expressed in a rather systematic way, but not necessarily public (although communicable in principle). An axiomatic theory is not a theory in this sense, although we can expect an axiomatic theory to be the formal representation of a generic theory.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#Thing -->
+
+    <owl:Class rdf:about="&owl;Thing"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+

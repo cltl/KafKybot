@@ -1,0 +1,15 @@
+participant:report:agent	2	event:kill:	1	event:say:	1
+participant:agency:agent	1	event:respond:	1
+participant:road:agent	3	event:use:	1	event:travel:	1	event:collide:	1
+event:say:	1	participant:report:agent	1
+event:die:	1	participant:people:agent	1
+event:respond:	2	participant:agency:agent	1	participant:firefighter:agent	1
+event:collide:	2	participant:bus:agent	1	participant:road:agent	1
+participant:official:agent	1	event:confirm:	1
+participant:firefighter:agent	1	event:respond:	1
+participant:people:agent	2	event:kill:	1	event:die:	1
+event:confirm:	1	participant:official:agent	1
+event:use:	1	participant:road:agent	1
+event:travel:	1	participant:road:agent	1
+event:kill:	2	participant:people:agent	1	participant:report:agent	1
+participant:bus:agent	1	event:collide:	1

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<triples>
+<triple id="bus-accident.ont.dep.kaf#1" profile_id="agent-1-sem" profile_confidence="30" relation="agent">
+	<elementFirstIds label="event" comment="respond">
+		<elementFirst id="w34"/>
+	</elementFirstIds>
+	<elementSecondIds label="participant" comment="firefighter">
+		<elementSecond id="w30"/>
+	</elementSecondIds>
+</triple>
+<triple id="bus-accident.ont.dep.kaf#2" profile_id="agent-1-sem" profile_confidence="30" relation="agent">
+	<elementFirstIds label="event" comment="respond">
+		<elementFirst id="w34"/>
+	</elementFirstIds>
+	<elementSecondIds label="participant" comment="agency">
+		<elementSecond id="w33"/>
+	</elementSecondIds>
+</triple>
+<triple id="bus-accident.ont.dep.kaf#3" profile_id="agent-1-sem" profile_confidence="30" relation="agent">
+	<elementFirstIds label="event" comment="die">
+		<elementFirst id="w3"/>
+	</elementFirstIds>
+	<elementSecondIds label="participant" comment="people">
+		<elementSecond id="w2"/>
+	</elementSecondIds>
+</triple>
+<triple id="bus-accident.ont.dep.kaf#4" profile_id="agent-1-sem" profile_confidence="30" relation="agent">
+	<elementFirstIds label="event" comment="collide">
+		<elementFirst id="w22"/>
+	</elementFirstIds>
+	<elementSecondIds label="participant" comment="bus">
+		<elementSecond id="w16"/>
+	</elementSecondIds>
+</triple>
+<triple id="bus-accident.ont.dep.kaf#5" profile_id="agent-1-sem" profile_confidence="30" relation="agent">
+	<elementFirstIds label="event" comment="collide">
+		<elementFirst id="w22"/>
+	</elementFirstIds>
+	<elementSecondIds label="participant" comment="road">
+		<elementSecond id="w21"/>
+	</elementSecondIds>
+</triple>
+<triple id="bus-accident.ont.dep.kaf#6" profile_id="agent-1-sem" profile_confidence="30" relation="agent">
+	<elementFirstIds label="event" comment="confirm">
+		<elementFirst id="w97"/>
+	</elementFirstIds>
+	<elementSecondIds label="participant" comment="official">
+		<elementSecond id="w93"/>
+	</elementSecondIds>
+</triple>
+<triple id="bus-accident.ont.dep.kaf#7" profile_id="agent-1-sem" profile_confidence="30" relation="agent">
+	<elementFirstIds label="event" comment="use">
+		<elementFirst id="w50"/>
+	</elementFirstIds>
+	<elementSecondIds label="participant" comment="road">
+		<elementSecond id="w48"/>
+	</elementSecondIds>
+</triple>
+<triple id="bus-accident.ont.dep.kaf#8" profile_id="agent-1-sem" profile_confidence="30" relation="agent">
+	<elementFirstIds label="event" comment="travel">
+		<elementFirst id="w52"/>
+	</elementFirstIds>
+	<elementSecondIds label="participant" comment="road">
+		<elementSecond id="w48"/>
+	</elementSecondIds>
+</triple>
+<triple id="bus-accident.ont.dep.kaf#9" profile_id="agent-1-sem" profile_confidence="30" relation="agent">
+	<elementFirstIds label="event" comment="say">
+		<elementFirst id="w73"/>
+	</elementFirstIds>
+	<elementSecondIds label="participant" comment="report">
+		<elementSecond id="w72"/>
+	</elementSecondIds>
+</triple>
+<triple id="bus-accident.ont.dep.kaf#10" profile_id="agent-1-sem" profile_confidence="30" relation="agent">
+	<elementFirstIds label="event" comment="kill">
+		<elementFirst id="w83"/>
+	</elementFirstIds>
+	<elementSecondIds label="participant" comment="report">
+		<elementSecond id="w72"/>
+	</elementSecondIds>
+</triple>
+<triple id="bus-accident.ont.dep.kaf#11" profile_id="agent-1-sem" profile_confidence="30" relation="agent">
+	<elementFirstIds label="event" comment="kill">
+		<elementFirst id="w83"/>
+	</elementFirstIds>
+	<elementSecondIds label="participant" comment="people">
+		<elementSecond id="w79"/>
+	</elementSecondIds>
+</triple>
+</triples>

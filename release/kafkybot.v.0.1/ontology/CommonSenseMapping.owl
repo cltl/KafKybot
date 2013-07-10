@@ -1,0 +1,776 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY DOLCE-Lite "http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#" >
+    <!ENTITY ExtendedDnS "http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#" >
+    <!ENTITY TemporalRelations "http://www.loa-cnr.it/ontologies/TemporalRelations.owl#" >
+    <!ENTITY ModalDescriptions "http://www.loa-cnr.it/ontologies/ModalDescriptions.owl#" >
+    <!ENTITY CommonSenseMapping "http://www.loa-cnr.it/ontologies/CommonSenseMapping.owl#" >
+    <!ENTITY FunctionalParticipation "http://www.loa-cnr.it/ontologies/FunctionalParticipation.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.loa-cnr.it/ontologies/CommonSenseMapping.owl#"
+     xml:base="http://www.loa-cnr.it/ontologies/CommonSenseMapping.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:DOLCE-Lite="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#"
+     xmlns:ModalDescriptions="http://www.loa-cnr.it/ontologies/ModalDescriptions.owl#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:CommonSenseMapping="http://www.loa-cnr.it/ontologies/CommonSenseMapping.owl#"
+     xmlns:FunctionalParticipation="http://www.loa-cnr.it/ontologies/FunctionalParticipation.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:TemporalRelations="http://www.loa-cnr.it/ontologies/TemporalRelations.owl#"
+     xmlns:ExtendedDnS="http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#">
+    <owl:Ontology rdf:about="">
+        <owl:versionInfo rdf:datatype="&xsd;string">397</owl:versionInfo>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Some classes used to map DOLCE and DnS to commonsense notions, e.g. from OntoWordNet. OWL engineering by Aldo Gangemi.</rdfs:comment>
+        <owl:imports rdf:resource="http://www.loa-cnr.it/ontologies/FunctionalParticipation.owl"/>
+        <owl:imports rdf:resource="http://www.loa-cnr.it/ontologies/ModalDescriptions.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/CommonSenseMapping.owl#duration -->
+
+    <owl:ObjectProperty rdf:about="#duration">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >The time interval of duration of a perdurant.</rdfs:comment>
+        <rdfs:domain rdf:resource="&DOLCE-Lite;perdurant"/>
+        <rdfs:range rdf:resource="&DOLCE-Lite;time-interval"/>
+        <rdfs:subPropertyOf rdf:resource="&TemporalRelations;temporal-location"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/CommonSenseMapping.owl#duration-of -->
+
+    <owl:ObjectProperty rdf:about="#duration-of">
+        <owl:inverseOf rdf:resource="#duration"/>
+        <rdfs:range rdf:resource="&DOLCE-Lite;perdurant"/>
+        <rdfs:domain rdf:resource="&DOLCE-Lite;time-interval"/>
+        <rdfs:subPropertyOf rdf:resource="&TemporalRelations;temporal-location-of"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/CommonSenseMapping.owl#geographic-part -->
+
+    <owl:ObjectProperty rdf:about="#geographic-part">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <owl:inverseOf rdf:resource="#geographic-part-of"/>
+        <rdfs:range rdf:resource="#political-geographic-object"/>
+        <rdfs:domain rdf:resource="#political-geographic-object"/>
+        <rdfs:subPropertyOf rdf:resource="&DOLCE-Lite;proper-part"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/CommonSenseMapping.owl#geographic-part-of -->
+
+    <owl:ObjectProperty rdf:about="#geographic-part-of">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >The transitive proper part relation between political (non-physical) 
+    geographic objects. It is a primitive proper-part, and not a composed 
+    relation through the physical depend-ons of political places, since 
+    geographical parts can be dependent on disconnected physical places.</rdfs:comment>
+        <rdfs:domain rdf:resource="#political-geographic-object"/>
+        <rdfs:range rdf:resource="#political-geographic-object"/>
+        <rdfs:subPropertyOf rdf:resource="&DOLCE-Lite;proper-part-of"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/CommonSenseMapping.owl#happens-at -->
+
+    <owl:ObjectProperty rdf:about="#happens-at">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Perdurant presence (happening) is axiomatized as  being temporally located at a point in one&#39;s life.</rdfs:comment>
+        <rdfs:domain rdf:resource="&DOLCE-Lite;perdurant"/>
+        <rdfs:range rdf:resource="&DOLCE-Lite;time-interval"/>
+        <rdfs:subPropertyOf rdf:resource="&TemporalRelations;temporal-location"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/CommonSenseMapping.owl#time-of-happening-of -->
+
+    <owl:ObjectProperty rdf:about="#time-of-happening-of">
+        <owl:inverseOf rdf:resource="#happens-at"/>
+        <rdfs:range rdf:resource="&DOLCE-Lite;perdurant"/>
+        <rdfs:domain rdf:resource="&DOLCE-Lite;time-interval"/>
+        <rdfs:subPropertyOf rdf:resource="&TemporalRelations;temporal-location-of"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/CommonSenseMapping.owl#unit -->
+
+    <owl:ObjectProperty rdf:about="#unit">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A relation for composing regions by means of a reference metrics. One of them (the measurement unit) should be explicitly used to represent a measurement space.</rdfs:comment>
+        <rdfs:range rdf:resource="#measurement-unit"/>
+        <rdfs:subPropertyOf rdf:resource="&DOLCE-Lite;r-location"/>
+        <rdfs:domain rdf:resource="&DOLCE-Lite;region"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/CommonSenseMapping.owl#unit-of -->
+
+    <owl:ObjectProperty rdf:about="#unit-of">
+        <rdfs:domain rdf:resource="#measurement-unit"/>
+        <owl:inverseOf rdf:resource="#unit"/>
+        <rdfs:subPropertyOf rdf:resource="&DOLCE-Lite;r-location-of"/>
+        <rdfs:range rdf:resource="&DOLCE-Lite;region"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#generic-constituent -->
+
+    <owl:ObjectProperty rdf:about="&DOLCE-Lite;generic-constituent"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#part -->
+
+    <owl:ObjectProperty rdf:about="&DOLCE-Lite;part"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#proper-part -->
+
+    <owl:ObjectProperty rdf:about="&DOLCE-Lite;proper-part"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#proper-part-of -->
+
+    <owl:ObjectProperty rdf:about="&DOLCE-Lite;proper-part-of"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#r-location -->
+
+    <owl:ObjectProperty rdf:about="&DOLCE-Lite;r-location"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#r-location-of -->
+
+    <owl:ObjectProperty rdf:about="&DOLCE-Lite;r-location-of"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#hypostasis-of -->
+
+    <owl:ObjectProperty rdf:about="&ExtendedDnS;hypostasis-of"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#involves -->
+
+    <owl:ObjectProperty rdf:about="&ExtendedDnS;involves"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#member-of -->
+
+    <owl:ObjectProperty rdf:about="&ExtendedDnS;member-of"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#played-by -->
+
+    <owl:ObjectProperty rdf:about="&ExtendedDnS;played-by"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#plays -->
+
+    <owl:ObjectProperty rdf:about="&ExtendedDnS;plays"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#unified-by -->
+
+    <owl:ObjectProperty rdf:about="&ExtendedDnS;unified-by"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/FunctionalParticipation.owl#used-in -->
+
+    <owl:ObjectProperty rdf:about="&FunctionalParticipation;used-in"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/TemporalRelations.owl#temporal-location -->
+
+    <owl:ObjectProperty rdf:about="&TemporalRelations;temporal-location"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/TemporalRelations.owl#temporal-location-of -->
+
+    <owl:ObjectProperty rdf:about="&TemporalRelations;temporal-location-of"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/CommonSenseMapping.owl#counted-by -->
+
+    <owl:DatatypeProperty rdf:about="#counted-by">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A relation to compose a quality space with a numeric ordering at the symbol level. In practice, it enables to associate an instance of a numeric data type (currently float data types have been chosen) to a region.</rdfs:comment>
+        <rdfs:domain rdf:resource="&DOLCE-Lite;region"/>
+        <rdfs:range rdf:resource="&xsd;decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/CommonSenseMapping.owl#has-informal-description -->
+
+    <owl:DatatypeProperty rdf:about="#has-informal-description">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Similar to a generic annotation property. To be used when annotations can be incompatible with an ontology project.</rdfs:comment>
+        <rdfs:domain rdf:resource="&DOLCE-Lite;particular"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/CommonSenseMapping.owl#biological-object -->
+
+    <owl:Class rdf:about="#biological-object">
+        <rdfs:subClassOf rdf:resource="#physical-body"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DOLCE-Lite;generic-constituent"/>
+                <owl:someValuesFrom rdf:resource="#chemical-object"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="#chemical-object"/>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Any physical body at the biological granularity level. They are (generically) constituted by chemical objects.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/CommonSenseMapping.owl#causal-role -->
+
+    <owl:Class rdf:about="#causal-role">
+        <rdfs:subClassOf rdf:resource="&ExtendedDnS;role"/>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A role defined (not just used!) by a causal description, and exploited to conceptualize some causation invariants.Causal notions are still primitive in this version of DLP.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/CommonSenseMapping.owl#chemical-object -->
+
+    <owl:Class rdf:about="#chemical-object">
+        <rdfs:subClassOf rdf:resource="#physical-body"/>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Any physical body at the chemical granularity level.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/CommonSenseMapping.owl#collection-role -->
+
+    <owl:Class rdf:about="#collection-role">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&ExtendedDnS;role"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&ExtendedDnS;played-by"/>
+                        <owl:allValuesFrom rdf:resource="&ExtendedDnS;collection"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A role only played by collections.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/CommonSenseMapping.owl#commerce-role -->
+
+    <owl:Class rdf:about="#commerce-role">
+        <rdfs:subClassOf rdf:resource="&ExtendedDnS;social-role"/>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A role played by some substance or object within a commercial transaction description.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/CommonSenseMapping.owl#contract -->
+
+    <owl:Class rdf:about="#contract">
+        <rdfs:subClassOf rdf:resource="&ExtendedDnS;regulation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DOLCE-Lite;part"/>
+                <owl:someValuesFrom rdf:resource="&ModalDescriptions;promise"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A binding agreement that is possibly enforceable by law.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/CommonSenseMapping.owl#country -->
+
+    <owl:Class rdf:about="#country">
+        <rdfs:subClassOf rdf:resource="#political-geographic-object"/>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A political geographic object that is (generically) dependent on some physical place (in principle, countries can change their borders).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/CommonSenseMapping.owl#creative-object -->
+
+    <owl:Class rdf:about="#creative-object">
+        <rdfs:subClassOf rdf:resource="&ExtendedDnS;information-object"/>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >The information realized by an entity for creative purposes. Here mainly for mapping purpose from WordNet.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/CommonSenseMapping.owl#feature-role -->
+
+    <owl:Class rdf:about="#feature-role">
+        <rdfs:subClassOf rdf:resource="&ExtendedDnS;role"/>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A role played by some feature of a physical object.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/CommonSenseMapping.owl#functional-matter -->
+
+    <owl:Class rdf:about="#functional-matter">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&DOLCE-Lite;amount-of-matter"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&ExtendedDnS;plays"/>
+                        <owl:someValuesFrom rdf:resource="&ExtendedDnS;role"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&FunctionalParticipation;used-in"/>
+                <owl:someValuesFrom rdf:resource="&ExtendedDnS;activity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Amount of matter playing a typically &#39;functional&#39; role at some time in some situation.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/CommonSenseMapping.owl#geographical-object -->
+
+    <owl:Class rdf:about="#geographical-object">
+        <rdfs:subClassOf rdf:resource="#physical-place"/>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A physical place whose spatial quality is q-located in geographical coordinates.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/CommonSenseMapping.owl#geographical-place -->
+
+    <owl:Class rdf:about="#geographical-place">
+        <rdfs:subClassOf rdf:resource="#non-physical-place"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ExtendedDnS;hypostasis-of"/>
+                <owl:someValuesFrom rdf:resource="#geographical-object"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A non-physical place, generically dependent on some (physical) geographical object.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/CommonSenseMapping.owl#legal-possession-entity -->
+
+    <owl:Class rdf:about="#legal-possession-entity">
+        <rdfs:subClassOf rdf:resource="&ExtendedDnS;social-role"/>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A role played by assets involved in a legal possession description.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/CommonSenseMapping.owl#locative-role -->
+
+    <owl:Class rdf:about="#locative-role">
+        <rdfs:subClassOf rdf:resource="&ExtendedDnS;role"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ExtendedDnS;played-by"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="#non-physical-place"/>
+                            <rdf:Description rdf:about="&DOLCE-Lite;physical-object"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >This is a role (e.g. closed area) for places. Locative roles are played by physical objects (in locational cases, physical places), as well as non-physical places (individual places depending on a physical object).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/CommonSenseMapping.owl#measurement-unit -->
+
+    <owl:Class rdf:about="#measurement-unit">
+        <rdfs:subClassOf rdf:resource="&DOLCE-Lite;abstract-region"/>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A quality space used as a reference metrics (&quot;measurement space&quot;) for other spaces. It is usually &quot;counted by&quot; some number.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/CommonSenseMapping.owl#non-physical-place -->
+
+    <owl:Class rdf:about="#non-physical-place">
+        <rdfs:subClassOf rdf:resource="&ExtendedDnS;non-agentive-figure"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ExtendedDnS;hypostasis-of"/>
+                <owl:someValuesFrom rdf:resource="#physical-place"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A non-agentive figure (e.g. Italy) for non-physical (i.e. socially- or cognitively-constructed) places.Non-physical places generically depend on physical places.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/CommonSenseMapping.owl#norm -->
+
+    <owl:Class rdf:about="#norm">
+        <rdfs:subClassOf rdf:resource="&ExtendedDnS;regulation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ExtendedDnS;involves"/>
+                <owl:someValuesFrom rdf:resource="&ExtendedDnS;rational-agent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A regulation having a cognitive modal description as part.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/CommonSenseMapping.owl#phase-role -->
+
+    <owl:Class rdf:about="#phase-role">
+        <rdfs:subClassOf rdf:resource="&ExtendedDnS;role"/>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Formerly: (non-) agentive temporary role.A role for talking of someone or something at certain phases of own life. It can be used also to map temporal parts of agentive objects from a 4D ontology.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/CommonSenseMapping.owl#physical-body -->
+
+    <owl:Class rdf:about="#physical-body">
+        <rdfs:subClassOf rdf:resource="&ExtendedDnS;non-agentive-physical-object"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DOLCE-Lite;proper-part"/>
+                <owl:allValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&ExtendedDnS;member-of"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="&ExtendedDnS;collection"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="&ExtendedDnS;unified-by"/>
+                                        <owl:allValuesFrom>
+                                            <owl:Class>
+                                                <owl:complementOf>
+                                                    <owl:Class>
+                                                        <owl:unionOf rdf:parseType="Collection">
+                                                            <rdf:Description rdf:about="&ExtendedDnS;plan"/>
+                                                            <rdf:Description rdf:about="&ExtendedDnS;project"/>
+                                                        </owl:unionOf>
+                                                    </owl:Class>
+                                                </owl:complementOf>
+                                            </owl:Class>
+                                        </owl:allValuesFrom>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A physical body is a non-agentive physical object whose primary identity criterion is not given by its artefactual origin, if any. For example, a rock or a tree can be considered physical bodies unless or until they are not viewed as artifacts. As a matter of fact, no easy definition of artifactual properties is possible, hence it is better to rely on alternative descriptions and roles: a physical object that shows or is known to have an artifactual origin that counts in the tasks an ontology is supposed to support, will be a material artifact. On the other hand, physical objects that do not show that origin, or that origin is unimportant for the task of the ontology, will be physical bodies. Formally, a restriction is provided here that requires that the collection whose members are proper parts of a physical body is not *unified* by a plan or project. BTW, a physical body can still be a *device*, can be &#39;used&#39; and have &#39;functions&#39; (roles), e.g. a stone used as a weapon, but it plays no role like being produced, as material artifacts do. Moreover, a collection whose members are proper parts of a physical body can still be unified by a description (e.g. a biochemical model). Physical bodies can have several granularity levels: geological, chemical, physical, biological, etc.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/CommonSenseMapping.owl#physical-place -->
+
+    <owl:Class rdf:about="#physical-place">
+        <rdfs:subClassOf rdf:resource="&ExtendedDnS;non-agentive-physical-object"/>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A placeholder for physical objects that are conceived primarily as places, e.g. wrt their spatial quality.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/CommonSenseMapping.owl#political-geographic-object -->
+
+    <owl:Class rdf:about="#political-geographic-object">
+        <rdfs:subClassOf rdf:resource="#geographical-place"/>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A geographical place, conventionally accepted by a community.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/CommonSenseMapping.owl#principle -->
+
+    <owl:Class rdf:about="#principle">
+        <rdfs:subClassOf rdf:resource="&ExtendedDnS;social-description"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/CommonSenseMapping.owl#qualitative-role -->
+
+    <owl:Class rdf:about="#qualitative-role">
+        <rdfs:subClassOf rdf:resource="&ExtendedDnS;role"/>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A placeholder for some roles in common sense that do not easily map to other types of roles. More work is needed here.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/CommonSenseMapping.owl#rationale -->
+
+    <owl:Class rdf:about="#rationale">
+        <rdfs:subClassOf rdf:resource="&ExtendedDnS;social-description"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/CommonSenseMapping.owl#spatial-feature -->
+
+    <owl:Class rdf:about="#spatial-feature">
+        <rdfs:subClassOf rdf:resource="&DOLCE-Lite;relevant-part"/>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A feature related to spatial properties.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/CommonSenseMapping.owl#substance-role -->
+
+    <owl:Class rdf:about="#substance-role">
+        <rdfs:subClassOf rdf:resource="&ExtendedDnS;role"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ExtendedDnS;played-by"/>
+                <owl:allValuesFrom rdf:resource="&DOLCE-Lite;amount-of-matter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A role played by some substance.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#abstract-region -->
+
+    <owl:Class rdf:about="&DOLCE-Lite;abstract-region"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#amount-of-matter -->
+
+    <owl:Class rdf:about="&DOLCE-Lite;amount-of-matter"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#particular -->
+
+    <owl:Class rdf:about="&DOLCE-Lite;particular"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#perdurant -->
+
+    <owl:Class rdf:about="&DOLCE-Lite;perdurant"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#physical-object -->
+
+    <owl:Class rdf:about="&DOLCE-Lite;physical-object"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#region -->
+
+    <owl:Class rdf:about="&DOLCE-Lite;region"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#relevant-part -->
+
+    <owl:Class rdf:about="&DOLCE-Lite;relevant-part"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#time-interval -->
+
+    <owl:Class rdf:about="&DOLCE-Lite;time-interval"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#activity -->
+
+    <owl:Class rdf:about="&ExtendedDnS;activity"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#collection -->
+
+    <owl:Class rdf:about="&ExtendedDnS;collection"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#information-object -->
+
+    <owl:Class rdf:about="&ExtendedDnS;information-object"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#non-agentive-figure -->
+
+    <owl:Class rdf:about="&ExtendedDnS;non-agentive-figure"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#non-agentive-physical-object -->
+
+    <owl:Class rdf:about="&ExtendedDnS;non-agentive-physical-object"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#plan -->
+
+    <owl:Class rdf:about="&ExtendedDnS;plan"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#project -->
+
+    <owl:Class rdf:about="&ExtendedDnS;project"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#rational-agent -->
+
+    <owl:Class rdf:about="&ExtendedDnS;rational-agent"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#regulation -->
+
+    <owl:Class rdf:about="&ExtendedDnS;regulation"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#role -->
+
+    <owl:Class rdf:about="&ExtendedDnS;role"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#social-description -->
+
+    <owl:Class rdf:about="&ExtendedDnS;social-description"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ExtendedDnS.owl#social-role -->
+
+    <owl:Class rdf:about="&ExtendedDnS;social-role"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/ModalDescriptions.owl#promise -->
+
+    <owl:Class rdf:about="&ModalDescriptions;promise"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+
