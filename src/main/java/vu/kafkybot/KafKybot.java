@@ -73,7 +73,9 @@ public class KafKybot {
             try {
                 FileOutputStream fos = new FileOutputStream(kafFile.getAbsolutePath()+".tpl");
                 kafResultOverviewMap = ApplyProfilesToKafFile(kafFile, pathToProfiles);
+                System.out.println("kafResultOverviewMap = " + kafResultOverviewMap.size());
                 SerializeKafResults.writeMapToStream(kafResultOverviewMap, fos);
+                fos.flush();
                 fos.close();
             } catch (IOException e) {
                 e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.

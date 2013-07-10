@@ -60,10 +60,12 @@ public class SerializeKafResults {
             while (keys.hasNext()) {
                 String key = (String) keys.next();
                 ArrayList<KafResult> results = kafResultMap.get(key);
+               // System.out.println("results.size() = " + results.size());
                 Element docResult = xmldoc.createElement("tuples");
                 docResult.setAttribute("source", key);
                 for (int i = 0; i < results.size(); i++) {
                     KafResult kafResult = results.get(i);
+                   // System.out.println("kafResult.toString() = " + kafResult.toString());
                     docResult.appendChild(kafResult.toXML(xmldoc));
                 }
                 root.appendChild(docResult);

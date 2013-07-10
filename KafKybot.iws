@@ -2,76 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="03dd28a9-539d-4323-a072-83dd5d9043fc" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/release/kafkybot.v.0.1/example/bus-accident.ont.dep.kaf-profiles-sem.txt.overview.xls" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/release/kafkybot.v.0.1/example/bus-accident.ont.dep.kaf-profiles-syn.txt.overview.xls" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/release/kafkybot.v.0.1/example/bus-accident.ont.dep.kaf.sem.tpl.trp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/release/kafkybot.v.0.1/example/bus-accident.ont.dep.kaf.sem.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/release/kafkybot.v.0.1/example/bus-accident.ont.dep.kaf.syn.tpl.trp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/release/kafkybot.v.0.1/example/bus-accident.ont.dep.kaf.syn.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/release/kafkybot.v.0.1/example/bus-accident.ont.dep.kaf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/release/kafkybot.v.0.1/lib/KafKybot-1.0-jar-with-dependencies.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/release/kafkybot.v.0.1/ontology/CommonSenseMapping.owl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/release/kafkybot.v.0.1/ontology/DLP_397.owl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/release/kafkybot.v.0.1/ontology/DOLCE-Lite.owl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/release/kafkybot.v.0.1/ontology/ExtendedDnS.owl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/release/kafkybot.v.0.1/ontology/FunctionalParticipation.owl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/release/kafkybot.v.0.1/ontology/InformationObjects.owl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/release/kafkybot.v.0.1/ontology/Kyoto3Domain.owl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/release/kafkybot.v.0.1/ontology/Kyoto3Middle.owl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/release/kafkybot.v.0.1/ontology/Kyoto3Top.owl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/release/kafkybot.v.0.1/ontology/ModalDescriptions.owl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/release/kafkybot.v.0.1/ontology/Plans.owl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/release/kafkybot.v.0.1/ontology/SocialUnits.owl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/release/kafkybot.v.0.1/ontology/SpatialRelations.owl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/release/kafkybot.v.0.1/ontology/TemporalRelations.owl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/release/kafkybot.v.0.1/ontology/export1.owl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/KafKybot-1.0-jar-with-dependencies.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/KafKybot-1.0.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/vu/kafkybot/ConvertTuplesToTriples.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/vu/kafkybot/ExtractEntities.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/vu/kafkybot/FeatureValuePair.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/vu/kafkybot/KafKybot.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/vu/kafkybot/KafResult.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/vu/kafkybot/KafResultOverview$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/vu/kafkybot/KafResultOverview$1lemmaCount.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/vu/kafkybot/KafResultOverview.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/vu/kafkybot/KafResultSaxparser.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/vu/kafkybot/Profile.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/vu/kafkybot/ProfileReader.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/vu/kafkybot/ResultTree.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/vu/kafkybot/SerializeKafResults.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/vu/kafkybot/TermProfile.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/vu/kafkybot/TupleElement.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/vu/kafkybot/TupleSaxParser.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/vu/kafkybot/Util.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/KafKybot.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/KafKybot.ipr" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/KafKybot.iws" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/release/kafkybot.v.0.1/COPYING-GPL.TXT" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/release/kafkybot.v.0.1/LICENSESOFTWARE.TXT" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/release/kafkybot.v.0.1/README.TXT" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/release/kafkybot.v.0.1/profiles/profiles-next.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/release/kafkybot.v.0.1/profiles/profiles-sem.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/release/kafkybot.v.0.1/profiles/profiles-syn.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/release/kafkybot.v.0.1/scripts/convert-tuples-to-triples.sh" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/release/kafkybot.v.0.1/scripts/run-profiles.sh" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/vu/kafkybot/ConvertTuplesToTriples.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/vu/kafkybot/ExtractEntities.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/vu/kafkybot/FeatureValuePair.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/vu/kafkybot/KafKybot.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/vu/kafkybot/KafResult.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/vu/kafkybot/KafResultOverview.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/vu/kafkybot/KafResultSaxparser.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/vu/kafkybot/Profile.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/vu/kafkybot/ProfileReader.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/vu/kafkybot/ResultTree.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/vu/kafkybot/SerializeKafResults.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/vu/kafkybot/TermProfile.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/vu/kafkybot/TupleElement.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/vu/kafkybot/TupleSaxParser.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/vu/kafkybot/Util.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/release/kafkybot.v.0.1/example/bus-accident.ont.dep.kaf-profiles-sem.txt.overview.xls" afterPath="$PROJECT_DIR$/release/kafkybot.v.0.1/example/bus-accident.ont.dep.kaf-profiles-sem.txt.overview.xls" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/release/kafkybot.v.0.1/lib/KafKybot-1.0-jar-with-dependencies.jar" afterPath="$PROJECT_DIR$/release/kafkybot.v.0.1/lib/KafKybot-1.0-jar-with-dependencies.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/KafKybot.iws" afterPath="$PROJECT_DIR$/KafKybot.iws" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/release/kafkybot.v.0.1/example/bus-accident.ont.dep.kaf.sem.tpl" afterPath="$PROJECT_DIR$/release/kafkybot.v.0.1/example/bus-accident.ont.dep.kaf.sem.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/release/kafkybot.v.0.1/example/bus-accident.ont.dep.kaf.syn.tpl" afterPath="$PROJECT_DIR$/release/kafkybot.v.0.1/example/bus-accident.ont.dep.kaf.syn.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/release/kafkybot.v.0.1/profiles/profiles-sem.txt" afterPath="$PROJECT_DIR$/release/kafkybot.v.0.1/profiles/profiles-sem.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/release/kafkybot.v.0.1/scripts/run-profiles.sh" afterPath="$PROJECT_DIR$/release/kafkybot.v.0.1/scripts/run-profiles.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/vu/kafkybot/KafKybot.java" afterPath="$PROJECT_DIR$/src/main/java/vu/kafkybot/KafKybot.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/vu/kafkybot/SerializeKafResults.java" afterPath="$PROJECT_DIR$/src/main/java/vu/kafkybot/SerializeKafResults.java" />
     </list>
     <ignored path="KafKybot.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -156,15 +95,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="29" selection-start="418" selection-end="418" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="TupleSaxParser.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/vu/kafkybot/TupleSaxParser.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -174,14 +104,32 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="KafKybot.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="KafKybot.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/vu/kafkybot/KafKybot.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="0" selection-start="754" selection-end="754" vertical-scroll-proportion="0.0198939">
+            <state line="76" column="44" selection-start="3212" selection-end="3212" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#881#911#0" expanded="true" />
-                <element signature="e#4090#4120#0" expanded="true" />
+                <element signature="e#4212#4242#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SerializeKafResults.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/vu/kafkybot/SerializeKafResults.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="57" column="77" selection-start="2013" selection-end="2013" vertical-scroll-proportion="0.56057495">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="KafResultOverview.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/vu/kafkybot/KafResultOverview.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="117" column="52" selection-start="5126" selection-end="5126" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -193,12 +141,12 @@
       <setting name="OPEN_NEW_TAB" value="false" />
     </FindUsagesManager>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/Util.java" />
-        <option value="$PROJECT_DIR$/src/main/java/TupleSaxparser.java" />
-        <option value="$PROJECT_DIR$/src/main/java/KafResultSaxparser.java" />
         <option value="$PROJECT_DIR$/src/main/java/SerializeKafResults.java" />
         <option value="$PROJECT_DIR$/src/main/java/KafResultOverview.java" />
         <option value="$PROJECT_DIR$/src/main/java/TermProfile.java" />
@@ -211,7 +159,10 @@
         <option value="$PROJECT_DIR$/src/main/java/ConvertTuplesToTriples.java" />
         <option value="$PROJECT_DIR$/src/main/java/KafKybot.java" />
         <option value="$PROJECT_DIR$/src/main/java/vu/kafkybot/ConvertTuplesToTriples.java" />
+        <option value="$PROJECT_DIR$/release/kafkybot.v.0.1/README.TXT" />
+        <option value="$PROJECT_DIR$/release/kafkybot.v.0.1/scripts/run-profiles.sh" />
         <option value="$PROJECT_DIR$/src/main/java/vu/kafkybot/KafKybot.java" />
+        <option value="$PROJECT_DIR$/src/main/java/vu/kafkybot/SerializeKafResults.java" />
       </list>
     </option>
   </component>
@@ -297,10 +248,10 @@
     <option name="runMavenInBackground" value="false" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="76" />
-    <option name="y" value="22" />
-    <option name="width" value="1876" />
-    <option name="height" value="878" />
+    <option name="x" value="383" />
+    <option name="y" value="56" />
+    <option name="width" value="1643" />
+    <option name="height" value="861" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -329,11 +280,18 @@
     </navigator>
     <panes>
       <pane id="Scope">
-        <subPane subId="Project Files">
+        <subPane subId="Project Files" />
+      </pane>
+      <pane id="PackagesPane">
+        <subPane>
           <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
+            <PATH_ELEMENT>
+              <option name="myItemId" value="KafKybot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="KafKybot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -484,18 +442,44 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-        </subPane>
-      </pane>
-      <pane id="PackagesPane">
-        <subPane>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="KafKybot" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="KafKybot" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="release" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kafkybot.v.0.1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="KafKybot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="KafKybot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="release" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kafkybot.v.0.1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -515,16 +499,16 @@
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.searchVisible" value="true" />
-    <property name="dynamic.classpath" value="false" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="dynamic.classpath" value="false" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="vu.kafkybot" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ConvertTuplesToTriples">
+  <component name="RunManager" selected="Application.KafKybot (2)">
     <configuration default="false" name="KafKybot" type="Application" factoryName="Application" temporary="true">
       <extension name="coverage" enabled="false" merge="false" />
       <option name="MAIN_CLASS_NAME" value="vu.kafkybot.KafKybot" />
@@ -682,7 +666,7 @@
       <extension name="coverage" enabled="false" merge="false" />
       <option name="MAIN_CLASS_NAME" value="vu.kafkybot.KafKybot" />
       <option name="VM_PARAMETERS" value="" />
-      <option name="PROGRAM_PARAMETERS" value="--kaf-file &quot;$PROJECT_DIR$/release/kafkybot.v.0.1/example/bus-accident.ont.dep.kaf&quot; --profiles &quot;$PROJECT_DIR$/release/kafkybot.v.0.1/profiles/profiles-sem.txt&quot;" />
+      <option name="PROGRAM_PARAMETERS" value="--kaf-file &quot;$PROJECT_DIR$/release/kafkybot.v.0.1/example/bus-accident.ont.dep.kaf&quot; --profiles &quot;$PROJECT_DIR$/release/kafkybot.v.0.1/profiles/profiles-pos.txt&quot; --overview " />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" value="" />
@@ -791,7 +775,19 @@
       <created>1372489520144</created>
       <updated>1372489520144</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="- First version of KafKybot in Github-cltl">
+      <created>1373447679664</created>
+      <updated>1373447679664</updated>
+    </task>
+    <task id="LOCAL-00013" summary="- First version of KafKybot in Github-cltl">
+      <created>1373449091140</created>
+      <updated>1373449091141</updated>
+    </task>
+    <task id="LOCAL-00014" summary="- First version of KafKybot in Github-cltl">
+      <created>1373450427950</created>
+      <updated>1373450427950</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -815,7 +811,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="76" y="22" width="1876" height="878" extended-state="0" />
+    <frame x="383" y="56" width="1643" height="861" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -826,19 +822,19 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="14" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32841328" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27937096" sideWeight="0.9992401" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32902467" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.09299781" sideWeight="0.87696576" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22633229" sideWeight="0.7015707" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23413567" sideWeight="0.87696576" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.12282878" sideWeight="0.9993206" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.11473354" sideWeight="0.7015707" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2984293" sideWeight="0.91285264" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="SVN Repositories" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3679558" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven-2 Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26876876" sideWeight="0.99862546" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27937096" sideWeight="0.9992401" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="EJB" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="JSON Formatter" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
@@ -883,7 +879,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="" />
+    <option name="LAST_COMMIT_MESSAGE" value="- First version of KafKybot in Github-cltl" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -896,6 +892,7 @@
     <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
+    <MESSAGE value="- First version of KafKybot in Github-cltl" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -905,26 +902,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/vu/kafkybot/SerializeKafResults.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="85" selection-start="2378" selection-end="2378" vertical-scroll-proportion="0.81850535" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/vu/kafkybot/KafResultOverview.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="117" column="52" selection-start="5207" selection-end="5207" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/vu/kafkybot/FeatureValuePair.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="11" selection-start="478" selection-end="478" vertical-scroll-proportion="-1.6839465" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/vu/kafkybot/ProfileReader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="49" selection-start="2655" selection-end="2655" vertical-scroll-proportion="1.0294118" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/vu/kafkybot/Profile.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="23" column="32" selection-start="524" selection-end="524" vertical-scroll-proportion="0.81947744" />
@@ -965,28 +942,58 @@
         <state line="39" column="18" selection-start="961" selection-end="961" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/vu/kafkybot/ConvertTuplesToTriples.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="97" selection-start="2528" selection-end="2528" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="29" selection-start="418" selection-end="418" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/vu/kafkybot/TupleSaxParser.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="246" column="0" selection-start="10240" selection-end="10846" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/vu/kafkybot/KafResultOverview.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="117" column="52" selection-start="5126" selection-end="5126" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/release/kafkybot.v.0.1/README.TXT">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="223" column="0" selection-start="13916" selection-end="13916" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="29" selection-start="418" selection-end="418" vertical-scroll-proportion="0.0198939">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/vu/kafkybot/ConvertTuplesToTriples.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="56" column="97" selection-start="2528" selection-end="2528" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/release/kafkybot.v.0.1/scripts/run-profiles.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="85" selection-start="85" selection-end="85" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/vu/kafkybot/KafKybot.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="0" selection-start="754" selection-end="754" vertical-scroll-proportion="0.0198939">
+        <state line="76" column="44" selection-start="3212" selection-end="3212" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="e#881#911#0" expanded="true" />
-            <element signature="e#4090#4120#0" expanded="true" />
+            <element signature="e#4212#4242#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/vu/kafkybot/SerializeKafResults.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="57" column="77" selection-start="2013" selection-end="2013" vertical-scroll-proportion="0.56057495">
+          <folding />
         </state>
       </provider>
     </entry>

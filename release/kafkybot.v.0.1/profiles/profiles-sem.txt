@@ -1,4 +1,3 @@
 profile=agent-1-sem;confidence=30
 id=1;type=participant;role=agent;term:reference=*#material-artifact OR *#social-object OR *#agentive-physical-object;term:pos=N*
-id=2;type=stop;term:pos=WRB*
 id=3;type=event;term:reference=*#event;term:pos=V*;term:lemma=!have;term:lemma=!be
