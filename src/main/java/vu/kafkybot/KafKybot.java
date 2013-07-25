@@ -61,9 +61,9 @@ public class KafKybot {
                 if (!file.isDirectory()) {
                     try {
                        // System.out.println("file.getName() = " + file.getName());
-                        FileOutputStream fos = new FileOutputStream(file.getAbsolutePath()+".tpl");
                         HashMap<String, ArrayList<KafResult>> kafResultMap = ApplyProfilesToKafFile(file, pathToProfiles);
                         if (!singleOutput) {
+                            FileOutputStream fos = new FileOutputStream(file.getAbsolutePath()+".tpl");
                             SerializeKafResults.writeMapToStream(kafResultMap, fos);
                             fos.close();
                         }

@@ -23,14 +23,20 @@ public class ProfileReader {
             InputStreamReader isr = new InputStreamReader(fis);
             BufferedReader in = new BufferedReader(isr);
             String inputLine = "";
+            int nLines = 0;
+            int profileLine = 0;
             Profile profile = null;
             while (in.ready()&&(inputLine = in.readLine()) != null) {
+                nLines++;
                 if (inputLine.trim().length()>0) {
                     if (!inputLine.startsWith("#")) {
                         if (inputLine.startsWith("profile=")) {
                             if (profile!= null) {
-                                arrayList.add(profile);
+                                if (profileCheck(profile, profileLine)) {
+                                    arrayList.add(profile);
+                                }
                             }
+                            profileLine = nLines;
                             profile = new Profile();
                             String [] fields = inputLine.split(";");
                             for (int i = 0; i < fields.length; i++) {
@@ -120,11 +126,40 @@ public class ProfileReader {
                 }
             }
             if (profile!= null) {
-                arrayList.add(profile);
+                if (profileCheck(profile, profileLine)) {
+                    arrayList.add(profile);
+                }
             }
         } catch (IOException e) {
             e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
         }
         return arrayList;
+    }
+
+    static boolean profileCheck (Profile profile, int profileLine) {
+        boolean check = true;
+        if(profile.getName().isEmpty()) {
+            System.out.println("Empty name profile.toString() = " + profile.toString());
+            check = false;
+        }
+        for (int i = 0; i < profile.getTermProfiles().size(); i++) {
+            TermProfile termProfile = profile.getTermProfiles().get(i);
+            if (termProfile.getType().isEmpty()) {
+                System.out.println("profile.getName() = " + profile.getName());
+                System.out.println("termProfile.getVariableId() = " + termProfile.getVariableId());
+                System.out.println("Empty termProfile.getType() = " + termProfile.getType());
+                check = false;
+            }
+            if (termProfile.getVariableId().isEmpty()) {
+                System.out.println("profile.getName() = " + profile.getName());
+                System.out.println("Empty termProfile.getVariableId() = " + termProfile.getVariableId());
+                System.out.println("termProfile.getType() = " + termProfile.getType());
+                check = false;
+            }
+        }
+        if(!check) {
+            System.out.println("SKIPPING THIS PROFILE AT LINE NR: "+profileLine);
+        }
+        return check;
     }
 }

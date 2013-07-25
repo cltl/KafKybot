@@ -250,8 +250,10 @@ public class TupleElement {
     }
 
     public Element toXML(Document xmldoc)
-    {
-        Element root = xmldoc.createElement(name);
+    {   Element root = null;
+        if (!name.isEmpty()) {
+            root = xmldoc.createElement(name);
+        }
 
         if (mention != null)
             root.setAttribute("mention", mention);
@@ -260,7 +262,9 @@ public class TupleElement {
 
         if ((concept != null) && !concept.isEmpty())   {
             root.setAttribute("concept", concept);
-            root.setAttribute("confidence", new Double(confidence).toString());
+            if (confidence>-1) {
+                root.setAttribute("confidence", new Double(confidence).toString());
+            }
         }
 
         if ((reference != null) && !reference.isEmpty())   {

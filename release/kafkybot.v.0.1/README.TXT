@@ -134,7 +134,16 @@ role:		any string can be used to fill the role attribute in the output
 
 All other fv-pairs are used as constraints on the terms to be matched. Any of the attributes of the terms in KAF can be used as a contraint,
 but also all the attributes of the embedded elements.
-		
+
+The profile name, the id and the type of the variable are all obligatory fields. If any of these is not present or cannot be processed
+the profile is skipped and an error message is send to the output stream. Note that if the tuples are sent to the output stream, 
+the output may be preceded by error messages on the profile syntax:
+
+profile.getName() = time_Vaspect_NEdate_NEdate
+termProfile.getVariableId() = 1
+Empty termProfile.getType() = 
+SKIPPING THIS PROFILE AT LINE NR: 802
+	
 All fv pairs specified on a single line need to be present in a term to have match and also 
 all the lines for a profile need to be matched on the terms of a sentence to have a match.
 
