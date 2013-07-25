@@ -68,10 +68,18 @@ You can also run the program for a complete folder with files. In that case the 
 
 java -Xmx812m -cp ../lib/vu.kafkybot.KafKybot-1.0-jar-with-dependencies.jar vu.kafkybot.KafKybot
 --kaf-file "../example" 
---profiles "../profiles/profiles-sem.txt" --extension ".kaf" > "../example/bus-accident.ont.dep.kaf.sem.tpl" 
+--profiles "../profiles/profiles-sem.txt" --extension ".kaf"
 
 In this example, all files in the folder example with the extension ".kaf" are processed with the same profiles and
 the result is stored in separate files with the extension ".tpl" for each input file.
+
+By using the --single-output parameter, you can merge the results for a whole folder in a single output stream:
+
+java -Xmx812m -cp ../lib/vu.kafkybot.KafKybot-1.0-jar-with-dependencies.jar vu.kafkybot.KafKybot
+--kaf-file "../example" 
+--profiles "../profiles/profiles-sem.txt" --extension ".kaf" > "../example/all.tpl" 
+
+Now the results for all input files are stored in a single file (the system output stream that is redirected!) all.tpl.
 
 Finally, an optional argument --overview can be given. This will trigger the generation of an additional xls file with a simple overview of relations and quantification of the results.
 Such an overview could look as follows:

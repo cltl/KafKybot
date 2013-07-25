@@ -33,6 +33,7 @@ public class KafKybot {
         String pathToKafFile = "/Code/vu/kyotoproject/vu.kafkybot.KafKybot/release/kafkybot.v.0.1/example/bus-accident.ont.dep.kaf";
         String extension = "";
         boolean overview = false;
+        boolean singleOutput = false;
         String pathToProfiles = "/Code/vu/kyotoproject/vu.kafkybot.KafKybot/release/kafkybot.v.0.1/profiles/profiles.txt";
         for (int i = 0; i < args.length; i++) {
             String arg = args[i];
@@ -45,6 +46,9 @@ public class KafKybot {
             else if ((arg.equals("--extension")) && args.length>i+1) {
                 extension = args[i+1];
             }
+            else if (arg.equals("--single-output")) {
+                singleOutput = true;
+            }
             else if (arg.equals("--overview")) {
                 overview = true;
             }
@@ -56,11 +60,14 @@ public class KafKybot {
                 File file = new File(files.get(i));
                 if (!file.isDirectory()) {
                     try {
+                       // System.out.println("file.getName() = " + file.getName());
                         FileOutputStream fos = new FileOutputStream(file.getAbsolutePath()+".tpl");
                         HashMap<String, ArrayList<KafResult>> kafResultMap = ApplyProfilesToKafFile(file, pathToProfiles);
-                        SerializeKafResults.writeMapToStream(kafResultMap, fos);
-                        fos.close();
-                        if (overview) {
+                        if (!singleOutput) {
+                            SerializeKafResults.writeMapToStream(kafResultMap, fos);
+                            fos.close();
+                        }
+                        if (overview || singleOutput) {
                             kafResultOverviewMap.putAll(kafResultMap);
                         }
                     } catch (IOException e) {
@@ -81,6 +88,9 @@ public class KafKybot {
                 FileOutputStream fos = new FileOutputStream(kafFile+"-"+new File(pathToProfiles).getName()+".overview.xls");
                 KafResultOverview.makeOverviewFile(kafResultOverviewMap, fos);
                 fos.close();
+            }
+            if (singleOutput) {
+                SerializeKafResults.writeMapToStream(kafResultOverviewMap, System.out);
             }
         } catch (IOException e) {
             e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
@@ -315,7 +325,10 @@ public class KafKybot {
                     parentNode.addChild(childNode);
                     int endPosition = termEndPosition;
                     if (termProfile.getNext()>0) {
-                        endPosition = j+termProfile.getNext();
+                        endPosition = j+termProfile.getNext()+1;
+                        /// we need to move end one position more to match the direct match
+                        /// otherwise if next==1 the next termStartPosition will immediately match
+                        // the end position and there is no match
                         if (endPosition>termIds.size()) {
                             endPosition = termIds.size();
                         }
