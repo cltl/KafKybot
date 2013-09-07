@@ -66,75 +66,15 @@ public class FeatureValuePair {
         this.value = value;
     }
 
-    public boolean matchFeatureValue (FeatureValuePair pair) {
-        if (this.getFeature().equals(pair.getFeature())) {
-            String [] values = pair.getValue().split(" OR ");
-            for (int i = 0; i < values.length; i++) {
-                String value = values[i].trim();
-                //System.out.println("value = " + value);
-                boolean neg = false;
-                String matchType = "";
-                if (value.equals("*")) {
-                    return true;
-                }
-                /// strip off negation marker
-                if (pair.getValue().startsWith("!")) {
-                    value = pair.getValue().substring(1);
-                    //System.out.println("value = " + value);
-                }
-
-                if ((value.endsWith("*")) && (value.startsWith("*"))) {
-                    matchType = "sub";
-                    value = value.substring(1, value.length() - 1);
-                }
-                else if (value.endsWith("*")) {
-                    matchType = "start";
-                    value = value.substring(0, value.length() - 1);
-                }
-                else if (value.startsWith("*")) {
-                    matchType = "end";
-                    value = value.substring(1, value.length());
-                }
-                // System.out.println("value = " + value);
-                if (matchType.equals("sub")) {
-                    if (this.getValue().indexOf(value)>-1) {
-                        /*System.out.println("SUB");
-                    System.out.println("this.getValue() = " + this.getValue());
-                    System.out.println("pair.getValue() = " + pair.getValue());*/
-                        return true;
-                    }
-                }
-                else if (matchType.equals("start")) {
-                    if (this.getValue().startsWith(value)) {
-                        /*System.out.println("START");
-                    System.out.println("this.getValue() = " + this.getValue());
-                    System.out.println("pair.getValue() = " + pair.getValue());*/
-                        return true;
-                    }
-                }
-                else if (matchType.equals("end")) {
-                    if (this.getValue().endsWith(value)) {
-                        /*System.out.println("END");
-                    System.out.println("this.getValue() = " + this.getValue());
-                    System.out.println("pair.getValue() = " + pair.getValue());*/
-                        return true;
-                    }
-                }
-                //else if (this.getValue().equals(value)) {
-                else if (this.getValue().equalsIgnoreCase(value)) {
-                    /*System.out.println("EXACT");
-                System.out.println("this.getValue() = " + this.getValue());
-                System.out.println("pair.getValue() = " + pair.getValue());*/
-                    return true;
-                }
-            }
+    public boolean matchTargetFeatureValue (FeatureValuePair profilePair) {
+        if (this.getFeature().equals(profilePair.getFeature())) {
+            return  (Util.matchStringValue(this.getValue(), profilePair.getValue()));
         }
         else {
             return false;
             //  System.out.println("this.feature = " + this.getFeature());
             //  System.out.println("pair.feature = " + pair.getFeature());
         }
-        return false;
     }
 
 }

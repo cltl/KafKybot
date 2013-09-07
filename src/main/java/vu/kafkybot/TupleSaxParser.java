@@ -188,6 +188,9 @@ public class TupleSaxParser extends DefaultHandler{
                     else if (name.equalsIgnoreCase("reference")) {
                         tupleElement.setReference(attributes.getValue(i).trim());
                     }
+                    else if (name.equalsIgnoreCase("gran_nr")) {
+                        tupleElement.setGran_nr(attributes.getValue(i).trim());
+                    }
                     else if (name.equalsIgnoreCase("mention")) {
                         tupleElement.setMention(attributes.getValue(i).trim());
                     }

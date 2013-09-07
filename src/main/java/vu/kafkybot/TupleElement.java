@@ -25,6 +25,7 @@ public class TupleElement {
     private String mention;
     private ArrayList<String> tokens;
     private String role;
+    private String gran_nr;
     private String depFrom;
     private String depTo;
     private String depRelation;
@@ -54,7 +55,6 @@ public class TupleElement {
             name = "element";
         }
 
-        //// new style that uses real dependencies
         for (int i = 0; i < termProfile.getTermDependenciesProperties().size(); i++) {
             FeatureValuePair featureValuePair = termProfile.getTermDependenciesProperties().get(i);
             if (featureValuePair.getFeature().equals("to")) {
@@ -65,18 +65,12 @@ public class TupleElement {
         for (int i = 0; i < termProfile.getTermDependenciesProperties().size(); i++) {
             FeatureValuePair featureValuePair = termProfile.getTermDependenciesProperties().get(i);
             if (featureValuePair.getFeature().equals("from")) {
-                this.depTo = featureValuePair.getValue().trim();
+                this.depFrom = featureValuePair.getValue().trim();
                 break;
             }
         }
-        for (int i = 0; i < termProfile.getTermDependenciesProperties().size(); i++) {
-            FeatureValuePair featureValuePair = termProfile.getTermDependenciesProperties().get(i);
-            if (featureValuePair.getFeature().equals("rfunc")) {
-                this.depRelation = featureValuePair.getValue().trim();
-                break;
-            }
-        }
-
+        //// new style that uses real dependencies
+        this.setDepRelation(termProfile.getDepRelation());
         this.setTokens(kafTerm.getSpans());
         this.setMention(kafTerm.getTid());
         this.setLemma(kafTerm.getLemma());
@@ -102,9 +96,19 @@ public class TupleElement {
         this.mention = "";
         this.pos = "";
         this.role = "";
+        this.gran_nr = "";
         this.geoCountryObjects = new ArrayList<GeoCountryObject>();
         this.geoPlaceObjects = new ArrayList<GeoPlaceObject>();
         this.isoDates = new ArrayList<ISODate>();
+    }
+
+
+    public String getGran_nr() {
+        return gran_nr;
+    }
+
+    public void setGran_nr(String gran_nr) {
+        this.gran_nr = gran_nr;
     }
 
     public ArrayList<String> getTokens() {
@@ -269,6 +273,10 @@ public class TupleElement {
 
         if ((reference != null) && !reference.isEmpty())   {
             root.setAttribute("reference", reference);
+        }
+
+        if ((gran_nr != null) && !gran_nr.isEmpty())   {
+            root.setAttribute("gran_nr", gran_nr);
         }
 
         if ((pos != null) && !pos.isEmpty())   {

@@ -158,34 +158,27 @@ public class KafKybot {
             } /// end of sentenceIds
            // System.out.println("pathToKafFile = " + pathToKafFile);
            // System.out.println("tuples.size() = " + tuples.size());
-            kafResultMap.put(pathToKafFile.getName(), tuples);
+            String parentName = pathToKafFile.getParentFile().getName();
+            String source = parentName+"_"+pathToKafFile.getName();
+            kafResultMap.put(source, tuples);
            // System.out.println("kafResultMap.size() = " + kafResultMap.size());
             //writeKafToStream(tuples, System.out, pathToKafFile.getName());
         }
         return kafResultMap;
     }
 
-    static boolean depRelationMatch (KafDep kafDep, TupleElement element) {
-        boolean match = false;
-        String relation = element.getDepRelation();
-        if (relation.endsWith("*")) {
-           relation = relation.substring(0, relation.length()-1);
-           match = kafDep.getRfunc().startsWith(relation);
-        }
-        else {
-            match = kafDep.getRfunc().equals(relation);
-        }
-        return match;
-    }
-
     static boolean checkDependencyTargets (KafSaxParser kafSaxParser, ArrayList<TupleElement> tupleElements) {
         for (int i = 0; i < tupleElements.size(); i++) {
             TupleElement element = tupleElements.get(i);
+            //System.out.println("element.getDepTo() = " + element.getDepTo());
             if (!element.getDepTo().isEmpty()) {
+
+
 /*
                 System.out.println("element.getDepTo() = " + element.getDepTo());
                 System.out.println("element.getDepRelation() = " + element.getDepRelation());
 */
+
                 boolean hasTarget = false;
                 if (kafSaxParser.TermToDeps.containsKey(element.getMention())) {
                     ArrayList<KafDep> deps = kafSaxParser.TermToDeps.get(element.getMention());
@@ -197,12 +190,15 @@ public class KafKybot {
                                     KafDep kafDep = deps.get(k);
                                     if (kafDep.getFrom().equals(tupleElement.getMention()) ||
                                          kafDep.getTo().equals(tupleElement.getMention())) {
+
+
 /*
                                         System.out.println("kafDep.getFrom() = " + kafDep.getFrom());
                                         System.out.println("kafDep.getTo() = " + kafDep.getTo());
                                         System.out.println("kafDep.getRfunc() = " + kafDep.getRfunc());
 */
-                                        if (depRelationMatch(kafDep,element)) {
+
+                                        if (kafDep.getRfunc().equals(element.getDepRelation())) {
                                             hasTarget = true;
                                             break;
                                         }
@@ -219,9 +215,13 @@ public class KafKybot {
                     }
                 }
             }
+            else {
+              //  System.out.println("element = " + element.getDepTo());
+            }
         }
         return true;
     }
+
 
     static ArrayList<KafResult> processInOrderSentence (KafSaxParser kafSaxParser,
                                                         Profile profile,
@@ -243,13 +243,15 @@ public class KafKybot {
                 termIds, 0, termIds.size(), termProfiles, 0, resultTree);
         ArrayList<ArrayList<TupleElement>> tupleElements = resultTree.getTupleElements();
       //  System.out.println("final resultTree="+resultTree.printTree(0));
-      //  System.out.println("tupleElements.size() = " + tupleElements.size());
+       // System.out.println("tupleElements.size() = " + tupleElements.size());
         for (int i = 0; i < tupleElements.size(); i++) {
             ArrayList<TupleElement> result = tupleElements.get(i);
-           // System.out.println("result.size() = " + result.size());
+            //System.out.println("result.size() = " + result.size());
+            //System.out.println("nRequiredMatches = " + nRequiredMatches);
 
-            /// we need to check the dependencies separately because they are relations between results.
+            /// we need to check the dependency relations separately because they are relations between results.
             /// we first need to have all the result elements to be able to test it
+            /// the actual dependency properties have already been tested so we can only have results with matching properties
             if ((nRequiredMatches==result.size()) && checkDependencyTargets(kafSaxParser, result)) {
                 //// pattern is valid!
                 KafResult kafResult = new KafResult(profile.getName());
@@ -297,7 +299,7 @@ public class KafKybot {
        //     System.out.println(tab+"termId = " + termId);
             KafTerm kafTerm = kafSaxParser.getTerm(termId);
        //     System.out.println(tab+"kafTerm.getLemma() = " + kafTerm.getLemma());
-            if (termProfile.hasMatchingProperties(kafSaxParser, kafTerm)) {
+            if (Util.hasMatchingProperties(kafSaxParser, kafTerm, termProfile)) {
                 match = true;
                 if (termProfile.getType().equalsIgnoreCase("stop")) {
        //             System.out.println(tab+"NEGATIVE MATCH: "+kafTerm.getTid()+":"+kafTerm.getLemma());
@@ -369,7 +371,7 @@ public class KafKybot {
     }
 
 
-    static public void writeKafToStream(ArrayList<KafResult> events, OutputStream stream, String fileName)
+    static public void writeToStream(ArrayList<KafResult> events, OutputStream stream, String fileName)
     {
         try
         {
