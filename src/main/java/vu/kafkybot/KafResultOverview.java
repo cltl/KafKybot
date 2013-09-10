@@ -42,6 +42,15 @@ public class KafResultOverview {
         }
         keySet = events.keySet();
         keys = keySet.iterator();
+
+
+        TreeSet sorter = new TreeSet();
+        while (keys.hasNext()) {
+            String key = (String) keys.next();
+            sorter.add(key);
+
+        }
+        keys = sorter.iterator();
         while (keys.hasNext()) {
             String key = (String) keys.next();
             ArrayList<KafResult> results = events.get(key);
@@ -159,60 +168,4 @@ public class KafResultOverview {
         return str;
     }
 
-/*    static public TreeSet sortOnDescendant (ArrayList<Term> list) {
-        TreeSet sorter = new TreeSet(
-                new Comparator() {
-                    public int compare(Object a, Object b) {
-                        Term itemA = (Term) a;
-                        Term itemB = (Term) b;
-                        Integer nA = new Integer(itemA.getDescendantCount());
-                        Integer nB = new Integer(itemB.getDescendantCount());
-                        if (nB.equals(nA)) // We force equal frequencies to be inserted
-                        {
-                            return -1;
-                        } else {
-                            return (nB.compareTo(nA));
-                        }
-                    }
-                }
-
-        );
-        for (int i = 0; i < list.size(); i++) {
-            Term term = list.get(i);
-            sorter.add(term);
-        }
-        return sorter;
-    }*/
-    /**
-     *         if (nChildren > 0) {
-     TreeSet sorter = new TreeSet();
-     Enumeration e = currentNode.children();
-     int i = 0;
-     while (e.hasMoreElements()) {
-     gtreeNode childNode = (gtreeNode) e.nextElement();
-     String key = childNode.nameId.name;
-     //               System.out.println("Adding sort Key:"+key);
-     sorter.add(key);
-     }
-     Iterator iter = sorter.iterator();
-     while (iter.hasNext()) { //  gtreeNode childNode = findFirstNodeByName(keys[i]);
-     String childName = (String) iter.next();
-     if (childName.length()>0)  {
-     //                   System.out.println("sorted Key:"+childName);
-     gtreeNode childNode = findFirstChildByNameExact(currentNode, childName);
-     if (childNode != null) {
-     gtreeNode subTreeNode = copySubTree(childNode);
-     treeModel.removeNodeFromParent(childNode);
-     Long id = new Long(childNode.nameId.id);
-     nodeIds.remove(id);
-     nTreeNodes--;
-     pasteSubTree(currentNode, subTreeNode);
-     }
-     else {
-     //                       System.out.println("Child is null");
-     }
-     }
-     }
-     }
-     */
 }

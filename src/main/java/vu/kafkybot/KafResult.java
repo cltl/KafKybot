@@ -120,7 +120,7 @@ public class KafResult {
     public void setDateAndTime(KafSaxParser kafSaxParser, String elementName) {
         for (int i = 0; i < children.size(); i++) {
             TupleElement tupleElement = children.get(i);
-            if (tupleElement.getName().equals(elementName)) {
+            if (tupleElement.getName().toLowerCase().startsWith(elementName)) {
                 tupleElement.setTimeAndPlace(kafSaxParser);
             }
         }
