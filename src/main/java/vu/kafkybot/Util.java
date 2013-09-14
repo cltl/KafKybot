@@ -14,6 +14,18 @@ import java.util.ArrayList;
  */
 public class Util {
 
+    public static boolean overlappingSpans (ArrayList<String> spans, ArrayList<KafParticipant> participantArrayList) {
+        for (int i = 0; i < participantArrayList.size(); i++) {
+            KafParticipant kafParticipant = participantArrayList.get(i);
+            for (int j = 0; j < kafParticipant.getSpans().size(); j++) {
+                String s = kafParticipant.getSpans().get(j);
+                if (spans.contains(s)) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
 
     public static boolean hasMatchingProperties(KafSaxParser kafSaxParser, KafTerm term, TermProfile termProfile) {
         boolean  match = hasMatchingTermPropertiesValue(term, termProfile);
@@ -84,8 +96,6 @@ public class Util {
         ArrayList<FeatureValuePair> termFeatureValuePairs = Util.kafTermToFeatureValue(term);
         for (int i = 0; i < termProfile.getTermLayerProperties().size(); i++) {
             FeatureValuePair profileFeatureValuePair = termProfile.getTermLayerProperties().get(i);
-            /// for the new version that uses real dependencies, we skip these constraints
-            // if (term.getLemma().equals("people")) System.out.println("profileFeatureValuePair.getValue() = " + profileFeatureValuePair.getValue());
             boolean match = false;
             if (profileFeatureValuePair.getValue().startsWith("!")) {
                 /// negative case
@@ -115,6 +125,19 @@ public class Util {
                         match = true;
                         break;
                     }
+                    /*else if (profileFeatureValuePair.getValue().startsWith("!")) {
+                        /// immediately quit!
+                        if (!pair.getParent_reference().isEmpty()) {
+                            termProfile.setParent_confidence(pair.getParent_score());
+                            termProfile.setParent_reference(pair.getParent_reference());
+                        }
+                        if (pair.getFeature().equalsIgnoreCase("reference")) {
+                            termProfile.setReference(pair.getValue());
+                        }
+                        termProfile.setNegative(true);
+                        match = true;
+                        break;
+                    }*/
                 }
             }
             if (!match) {

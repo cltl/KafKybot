@@ -74,7 +74,15 @@ public class TupleElement {
         this.setTokens(kafTerm.getSpans());
         this.setMention(kafTerm.getTid());
         this.setLemma(kafTerm.getLemma());
-        this.setConcept(termProfile.getParent_reference());
+        if (termProfile.getParent_reference().isEmpty()) {
+           if (kafTerm.getSenseTags().size()>0) {
+               this.setConcept(kafTerm.getSenseTags().get(0).getSensecode());
+               this.setConfidence(kafTerm.getSenseTags().get(0).getConfidence());
+           }
+        }
+        else {
+            this.setConcept(termProfile.getParent_reference());
+        }
         this.setConfidence(termProfile.getParent_confidence());
         this.setReference(termProfile.getReference());
         this.setPos(kafTerm.getPos());
@@ -208,6 +216,10 @@ public class TupleElement {
 
     public String getMention() {
         return mention;
+    }
+
+    public String getNafMention() {
+        return "&docId;"+mention;
     }
 
     public void setMention(String mention) {

@@ -54,14 +54,17 @@ public class KafKybot {
             }
         }
         File kafFile = new File(pathToKafFile);
+        KafSaxParser kafSaxParser = new KafSaxParser();
         if (kafFile.isDirectory()) {
            ArrayList<String> files = Util.makeRecursiveFileListAll(pathToKafFile, extension);
             for (int i = 0; i < files.size(); i++) {
                 File file = new File(files.get(i));
                 if (!file.isDirectory()) {
                     try {
-                       // System.out.println("file.getName() = " + file.getName());
-                        HashMap<String, ArrayList<KafResult>> kafResultMap = ApplyProfilesToKafFile(file, pathToProfiles);
+                        kafSaxParser.parseFile(file);
+                        kafSaxParser.getKafMetaData().setFilename(file.getAbsolutePath());
+                        // System.out.println("file.getName() = " + file.getName());
+                        HashMap<String, ArrayList<KafResult>> kafResultMap = ApplyProfilesToKafFile(kafSaxParser, pathToProfiles);
                         if (!singleOutput) {
                             FileOutputStream fos = new FileOutputStream(file.getAbsolutePath()+".tpl");
                             SerializeKafResults.writeMapToStream(kafResultMap, fos);
@@ -77,7 +80,9 @@ public class KafKybot {
             }
         }
         else {
-                kafResultOverviewMap = ApplyProfilesToKafFile(kafFile, pathToProfiles);
+            kafSaxParser.parseFile(kafFile);
+            kafSaxParser.getKafMetaData().setFilename(kafFile.getAbsolutePath());
+            kafResultOverviewMap = ApplyProfilesToKafFile(kafSaxParser, pathToProfiles);
                 //System.out.println("kafResultOverviewMap = " + kafResultOverviewMap.size());
                 SerializeKafResults.writeMapToStream(kafResultOverviewMap, System.out);
         }
@@ -99,24 +104,19 @@ public class KafKybot {
 
     /**
      * @TODO Sentence based processing should be extended to cover any range sentence
-     * @param pathToKafFile
+     * @param kafSaxParser
      * @param pathToProfiles
      * @return
      */
 
 
-    static public HashMap<String, ArrayList<KafResult>> ApplyProfilesToKafFile (File pathToKafFile, String pathToProfiles) {
+
+     static public HashMap<String, ArrayList<KafResult>> ApplyProfilesToKafFile (KafSaxParser kafSaxParser, String pathToProfiles) {
         HashMap<String, ArrayList<KafResult>> kafResultMap = new HashMap<String, ArrayList<KafResult>>();
         ArrayList<Profile> profiles = ProfileReader.readProfiles(pathToProfiles);
         // System.out.println("profiles.size() = " + profiles.size());
-
-        if (pathToKafFile.exists()) {
-            int nResults = 0;
+           int nResults = 0;
             ArrayList<KafResult> tuples = new ArrayList<KafResult>();
-            KafSaxParser kafSaxParser = new KafSaxParser();
-           // System.out.println("pathToKafFile = " + pathToKafFile.getName());
-            kafSaxParser.parseFile(pathToKafFile);
-
 
             /// We process the kaf file sentence by sentence
             Set keySet = kafSaxParser.SentenceToTerm.keySet();
@@ -158,12 +158,12 @@ public class KafKybot {
             } /// end of sentenceIds
            // System.out.println("pathToKafFile = " + pathToKafFile);
            // System.out.println("tuples.size() = " + tuples.size());
-            String parentName = pathToKafFile.getParentFile().getName();
-            String source = parentName+"_"+pathToKafFile.getName();
+            File sourceFile = new File(kafSaxParser.getKafMetaData().getFilename());
+            String parentName = sourceFile.getParentFile().getName();
+            String source = parentName+"_"+sourceFile.getName();
             kafResultMap.put(source, tuples);
            // System.out.println("kafResultMap.size() = " + kafResultMap.size());
             //writeKafToStream(tuples, System.out, pathToKafFile.getName());
-        }
         return kafResultMap;
     }
 

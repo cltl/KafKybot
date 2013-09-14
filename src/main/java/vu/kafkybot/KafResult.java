@@ -122,6 +122,11 @@ public class KafResult {
             TupleElement tupleElement = children.get(i);
             if (tupleElement.getName().toLowerCase().startsWith(elementName)) {
                 tupleElement.setTimeAndPlace(kafSaxParser);
+               // System.out.println("tupleElement.geoCountryObjects.size() = " + tupleElement.geoCountryObjects.size());
+               // System.out.println("tupleElement.geoPlaceObjects.size() = " + tupleElement.geoPlaceObjects.size());
+               // System.out.println("tupleElement.isoDates.size() = " + tupleElement.isoDates.size());
+                //System.out.println("tupleElement.getName() = " + tupleElement.getName());
+                //System.out.println("elementName = " + elementName);
             }
         }
     }
@@ -177,7 +182,7 @@ public class KafResult {
 
         for (int i = 0; i < children.size(); i++) {
             TupleElement tupleElement = children.get(i);
-            if (tupleElement.getName().equalsIgnoreCase("event")) {
+            if (tupleElement.getName().toLowerCase().startsWith("event")) {
                 Element participantXml = tupleElement.toXmlWithDatePlace(xmldoc);
                 root.appendChild(participantXml);
             }
