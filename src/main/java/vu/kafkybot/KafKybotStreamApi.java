@@ -71,10 +71,10 @@ public class KafKybotStreamApi {
                         if (tupleElement.getName().toLowerCase().startsWith("event")) {
                             String eventId = "";
                             if (!format.equalsIgnoreCase("nafrdf")) {
-                                eventId  = key+"#"+kafResult.getSentenceId()+"#"+tupleElement.getMention();
+                                eventId  = key+"/"+kafResult.getSentenceId()+"/"+tupleElement.getMention();
                             }
                             else {
-                                eventId  = "&docId;"+kafResult.getSentenceId()+"#"+tupleElement.getMention();
+                                eventId  = "&docId;"+kafResult.getSentenceId()+"/"+tupleElement.getMention();
                             }
                             KafEvent kafEvent = new KafEvent();
                             if (kafEventMap.containsKey(eventId)) {
@@ -94,7 +94,7 @@ public class KafKybotStreamApi {
                                         if (!Util.overlappingSpans(geoCountryObject.getSpans(), kafEvent.getParticipants())) {
                                             String participantId = "";
                                             if (!format.equalsIgnoreCase("nafrdf")) {
-                                                participantId = key+"#"+geoCountryObject.getcId();
+                                                participantId = key+"/"+geoCountryObject.getcId();
                                             }
                                             else {
                                                 participantId = "&docId;"+geoCountryObject.getcId();
@@ -118,10 +118,10 @@ public class KafKybotStreamApi {
                                         if (!Util.overlappingSpans(geoPlaceObject.getSpans(), kafEvent.getParticipants())) {
                                             String participantId = "";
                                             if (!format.equalsIgnoreCase("nafrdf")) {
-                                                participantId = key+"#"+geoPlaceObject.getpId();
+                                                participantId = key+"/"+geoPlaceObject.getpId();
                                             }
                                             else {
-                                                participantId  = "&docId;"+kafResult.getSentenceId()+"#"+tupleElement.getMention();
+                                                participantId  = "&docId;"+kafResult.getSentenceId()+"/"+tupleElement.getMention();
 
                                             }
                                             KafParticipant kafParticipant = new KafParticipant();
@@ -143,7 +143,7 @@ public class KafKybotStreamApi {
                                         if (!Util.overlappingSpans(isoDate.getSpans(), kafEvent.getParticipants())) {
                                             String participantId = "";
                                             if (format.equalsIgnoreCase("nafrdf")) {
-                                                participantId = key+"#"+isoDate.getDid();
+                                                participantId = key+"/"+isoDate.getDid();
                                             }
                                             else {
                                                 participantId = "&docId;"+isoDate.getDid();
@@ -165,10 +165,10 @@ public class KafKybotStreamApi {
                                     if (!oTupleElement.getName().toLowerCase().startsWith("event")) {
                                         String participantId = "";
                                         if (!format.equalsIgnoreCase("nafrdf")) {
-                                            participantId = key+"#"+kafResult.getSentenceId()+"#"+oTupleElement.getMention();
+                                            participantId = key+"/"+kafResult.getSentenceId()+"/"+oTupleElement.getMention();
                                         }
                                         else {
-                                            participantId = "&docId;"+kafResult.getSentenceId()+"#"+oTupleElement.getMention();
+                                            participantId = "&docId;"+kafResult.getSentenceId()+"/"+oTupleElement.getMention();
                                         }
                                         KafParticipant kafParticipant = new KafParticipant();
                                         kafParticipant.setId(participantId);
