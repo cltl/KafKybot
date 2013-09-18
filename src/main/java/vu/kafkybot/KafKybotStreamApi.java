@@ -71,10 +71,10 @@ public class KafKybotStreamApi {
                         if (tupleElement.getName().toLowerCase().startsWith("event")) {
                             String eventId = "";
                             if (!format.equalsIgnoreCase("nafrdf")) {
-                                eventId  = key+"/"+kafResult.getSentenceId()+"/"+tupleElement.getMention();
+                                eventId  = key+":"+kafResult.getSentenceId()+":"+tupleElement.getMention();
                             }
                             else {
-                                eventId  = "&docId;"+kafResult.getSentenceId()+"/"+tupleElement.getMention();
+                                eventId  = "&docId;"+kafResult.getSentenceId()+":"+tupleElement.getMention();
                             }
                             KafEvent kafEvent = new KafEvent();
                             if (kafEventMap.containsKey(eventId)) {
@@ -82,8 +82,43 @@ public class KafKybotStreamApi {
                             }
                             else {
                                 kafEvent.setId(eventId);
-                                kafEvent.setElementName(tupleElement.getName());
-                                kafEvent.setReferenceType(tupleElement.getReference());
+                                kafEvent.setComponentType("event");
+                                if (!kafResult.getSentenceId().isEmpty())  {
+                                    kafEvent.setSentenceId(kafResult.getSentenceId());
+                                }
+                                if (!tupleElement.getName().isEmpty())  {
+                                    KafSense kafSense = new KafSense();
+                                    String sense = tupleElement.getName();
+                                    int idx = sense.indexOf(":");
+                                    if (idx >-1) {
+                                        sense = sense.substring(idx+1);
+                                    }
+                                    kafSense.setSensecode(sense);
+                                    kafSense.setRefType(tupleElement.getReference());
+                                    kafSense.setResource(tupleElement.getProfileId());
+                                    kafEvent.addExternalReferences(kafSense);
+                                }
+                                if (!tupleElement.getReference().isEmpty())  {
+                                    KafSense kafSense = new KafSense();
+                                    String sense = tupleElement.getReference();
+                                    String resource = "";
+                                    int idx = sense.indexOf(":");
+                                    if (idx >-1) {
+                                        resource = sense.substring(0, idx-1);
+                                        sense = sense.substring(idx+1);
+                                    }
+                                    kafSense.setSensecode(sense);
+                                    kafSense.setResource(resource);
+                                    kafSense.setRefType(tupleElement.getReference());
+                                    kafEvent.addExternalReferences(kafSense);
+                                }
+                                if (!tupleElement.getConcept().isEmpty()) {
+                                    KafSense kafSense = new KafSense();
+                                    kafSense.setSensecode(tupleElement.getConcept());
+                                    kafSense.setConfidence(tupleElement.getConfidence());
+                                    kafSense.setResource("wn:"+tupleElement.getConcept().substring(0,6));
+                                    kafEvent.addExternalReferences(kafSense);
+                                }
                                 kafEvent.setSynsetId(tupleElement.getConcept());
                                 kafEvent.setSynsetConfidence(tupleElement.getConfidence());
                                 kafEvent.addSpan(tupleElement.getMention());
@@ -94,7 +129,7 @@ public class KafKybotStreamApi {
                                         if (!Util.overlappingSpans(geoCountryObject.getSpans(), kafEvent.getParticipants())) {
                                             String participantId = "";
                                             if (!format.equalsIgnoreCase("nafrdf")) {
-                                                participantId = key+"/"+geoCountryObject.getcId();
+                                                participantId = key+":"+geoCountryObject.getcId();
                                             }
                                             else {
                                                 participantId = "&docId;"+geoCountryObject.getcId();
@@ -103,7 +138,7 @@ public class KafKybotStreamApi {
                                             kafParticipant.setId(participantId);
                                             kafParticipant.setRole("l2");
                                             if (geoCountryObject.getExternalReferences().size()>0) {
-                                                kafParticipant.setSynsetId(geoCountryObject.getExternalReferences().get(0).getSensecode());
+                                                kafParticipant.setExternalReferences(geoCountryObject.getExternalReferences());
                                             }
                                             kafParticipant.setElementName("country");
                                             kafParticipant.setSpans(geoCountryObject.getSpans());
@@ -118,17 +153,17 @@ public class KafKybotStreamApi {
                                         if (!Util.overlappingSpans(geoPlaceObject.getSpans(), kafEvent.getParticipants())) {
                                             String participantId = "";
                                             if (!format.equalsIgnoreCase("nafrdf")) {
-                                                participantId = key+"/"+geoPlaceObject.getpId();
+                                                participantId = key+":"+geoPlaceObject.getpId();
                                             }
                                             else {
-                                                participantId  = "&docId;"+kafResult.getSentenceId()+"/"+tupleElement.getMention();
+                                                participantId  = "&docId;"+kafResult.getSentenceId()+":"+tupleElement.getMention();
 
                                             }
                                             KafParticipant kafParticipant = new KafParticipant();
                                             kafParticipant.setId(participantId);
                                             kafParticipant.setRole("l1");
                                             if (geoPlaceObject.getExternalReferences().size()>0) {
-                                                kafParticipant.setSynsetId(geoPlaceObject.getExternalReferences().get(0).getSensecode());
+                                                kafParticipant.setExternalReferences(geoPlaceObject.getExternalReferences());
                                             }
                                             kafParticipant.setElementName("place");
                                             kafParticipant.setSpans(geoPlaceObject.getSpans());
@@ -142,13 +177,18 @@ public class KafKybotStreamApi {
                                         ISODate isoDate = tupleElement.isoDates.get(d);
                                         if (!Util.overlappingSpans(isoDate.getSpans(), kafEvent.getParticipants())) {
                                             String participantId = "";
-                                            if (format.equalsIgnoreCase("nafrdf")) {
-                                                participantId = key+"/"+isoDate.getDid();
+                                            if (!format.equalsIgnoreCase("nafrdf")) {
+                                                participantId = key+":"+isoDate.getDid();
                                             }
                                             else {
                                                 participantId = "&docId;"+isoDate.getDid();
                                             }
                                             KafParticipant kafParticipant = new KafParticipant();
+                                            if (!isoDate.getDateInfo().getDateISO().isEmpty()) {
+                                                KafSense kafSense = new KafSense();
+                                                kafSense.setSensecode(isoDate.getDateInfo().getDateISO());
+                                                kafParticipant.addExternalReferences(kafSense);
+                                            }
                                             kafParticipant.setId(participantId);
                                             kafParticipant.setRole("t1");
                                             kafParticipant.setElementName("time");
@@ -165,17 +205,51 @@ public class KafKybotStreamApi {
                                     if (!oTupleElement.getName().toLowerCase().startsWith("event")) {
                                         String participantId = "";
                                         if (!format.equalsIgnoreCase("nafrdf")) {
-                                            participantId = key+"/"+kafResult.getSentenceId()+"/"+oTupleElement.getMention();
+                                            participantId = key+":"+kafResult.getSentenceId()+":"+oTupleElement.getMention();
                                         }
                                         else {
-                                            participantId = "&docId;"+kafResult.getSentenceId()+"/"+oTupleElement.getMention();
+                                            participantId = "&docId;"+kafResult.getSentenceId()+":"+oTupleElement.getMention();
                                         }
                                         KafParticipant kafParticipant = new KafParticipant();
                                         kafParticipant.setId(participantId);
                                         kafParticipant.setRole(oTupleElement.getRole());
                                         kafParticipant.setSynsetId(oTupleElement.getConcept());
+
+                                        kafParticipant.setComponentType("participant");
+                                        if (!oTupleElement.getName().isEmpty())  {
+                                            KafSense kafSense = new KafSense();
+                                            String sense = oTupleElement.getName();
+                                            int idx = sense.indexOf(":");
+                                            if (idx >-1) {
+                                                sense = sense.substring(idx);
+                                            }
+                                            kafSense.setSensecode(sense);
+                                            kafSense.setRefType(oTupleElement.getReference());
+                                            kafSense.setResource(oTupleElement.getProfileId());
+                                            kafParticipant.addExternalReferences(kafSense);
+                                        }
+                                        if (!oTupleElement.getReference().isEmpty())  {
+                                            KafSense kafSense = new KafSense();
+                                            String sense = oTupleElement.getReference();
+                                            String resource = "";
+                                            int idx = sense.indexOf(":");
+                                            if (idx >-1) {
+                                                resource = sense.substring(0, idx-1);
+                                                sense = sense.substring(idx+1);
+                                            }
+                                            kafSense.setSensecode(sense);
+                                            kafSense.setResource(resource);
+                                            kafSense.setRefType(oTupleElement.getReference());
+                                            kafParticipant.addExternalReferences(kafSense);
+                                        }
+                                        if (!oTupleElement.getConcept().isEmpty()) {
+                                            KafSense kafSense = new KafSense();
+                                            kafSense.setSensecode(tupleElement.getConcept());
+                                            kafSense.setConfidence(tupleElement.getConfidence());
+                                            kafSense.setResource("wn:"+tupleElement.getConcept().substring(0,6));
+                                            kafParticipant.addExternalReferences(kafSense);
+                                        }
                                         kafParticipant.setElementName(oTupleElement.getName());
-                                        kafParticipant.setReferenceType(oTupleElement.getReference());
                                         kafParticipant.setSynsetConfidence(oTupleElement.getConfidence());
                                         kafParticipant.addSpan(oTupleElement.getMention());
                                         kafEvent.addParticipant(kafParticipant);
