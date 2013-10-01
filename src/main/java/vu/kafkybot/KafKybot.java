@@ -30,11 +30,17 @@ public class KafKybot {
 
     static public void main (String[] args) {
         HashMap<String, ArrayList<KafResult>> kafResultOverviewMap = new HashMap<String, ArrayList<KafResult>>();
-        String pathToKafFile = "/Code/vu/kyotoproject/vu.kafkybot.KafKybot/release/kafkybot.v.0.1/example/bus-accident.ont.dep.kaf";
-        String extension = "";
-        boolean overview = false;
+
+        //String pathToKafFile = "/Projects/NEWSREADER/data/marit/kaf";
+        //String pathToProfiles = "/Tools/kafkybot.v.0.1/profiles/car-profiles-dep-all-event-subj-obj-nl.txt";
+        String pathToKafFile = "/Tools/kafkybot.v.0.1/cars2";
+        String pathToProfiles = "/Tools/kafkybot.v.0.1/profiles/car-profiles-dep-all-event-subj-obj-en.txt";
+
+        // String pathToKafFile = "/Code/vu/kyotoproject/vu.kafkybot.KafKybot/release/kafkybot.v.0.1/example/bus-accident.ont.dep.kaf";
+       // String pathToProfiles = "/Code/vu/kyotoproject/vu.kafkybot.KafKybot/release/kafkybot.v.0.1/profiles/profiles.txt";
+        String extension = ".event.kaf";
+        boolean overview = true;
         boolean singleOutput = false;
-        String pathToProfiles = "/Code/vu/kyotoproject/vu.kafkybot.KafKybot/release/kafkybot.v.0.1/profiles/profiles.txt";
         for (int i = 0; i < args.length; i++) {
             String arg = args[i];
             if ((arg.equals("--kaf-file")) && args.length>i+1) {
