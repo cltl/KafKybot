@@ -3,10 +3,8 @@ package vu.kafkybot;
 import eu.kyotoproject.kaf.*;
 
 import java.io.File;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Set;
+import java.text.SimpleDateFormat;
+import java.util.*;
 
 /**
  * Created with IntelliJ IDEA.
@@ -15,7 +13,11 @@ import java.util.Set;
  * Time: 4:27 PM
  * To change this template use File | Settings | File Templates.
  */
-public class KafKybotStreamApi {
+public class KafKybotPredicateStreamApi {
+
+    static final String layer = "predicate";
+    static final String name = "vua-kybot-predicate-role-detection";
+    static final String version = "1.0";
 
     static public void main (String[] args) {
         HashMap<String, ArrayList<KafResult>> kafResultMap = new HashMap<String, ArrayList<KafResult>>();
@@ -53,6 +55,15 @@ public class KafKybotStreamApi {
         HashMap<String, ArrayList<KafResult>> kafResultMap = new HashMap<String, ArrayList<KafResult>>();
         kafSaxParser.parseFile(kafFile);
         kafSaxParser.getKafMetaData().setFilename(kafFile.getAbsolutePath());
+        Calendar date = Calendar.getInstance();
+        date.setTimeInMillis(System.currentTimeMillis());
+        String strdate = null;
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        if (date != null) {
+            strdate = sdf.format(date.getTime());
+        }
+        kafSaxParser.getKafMetaData().addLayer(layer, name, version, strdate);
+
         if (kafFile.exists()) {
             kafResultMap = KafKybot.ApplyProfilesToKafFile(kafSaxParser, pathToProfiles);
             Set keySet = kafResultMap.keySet();

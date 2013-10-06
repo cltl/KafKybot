@@ -15,7 +15,7 @@ import java.util.HashMap;
  * Time: 4:27 PM
  * To change this template use File | Settings | File Templates.
  */
-public class KafKybotFolderApi {
+public class KafKybotPredicateFolderApi {
 
     static public void main (String[] args) {
         HashMap<String, ArrayList<KafResult>> kafResultMap = new HashMap<String, ArrayList<KafResult>>();
@@ -51,7 +51,7 @@ public class KafKybotFolderApi {
                 if (!file.isDirectory()) {
                     try {
                         FileOutputStream fos = new FileOutputStream(file.getAbsolutePath()+".srl.kaf");
-                        KafKybotStreamApi.processKafFile(kafSaxParser, file, pathToProfiles, format);
+                        KafKybotPredicateStreamApi.processKafFile(kafSaxParser, file, pathToProfiles, format);
                         if (format.equalsIgnoreCase("kaf")) {
                             kafSaxParser.writeKafToStream(fos);
                         }
