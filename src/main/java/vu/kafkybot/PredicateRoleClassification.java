@@ -68,12 +68,33 @@ public class PredicateRoleClassification {
             String s = spans.get(j);
             KafTerm kafTerm = kafSaxParser.getTerm(s);
             if (kafTerm!=null) {
+                boolean grammatical = false;
                 for (int i = 0; i < kafTerm.getSenseTags().size(); i++) {
                     KafSense kafSense = kafTerm.getSenseTags().get(i);
-                    if (kafSense.getConfidence()>topscore) {
-                       bestSense = kafSense;
-                       topscore = kafSense.getConfidence();
-                       termId = kafTerm.getTid();
+                    if (kafSense.getSensecode().equalsIgnoreCase("grammatical")) {
+                        grammatical = true;
+                        String sentenceId = kafSaxParser.getSentenceId(kafTerm);
+                        kafEvent.setSentenceId(sentenceId);
+                        kafEvent.addExternalReferences(kafSense);
+                        break;
+                    }
+                }
+                if (!grammatical) {
+                    for (int i = 0; i < kafTerm.getSenseTags().size(); i++) {
+                        KafSense kafSense = kafTerm.getSenseTags().get(i);
+                        for (int k = 0; k < kafSense.getChildren().size(); k++) {
+                            KafSense sense = kafSense.getChildren().get(k);
+                            if ((sense.getSensecode().startsWith("mcr:"))
+                            || (sense.getSensecode().startsWith("vn:"))
+                            || (sense.getSensecode().startsWith("fn:"))
+                            || (sense.getSensecode().startsWith("pb:"))) {
+                                if (kafSense.getConfidence()>topscore) {
+                                    bestSense = kafSense;
+                                    topscore = kafSense.getConfidence();
+                                    termId = kafTerm.getTid();
+                                }
+                            }
+                        }
                     }
                 }
             }
