@@ -330,9 +330,22 @@ public class TupleElement {
             root.setAttribute("confidence", new Double(confidence).toString());
         }
 
+        if ((reference != null) && !reference.isEmpty())   {
+            root.setAttribute("reference", reference);
+        }
+
+        if ((gran_nr != null) && !gran_nr.isEmpty())   {
+            root.setAttribute("gran_nr", gran_nr);
+        }
+
         if ((pos != null) && !pos.isEmpty())   {
             root.setAttribute("pos", pos);
         }
+
+        if ((depRelation != null) && !depRelation.isEmpty())   {
+            root.setAttribute("dep", depRelation);
+        }
+
         if ((role != null) && !role.isEmpty())   {
             root.setAttribute("role", role);
         }

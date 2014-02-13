@@ -33,8 +33,10 @@ public class KafKybot {
 
         //String pathToKafFile = "/Projects/NEWSREADER/data/marit/kaf";
         //String pathToProfiles = "/Tools/kafkybot.v.0.1/profiles/car-profiles-dep-all-event-subj-obj-nl.txt";
-        String pathToKafFile = "/Tools/kafkybot.v.0.1/cars2";
-        String pathToProfiles = "/Tools/kafkybot.v.0.1/profiles/car-profiles-dep-all-event-subj-obj-en.txt";
+        String pathToKafFile = "";
+        //"/Tools/kafkybot.v.0.1/cars2";
+        String pathToProfiles = "";
+        //"/Tools/kafkybot.v.0.1/profiles/car-profiles-dep-all-event-subj-obj-en.txt";
 
         // String pathToKafFile = "/Code/vu/kyotoproject/vu.kafkybot.KafKybot/release/kafkybot.v.0.1/example/bus-accident.ont.dep.kaf";
        // String pathToProfiles = "/Code/vu/kyotoproject/vu.kafkybot.KafKybot/release/kafkybot.v.0.1/profiles/profiles.txt";

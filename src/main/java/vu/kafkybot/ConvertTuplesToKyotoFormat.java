@@ -1,6 +1,5 @@
 package vu.kafkybot;
 
-import eu.kyotoproject.kybotoutput.objects.*;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -148,7 +147,7 @@ public class ConvertTuplesToKyotoFormat {
                         KafResult kafResult = kafResults.get(i);
                         for (int j = 0; j < kafResult.getChildren().size(); j++) {
                             TupleElement tupleElement =  kafResult.getChildren().get(j);
-                            if (tupleElement.getName().equals(firstElement)) {
+                            if (tupleElement.getName().equals(firstElement)) {/*
                                 KybotEvent kybotEvent = new KybotEvent();
                                 kybotEvent.setEventId(kafResult.getId());
                                 kybotEvent.setSynsetId(tupleElement.getConcept());
@@ -160,7 +159,7 @@ public class ConvertTuplesToKyotoFormat {
                                 kybotEvent.setGran_nr((tupleElement.getGran_nr()));
                                 kybotEvent.setProfileId(kafResult.getProfileName());
                                 kybotEvent.setSentenceId(kafResult.getSentenceId());
-                                str = "\t"+kybotEvent.toXmlString();
+                                str = "\t"+kybotEvent.toXmlString();*/
                                 fos.write(str.getBytes());
                             }
                         }

@@ -18,7 +18,7 @@ public class Util {
         for (int i = 0; i < participantArrayList.size(); i++) {
             KafParticipant kafParticipant = participantArrayList.get(i);
             for (int j = 0; j < kafParticipant.getSpans().size(); j++) {
-                String s = kafParticipant.getSpans().get(j);
+                String s = kafParticipant.getSpanIds().get(j);
                 if (spans.contains(s)) {
                     return true;
                 }

@@ -46,9 +46,6 @@ public class KafKybotPredicateStreamApi {
         else if (format.equalsIgnoreCase("naf")) {
             kafSaxParser.writeNafToStream(System.out);
         }
-        else if (format.equalsIgnoreCase("nafrdf")) {
-            kafSaxParser.writeNafRdfToStream(System.out);
-        }
     }
 
     static public void processKafFile (KafSaxParser kafSaxParser, File kafFile, String pathToProfiles, String format ) {
@@ -132,7 +129,9 @@ public class KafKybotPredicateStreamApi {
                                 }
                                 kafEvent.setSynsetId(tupleElement.getConcept());
                                 kafEvent.setSynsetConfidence(tupleElement.getConfidence());
-                                kafEvent.addSpan(tupleElement.getMention());
+                                CorefTarget corefTarget = new CorefTarget();
+                                corefTarget.setId(tupleElement.getMention());
+                                kafEvent.addSpan(corefTarget);
                                 if (tupleElement.geoCountryObjects.size()>0) {
                                     //  System.out.println("geoCountryObjects = " + geoCountryObjects.size());
                                     for (int g = 0; g < tupleElement.geoCountryObjects.size(); g++) {
@@ -152,7 +151,13 @@ public class KafKybotPredicateStreamApi {
                                                 kafParticipant.setExternalReferences(geoCountryObject.getExternalReferences());
                                             }
                                             kafParticipant.setElementName("country");
-                                            kafParticipant.setSpans(geoCountryObject.getSpans());
+
+                                            for (int k = 0; k < geoCountryObject.getSpans().size(); k++) {
+                                                String spanId =  geoCountryObject.getSpans().get(k);
+                                                corefTarget = new CorefTarget();
+                                                corefTarget.setId(spanId);
+                                                kafParticipant.addSpan(corefTarget);
+                                            }
                                             kafEvent.addParticipant(kafParticipant);
 
                                         }
@@ -177,7 +182,12 @@ public class KafKybotPredicateStreamApi {
                                                 kafParticipant.setExternalReferences(geoPlaceObject.getExternalReferences());
                                             }
                                             kafParticipant.setElementName("place");
-                                            kafParticipant.setSpans(geoPlaceObject.getSpans());
+                                            for (int k = 0; k < geoPlaceObject.getSpans().size(); k++) {
+                                                String spanId =  geoPlaceObject.getSpans().get(k);
+                                                corefTarget = new CorefTarget();
+                                                corefTarget.setId(spanId);
+                                                kafParticipant.addSpan(corefTarget);
+                                            }
                                             kafEvent.addParticipant(kafParticipant);
 
                                         }
@@ -203,7 +213,12 @@ public class KafKybotPredicateStreamApi {
                                             kafParticipant.setId(participantId);
                                             kafParticipant.setRole("t1");
                                             kafParticipant.setElementName("time");
-                                            kafParticipant.setSpans(isoDate.getSpans());
+                                            for (int k = 0; k < isoDate.getSpans().size(); k++) {
+                                                String spanId =  isoDate.getSpans().get(k);
+                                                corefTarget = new CorefTarget();
+                                                corefTarget.setId(spanId);
+                                                kafParticipant.addSpan(corefTarget);
+                                            }
                                             kafEvent.addParticipant(kafParticipant);
                                         }
                                     }
@@ -262,7 +277,10 @@ public class KafKybotPredicateStreamApi {
                                         }
                                         kafParticipant.setElementName(oTupleElement.getName());
                                         kafParticipant.setSynsetConfidence(oTupleElement.getConfidence());
-                                        kafParticipant.addSpan(oTupleElement.getMention());
+
+                                        CorefTarget corefTarget = new CorefTarget();
+                                        corefTarget.setId(oTupleElement.getMention());
+                                        kafParticipant.addSpan(corefTarget);
                                         kafEvent.addParticipant(kafParticipant);
                                     }
                                 }

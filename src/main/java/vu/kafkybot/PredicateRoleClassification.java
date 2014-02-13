@@ -60,7 +60,7 @@ public class PredicateRoleClassification {
     }
 
     static void processPredicateByWsdScore(KafEvent kafEvent, KafSaxParser kafSaxParser) {
-        ArrayList<String> spans = kafEvent.getSpans();
+        ArrayList<String> spans = kafEvent.getSpanIds();
         double topscore = 0;
         KafSense bestSense = null;
         String termId = "";
@@ -107,7 +107,7 @@ public class PredicateRoleClassification {
     }
 
     static void processRolesByWsdScore(KafParticipant kafParticipant, KafSaxParser kafSaxParser) {
-        ArrayList<String> spans = kafParticipant.getSpans();
+        ArrayList<String> spans = kafParticipant.getSpanIds();
         double topscore = 0;
         KafSense bestSense = null;
         String termId = "";

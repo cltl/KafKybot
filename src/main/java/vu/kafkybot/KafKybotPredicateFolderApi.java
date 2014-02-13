@@ -59,7 +59,7 @@ public class KafKybotPredicateFolderApi {
                             kafSaxParser.writeNafToStream(fos);
                         }
                         else if (format.equalsIgnoreCase("nafrdf")) {
-                            kafSaxParser.writeNafRdfToStream(fos);
+                            kafSaxParser.writeNafToStream(fos);
                         }
                         fos.flush();
                         fos.close();
