@@ -41,7 +41,7 @@ public class KafKybot {
         // String pathToKafFile = "/Code/vu/kyotoproject/vu.kafkybot.KafKybot/release/kafkybot.v.0.1/example/bus-accident.ont.dep.kaf";
        // String pathToProfiles = "/Code/vu/kyotoproject/vu.kafkybot.KafKybot/release/kafkybot.v.0.1/profiles/profiles.txt";
         String extension = ".event.kaf";
-        boolean overview = true;
+        boolean overview = false;
         boolean singleOutput = false;
         for (int i = 0; i < args.length; i++) {
             String arg = args[i];
