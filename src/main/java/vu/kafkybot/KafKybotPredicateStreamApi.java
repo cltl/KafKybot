@@ -269,10 +269,14 @@ public class KafKybotPredicateStreamApi {
                                             kafParticipant.addExternalReferences(kafSense);
                                         }
                                         if (!oTupleElement.getConcept().isEmpty()) {
+                                            String conceptString = tupleElement.getConcept();
+                                            if (conceptString.length()>6) {
+                                                conceptString = conceptString.substring(0,6);
+                                            }
                                             KafSense kafSense = new KafSense();
                                             kafSense.setSensecode(tupleElement.getConcept());
                                             kafSense.setConfidence(tupleElement.getConfidence());
-                                            kafSense.setResource("wn:"+tupleElement.getConcept().substring(0,6));
+                                            kafSense.setResource("wn:"+conceptString);
                                             kafParticipant.addExternalReferences(kafSense);
                                         }
                                         kafParticipant.setElementName(oTupleElement.getName());
