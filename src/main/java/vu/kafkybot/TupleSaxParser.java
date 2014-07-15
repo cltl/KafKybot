@@ -64,14 +64,14 @@ public class TupleSaxParser extends DefaultHandler{
 
     public void parseFile(String filePath) {
         String myerror = "";
-        System.out.println("filePath = " + filePath);
+       // System.out.println("filePath = " + filePath);
         try {
             SAXParserFactory factory = SAXParserFactory.newInstance();
             factory.setValidating(false);
             SAXParser parser = factory.newSAXParser();
             InputSource inp = new InputSource (new FileReader(filePath));
             parser.parse(inp, this);
-            System.out.println("kafResultMap.size() = " + tupleMap.size());
+           // System.out.println("kafResultMap.size() = " + tupleMap.size());
         } catch (SAXParseException err) {
             myerror = "\n** Parsing error" + ", line " + err.getLineNumber()
                     + ", uri " + err.getSystemId();

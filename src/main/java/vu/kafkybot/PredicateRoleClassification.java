@@ -3,9 +3,7 @@ package vu.kafkybot;
 import eu.kyotoproject.kaf.*;
 
 import java.io.File;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Calendar;
 
 /**
  * Created with IntelliJ IDEA.
@@ -36,15 +34,11 @@ public class PredicateRoleClassification {
         KafSaxParser kafSaxParser = new KafSaxParser();
         kafSaxParser.parseFile(kafFile);
         kafSaxParser.getKafMetaData().setFilename(kafFile.getAbsolutePath());
-        Calendar date = Calendar.getInstance();
-        date.setTimeInMillis(System.currentTimeMillis());
-        String strdate = null;
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        if (date != null) {
-            strdate = sdf.format(date.getTime());
-        }
-        kafSaxParser.getKafMetaData().addLayer(layer, name, version, strdate);
+        String strBeginDate = eu.kyotoproject.util.DateUtil.createTimestamp();
         processKafFile(kafSaxParser);
+        String strEndDate = eu.kyotoproject.util.DateUtil.createTimestamp();
+        LP lp = new LP(name,version, strBeginDate, strBeginDate, strEndDate);
+        kafSaxParser.getKafMetaData().addLayer(name, lp);
         kafSaxParser.writeNafToStream(System.out);
     }
 

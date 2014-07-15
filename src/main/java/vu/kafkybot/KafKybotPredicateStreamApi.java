@@ -59,7 +59,7 @@ public class KafKybotPredicateStreamApi {
         if (date != null) {
             strdate = sdf.format(date.getTime());
         }
-        kafSaxParser.getKafMetaData().addLayer(layer, name, version, strdate);
+        kafSaxParser.getKafMetaData().addLayer(layer, name, version, strdate, strdate, strdate);
 
         if (kafFile.exists()) {
             kafResultMap = KafKybot.ApplyProfilesToKafFile(kafSaxParser, pathToProfiles);

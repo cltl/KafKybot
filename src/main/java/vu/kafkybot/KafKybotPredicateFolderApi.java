@@ -16,16 +16,15 @@ import java.util.HashMap;
  * To change this template use File | Settings | File Templates.
  */
 public class KafKybotPredicateFolderApi {
-
     static public void main (String[] args) {
         HashMap<String, ArrayList<KafResult>> kafResultMap = new HashMap<String, ArrayList<KafResult>>();
        // String pathToKafFile = "//Tools/kafkybot.v.0.1/cars/Volkswagen-48-c6577c99c0be5cef4793cf54defb55e345fbe965.kaf.step.0.step.1.step.2.step.3.event.kaf";
         //String pathToKafFile = "/Tools/kafkybot.v.0.1/cars2";
         //String pathToProfiles = "/Tools/kafkybot.v.0.1/profiles/car-profiles-dep-all-event-subj-obj-en.txt";
         //String pathToKafFile = "/Projects/NEWSREADER/data/marit/kaf";
-        String pathToKafFile = "/Users/piek/Desktop/Thomese/Thomese_book_opener_nwr";
-        String pathToProfiles = "/Tools/kafkybot.v.0.1/profiles/car-profiles-dep-all-event-subj-obj-nl.txt";
-        String extension = "event.kaf";
+        String pathToKafFile = "/Users/piek/Desktop/Thomese/grillroom";
+        String pathToProfiles = "/Tools/kafkybot.v.0.1/profiles/thomese-profiles.txt";
+        String extension = ".kaf.event.kaf";
         String format = "NAF";
         for (int i = 0; i < args.length; i++) {
             String arg = args[i];
