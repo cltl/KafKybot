@@ -50,8 +50,9 @@ public class KafKybotPredicateFolderApi {
                 File file = new File(files.get(f));
                 if (!file.isDirectory()) {
                     try {
-                        FileOutputStream fos = new FileOutputStream(file.getAbsolutePath()+".srl.kaf");
-                        KafKybotPredicateStreamApi.processKafFile(kafSaxParser, file, pathToProfiles, format);
+                        FileOutputStream fos = new FileOutputStream(file.getAbsolutePath()+".srl");
+                        kafSaxParser.parseFile(file);
+                        KafKybotPredicateStreamApi.processKaf(kafSaxParser, pathToProfiles, format);
                         if (format.equalsIgnoreCase("kaf")) {
                             kafSaxParser.writeKafToStream(fos);
                         }

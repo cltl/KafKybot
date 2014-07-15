@@ -2,9 +2,10 @@ package vu.kafkybot;
 
 import eu.kyotoproject.kaf.*;
 
-import java.io.File;
-import java.text.SimpleDateFormat;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Set;
 
 /**
  * Created with IntelliJ IDEA.
@@ -20,14 +21,19 @@ public class KafKybotPredicateStreamApi {
     static final String version = "1.0";
 
     static public void main (String[] args) {
-        HashMap<String, ArrayList<KafResult>> kafResultMap = new HashMap<String, ArrayList<KafResult>>();
-       // String pathToKafFile = "//Tools/kafkybot.v.0.1/cars/Volkswagen-48-c6577c99c0be5cef4793cf54defb55e345fbe965.kaf.step.0.step.1.step.2.step.3.event.kaf";
-        String pathToKafFile = "//Tools/kafkybot.v.0.1/cars/Volkswagen-48-c6577c99c0be5cef4793cf54defb55e345fbe965.kaf.step.0.step.1.step.2.step.3.event.kaf";
-        String pathToProfiles = "/Tools/kafkybot.v.0.1/profiles/car-profiles-dep-other-event-subj-obj.txt";
-        String format = "NAF";
+        String pathToKafFile = null;
+        String pathToProfiles ="/Tools/kafkybot.v.0.1/profiles/car-profiles-dep-other-event-subj-obj.txt";
+        String format = "naf";
         for (int i = 0; i < args.length; i++) {
             String arg = args[i];
-            if ((arg.equals("--kaf-file")) && args.length>i+1) {
+
+            if ((arg.equals("--file")) && args.length>i+1) {
+                pathToKafFile = args[i+1];
+            }
+            else if ((arg.equals("--kaf-file")) && args.length>i+1) {
+                pathToKafFile = args[i+1];
+            }
+            else if ((arg.equals("--naf-file")) && args.length>i+1) {
                 pathToKafFile = args[i+1];
             }
             else if ((arg.equals("--profiles")) && args.length>i+1) {
@@ -37,9 +43,22 @@ public class KafKybotPredicateStreamApi {
                 format = args[i+1];
             }
         }
-        File kafFile = new File(pathToKafFile);
+
+        String strBeginDate = eu.kyotoproject.util.DateUtil.createTimestamp();
+        String strEndDate = null;
+
         KafSaxParser kafSaxParser = new KafSaxParser();
-        processKafFile(kafSaxParser, kafFile, pathToProfiles, format);
+        if (pathToKafFile==null) {
+            kafSaxParser.parseFile(System.in);
+        }
+        else {
+            kafSaxParser.parseFile(pathToKafFile);
+        }
+        processKaf(kafSaxParser, pathToProfiles, format);
+        strEndDate = eu.kyotoproject.util.DateUtil.createTimestamp();
+        LP lp = new LP(name,version, strBeginDate, strBeginDate, strEndDate);
+
+        kafSaxParser.getKafMetaData().addLayer(name, lp);
         if (format.equalsIgnoreCase("kaf")) {
             kafSaxParser.writeKafToStream(System.out);
         }
@@ -48,20 +67,8 @@ public class KafKybotPredicateStreamApi {
         }
     }
 
-    static public void processKafFile (KafSaxParser kafSaxParser, File kafFile, String pathToProfiles, String format ) {
+    static public void processKaf (KafSaxParser kafSaxParser, String pathToProfiles, String format ) {
         HashMap<String, ArrayList<KafResult>> kafResultMap = new HashMap<String, ArrayList<KafResult>>();
-        kafSaxParser.parseFile(kafFile);
-        kafSaxParser.getKafMetaData().setFilename(kafFile.getAbsolutePath());
-        Calendar date = Calendar.getInstance();
-        date.setTimeInMillis(System.currentTimeMillis());
-        String strdate = null;
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        if (date != null) {
-            strdate = sdf.format(date.getTime());
-        }
-        kafSaxParser.getKafMetaData().addLayer(layer, name, version, strdate, strdate, strdate);
-
-        if (kafFile.exists()) {
             kafResultMap = KafKybot.ApplyProfilesToKafFile(kafSaxParser, pathToProfiles);
             Set keySet = kafResultMap.keySet();
             Iterator keys = keySet.iterator();
@@ -299,10 +306,8 @@ public class KafKybotPredicateStreamApi {
                     String eventKey = (String) eventKeys.next();
                     KafEvent kafEvent = kafEventMap.get(eventKey);
                     kafSaxParser.kafEventArrayList.add(kafEvent);
-
                 }
             }
-        }
     }
 
 }
