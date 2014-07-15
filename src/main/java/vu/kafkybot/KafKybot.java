@@ -167,9 +167,14 @@ public class KafKybot {
            // System.out.println("pathToKafFile = " + pathToKafFile);
            // System.out.println("tuples.size() = " + tuples.size());
             File sourceFile = new File(kafSaxParser.getKafMetaData().getFilename());
-            String parentName = sourceFile.getParentFile().getName();
-            String source = parentName+"_"+sourceFile.getName();
-            kafResultMap.put(source, tuples);
+            if (sourceFile.exists()) {
+                String parentName = sourceFile.getParentFile().getName();
+                String source = parentName + "_" + sourceFile.getName();
+                kafResultMap.put(source, tuples);
+            }
+            else {
+                kafResultMap.put("NO_SOURCE_FILE", tuples);
+            }
            // System.out.println("kafResultMap.size() = " + kafResultMap.size());
             //writeKafToStream(tuples, System.out, pathToKafFile.getName());
         return kafResultMap;

@@ -304,8 +304,15 @@ public class KafKybotPredicateStreamApi {
                 Iterator eventKeys = eventSet.iterator();
                 while (eventKeys.hasNext()) {
                     String eventKey = (String) eventKeys.next();
-                    KafEvent kafEvent = kafEventMap.get(eventKey);
-                    kafSaxParser.kafEventArrayList.add(kafEvent);
+                   // System.out.println("eventKey = " + eventKey);
+                    if (!eventKey.isEmpty()) {
+                        KafEvent kafEvent = kafEventMap.get(eventKey);
+                        if (!kafEvent.getId().isEmpty()) {
+                          //  System.out.println("kafEvent.toString() = " + kafEvent.toString());
+                            kafSaxParser.kafEventArrayList.add(kafEvent);
+                        }
+
+                    }
                 }
             }
     }
