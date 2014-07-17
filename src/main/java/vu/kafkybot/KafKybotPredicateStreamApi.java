@@ -24,6 +24,7 @@ public class KafKybotPredicateStreamApi {
         String pathToKafFile = null;
         String pathToProfiles ="/Tools/kafkybot.v.0.1/profiles/car-profiles-dep-other-event-subj-obj.txt";
         String format = "naf";
+        String encoding = "";
         for (int i = 0; i < args.length; i++) {
             String arg = args[i];
 
@@ -39,6 +40,9 @@ public class KafKybotPredicateStreamApi {
             else if ((arg.equals("--profiles")) && args.length>i+1) {
                 pathToProfiles = args[i+1];
             }
+            else if ((arg.equals("--encoding")) && args.length>i+1) {
+                encoding = args[i+1];
+            }
             else if ((arg.equals("--format")) && args.length>i+1) {
                 format = args[i+1];
             }
@@ -49,10 +53,21 @@ public class KafKybotPredicateStreamApi {
 
         KafSaxParser kafSaxParser = new KafSaxParser();
         if (pathToKafFile==null) {
-            kafSaxParser.parseFile(System.in);
+            if (encoding.isEmpty()) {
+                kafSaxParser.parseFile(System.in);
+            }
+            else {
+                kafSaxParser.parseFile(System.in, encoding);
+            }
         }
         else {
-            kafSaxParser.parseFile(pathToKafFile);
+            if (encoding.isEmpty()) {
+                kafSaxParser.parseFile(pathToKafFile);
+            }
+            else {
+                //System.out.println("pathToKafFile = " + pathToKafFile);
+                kafSaxParser.parseFile(pathToKafFile, encoding);
+            }
         }
         processKaf(kafSaxParser, pathToProfiles, format);
         strEndDate = eu.kyotoproject.util.DateUtil.createTimestamp();
@@ -60,10 +75,20 @@ public class KafKybotPredicateStreamApi {
 
         kafSaxParser.getKafMetaData().addLayer(name, lp);
         if (format.equalsIgnoreCase("kaf")) {
-            kafSaxParser.writeKafToStream(System.out);
+            if (encoding.isEmpty()) {
+                kafSaxParser.writeKafToStream(System.out);
+            }
+            else {
+                kafSaxParser.writeKafToStream(System.out, encoding);
+            }
         }
         else if (format.equalsIgnoreCase("naf")) {
-            kafSaxParser.writeNafToStream(System.out);
+            if (encoding.isEmpty()) {
+                kafSaxParser.writeNafToStream(System.out);
+            }
+            else {
+                kafSaxParser.writeNafToStream(System.out, encoding);
+            }
         }
     }
 
